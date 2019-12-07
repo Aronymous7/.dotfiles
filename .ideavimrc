@@ -1,0 +1,30 @@
+" Pick a leader key
+let mapleader = "ä"
+let maplocalleader = "ü"
+
+" Show line numbers
+set number
+
+" Cursor motion
+set scrolloff=5
+set matchpairs+=<:> " use % to jump between pairs
+
+" Last line
+set showmode
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+map <leader><space> :noh<CR>
+
+
+" My own stuff :)
+
+" Map Escape (enter normal mode)
+inoremap jj <ESC>
+
+" Create and jump to tags
+inoremap öö <++>
+inoremap ö<space> <ESC>/<++><CR>"_c4l
