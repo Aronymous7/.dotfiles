@@ -91,9 +91,19 @@ inoremap jj <ESC>
 " Ask for confirmation when :q and not saved
 set confirm
 
+" Save file
+nnoremap <C-s> :update<cr>
+nnoremap <leader>s :update<cr>
+inoremap <C-s> <Esc>:update<cr>gi
+inoremap <leader>s <Esc>:update<cr>gi
+
+" Faster scrolling
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
 " Create and jump to tags
 inoremap öö <++>
-inoremap ö<space> <ESC>/<++><CR>"_c4l
+inoremap ö<space> <ESC>/<++><CR>:noh<CR>"_c4l
 
 " Auto close brackets
 inoremap " ""<++><ESC>4hi
