@@ -134,12 +134,14 @@ alias bashrc='vim ~/.bashrc'
 alias inputrc='vim ~/.inputrc'
 alias ideavimrc='vim ~/.ideavimrc'
 
+alias sdn="shutdown now"
 alias aptins="sudo apt install"
 alias aptrm="sudo apt remove"
+
+alias config='/usr/bin/git --git-dir=/home/aaron/.dotfiles/ --work-tree=/home/aaron'
 
 # Custom functions
 mkd () {
     mkdir -pv $1
     cd $1
 }
-alias config='/usr/bin/git --git-dir=/home/aaron/.dotfiles/ --work-tree=/home/aaron'

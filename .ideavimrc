@@ -20,11 +20,31 @@ set smartcase
 map <leader><space> :noh<CR>
 
 
-" My own stuff :)
-
 " Map Escape (enter normal mode)
 inoremap jj <ESC>
 
+" Faster scrolling
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+" Surrounding
+vnoremap ö( "sc()<ESC>"sP
+
 " Create and jump to tags
 inoremap öö <++>
-inoremap ö<space> <ESC>/<++><CR>"_c4l
+inoremap ö<space> <ESC>/<++><CR>:noh<CR>"_c4l
+
+" Auto close brackets
+inoremap " ""<++><ESC>4hi
+inoremap ( ()<++><ESC>4hi
+inoremap [ []<++><ESC>4hi
+inoremap { {}<++><ESC>4hi
+
+" Various bindings
+inoremap ö; <ESC>A;
+inoremap öi if<space>(<right><space>{<CR><++><up><ESC>F)i
+nnoremap öee A<space>else<space>{<CR>
+nnoremap öei A<space>else<space>if<space>(<right><space>{<CR><++><up><ESC>f)i
+inoremap öw while<space>(<right><space>{<CR><++><up><ESC>F)i
+inoremap öf for<space>(;<++>;<++><right><space>{<CR><++><up><ESC>T(i
+inoremap öm (<++><right><space>{<CR><++><up><ESC>F(i

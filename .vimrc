@@ -33,7 +33,8 @@ set encoding=utf-8
 
 " Whitespace
 set wrap
-set textwidth=90
+set textwidth=0
+set linebreak
 set formatoptions=tcqn1
 autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 set tabstop=4
@@ -80,26 +81,32 @@ set t_Co=256
 set background=dark
 
 
-" My own stuff :)
-
 set autoindent
 set splitbelow splitright
 
-" Map Escape (enter normal mode)
-inoremap jj <ESC>
+" Better command line completion
+set wildmenu
+set wildmode=longest,list,full
 
 " Ask for confirmation when :q and not saved
 set confirm
 
+" Map Escape (enter normal mode)
+inoremap jj <ESC>
+
 " Save file
 nnoremap <C-s> :update<cr>
-nnoremap <leader>s :update<cr>
 inoremap <C-s> <Esc>:update<cr>gi
-inoremap <leader>s <Esc>:update<cr>gi
+
+" Activate spell checking
+nnoremap <leader>s :setlocal spell spelllang=de<CR>
 
 " Faster scrolling
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+
+" Surrounding
+vnoremap ö( "sc()<ESC>"sP
 
 " Create and jump to tags
 inoremap öö <++>
@@ -107,17 +114,21 @@ inoremap ö<space> <ESC>/<++><CR>:noh<CR>"_c4l
 
 " Auto close brackets
 inoremap " ""<++><ESC>4hi
-inoremap ' ''<++><ESC>4hi
 inoremap ( ()<++><ESC>4hi
 inoremap [ []<++><ESC>4hi
 inoremap { {}<++><ESC>4hi
 inoremap {<CR> {<CR>}<++><ESC>O
 inoremap {;<CR> {<CR>};<++><ESC>O
 
-" Better command line completion
-set wildmenu
-set wildmode=longest,list,full
-
 " Latex bindings
 autocmd FileType tex nnoremap öb a\{<++>}<++><ESC>F{i
 autocmd FileType tex inoremap ö<CR> \\<CR>
+
+" Java bindings
+autocmd FileType java inoremap ö; <ESC>A;
+autocmd FileType java inoremap öi if<space>(<right><space>{<CR><++><up><ESC>F)i
+autocmd FileType java nnoremap öee A<space>else<space>{<CR>
+autocmd FileType java nnoremap öei A<space>else<space>if<space>(<right><space>{<CR><++><up><ESC>f)i
+autocmd FileType java inoremap öw while<space>(<right><space>{<CR><++><up><ESC>F)i
+autocmd FileType java inoremap öf for<space>(;<++>;<++><right><space>{<CR><++><up><ESC>T(i
+autocmd FileType java inoremap öm (<++><right><space>{<CR><++><up><ESC>F(i
