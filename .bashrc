@@ -131,17 +131,17 @@ stty -ixon
 alias stud='cd ~/Documents/Studium'
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
-alias inputrc='vim ~/.inputrc'
 alias ideavimrc='vim ~/.ideavimrc'
 
 alias sdn="shutdown now"
+alias rbn="shutdown -r now"
 alias aptins="sudo apt install"
 alias aptrm="sudo apt remove"
 
 alias ds='pwd > /tmp/cwd'
 alias dr='cd "$(</tmp/cwd)"'
 
-alias config='/usr/bin/git --git-dir=/home/aaron/.dotfiles/ --work-tree=/home/aaron'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Custom functions
 mkd () {
