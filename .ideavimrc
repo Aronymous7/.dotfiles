@@ -48,3 +48,5 @@ nnoremap öei A<space>else<space>if<space>(<right><space>{<CR><++><up><ESC>f)i
 inoremap öw while<space>(<right><space>{<CR><++><up><ESC>F)i
 inoremap öf for<space>(;<++>;<++><right><space>{<CR><++><up><ESC>T(i
 inoremap öm (<++><right><space>{<CR><++><up><ESC>F(i
+inoremap ötc try<space>{<CR><down><space>catch<space>(<++><right><space>{<CR><++><up><up>
+inoremap ötf try<space>{<CR><down><space>catch<space>(<++><right><space>{<CR><++><down><space>finally<space>{<CR><++><ESC>4kA

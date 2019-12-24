@@ -138,6 +138,9 @@ alias sdn="shutdown now"
 alias aptins="sudo apt install"
 alias aptrm="sudo apt remove"
 
+alias ds='pwd > /tmp/cwd'
+alias dr='cd "$(</tmp/cwd)"'
+
 alias config='/usr/bin/git --git-dir=/home/aaron/.dotfiles/ --work-tree=/home/aaron'
 
 # Custom functions

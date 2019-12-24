@@ -91,6 +91,9 @@ set wildmode=longest,list,full
 " Ask for confirmation when :q and not saved
 set confirm
 
+" Use system clipboard by default
+set clipboard=unnamedplus
+
 " Map Escape (enter normal mode)
 inoremap jj <ESC>
 
@@ -121,8 +124,11 @@ inoremap {<CR> {<CR>}<++><ESC>O
 inoremap {;<CR> {<CR>};<++><ESC>O
 
 " Latex bindings
-autocmd FileType tex nnoremap öb a\{<++>}<++><ESC>F{i
 autocmd FileType tex inoremap ö<CR> \\<CR>
+autocmd FileType tex inoremap öe <ESC>0"zdwA\begin{<ESC>"zpa}<CR><CR>\end{<ESC>"zpa}<up>
+autocmd FileType tex nnoremap öb a\{<++>}<++><ESC>F{i
+autocmd FileType tex nnoremap ös a\section{}<++><ESC>T{i
+autocmd FileType tex nnoremap öf i\begin{frame}{\secname}<CR><CR>\end{frame}<up>
 
 " Java bindings
 autocmd FileType java inoremap ö; <ESC>A;
