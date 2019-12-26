@@ -137,11 +137,14 @@ alias sdn="shutdown now"
 alias rbn="shutdown -r now"
 alias aptins="sudo apt install"
 alias aptrm="sudo apt remove"
+alias aptupd="sudo apt update"
+alias aptupg="sudo apt upgrade"
 
 alias ds='pwd > /tmp/cwd'
 alias dr='cd "$(</tmp/cwd)"'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias configupd='config add -u && config commit -m "some changes" && config push'
 
 # Custom functions
 mkd () {
