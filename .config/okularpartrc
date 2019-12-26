@@ -7,3 +7,4 @@ ShowLeftPanel=false
 [PageView]
 BackgroundColor=46,52,54
 UseCustomBackgroundColor=true
+ViewContinuous=false

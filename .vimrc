@@ -15,6 +15,9 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
+" Set default pdf-viewer for vimtex
+let g:vimtex_view_general_viewer='okular'
+
 " Pick a leader key
 let mapleader = "ä"
 let maplocalleader = "ü"
