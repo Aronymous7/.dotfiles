@@ -170,7 +170,7 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf okular %c %i, evince %c %i
+filextype *.pdf okular %c %i &, evince %c %i &
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
@@ -226,7 +226,7 @@ fileviewer *.[1-8] man ./%c | col -b
 
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ nomacs %c %i
+        \ nomacs %c %i &
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ convert -identify %f -verbose /dev/null
 
