@@ -124,6 +124,7 @@ inoremap {<CR> {<CR>}<++><ESC>O
 inoremap {;<CR> {<CR>};<++><ESC>O
 
 " Latex bindings
+autocmd FileType tex inoremap $ $$<++><ESC>4hi
 autocmd FileType tex inoremap ö<CR> \\<CR>
 autocmd FileType tex inoremap öe <ESC>0"zdwA\begin{<ESC>"zpa}<CR><CR>\end{<ESC>"zpa}<up>
 autocmd FileType tex nnoremap öb a\{<++>}<++><ESC>F{i
