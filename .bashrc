@@ -139,6 +139,8 @@ alias aptins="sudo apt install"
 alias aptrm="sudo apt remove"
 alias aptupd="sudo apt update"
 alias aptupg="sudo apt upgrade"
+alias aptsearch="sudo apt-cache search"
+alias aptlist="sudo apt list --installed | grep"
 
 alias ds='pwd > /tmp/cwd'
 alias dr='cd "$(</tmp/cwd)"'
