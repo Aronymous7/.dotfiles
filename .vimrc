@@ -128,11 +128,12 @@ inoremap {;<CR> {<CR>};<++><ESC>O
 
 " Latex bindings
 autocmd FileType tex inoremap $ $$<++><ESC>4hi
-autocmd FileType tex inoremap ö<CR> \\<CR>
-autocmd FileType tex inoremap öe <ESC>0"zdwA\begin{<ESC>"zpa}<CR><CR>\end{<ESC>"zpa}<up>
-autocmd FileType tex nnoremap öb a\{<++>}<++><ESC>F{i
-autocmd FileType tex nnoremap ös a\section{}<++><ESC>T{i
-autocmd FileType tex nnoremap öf i\begin{frame}{\secname}<CR><CR>\end{frame}<up>
+autocmd FileType tex inoremap öö<CR> \\<CR>
+autocmd FileType tex inoremap ööe <ESC>0"zdwA\begin{<ESC>"zpa}<CR><CR>\end{<ESC>"zpa}<up>
+autocmd FileType tex inoremap öös \section{}<++><ESC>T{i
+autocmd FileType tex inoremap ööf \begin{frame}{\secname}<CR><CR>\end{frame}<up>
+autocmd FileType tex inoremap ööb \textbf{}<++><ESC>T{i
+autocmd FileType tex inoremap ööi \textit{}<++><ESC>T{i
 
 " Java bindings
 autocmd FileType java inoremap ö; <ESC>A;
