@@ -89,7 +89,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -AlhF'
-alias la='ls -A'
+alias la='ls -AF'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -119,19 +119,17 @@ export VISUAL='vim'
 stty -ixon
 
 # Custom aliases
-alias stud='cd ~/Documents/Studium'
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias ideavimrc='vim ~/.ideavimrc'
 
-alias sdn="shutdown now"
-alias rbn="shutdown -r now"
-alias aptins="sudo apt install"
-alias aptrm="sudo apt remove"
-alias aptupd="sudo apt update"
-alias aptupg="sudo apt upgrade"
-alias aptsearch="sudo apt-cache search"
-alias aptlist="sudo apt list --installed | grep"
+alias sdn='shutdown now'
+alias rbn='shutdown -r now'
+alias aptins='sudo apt install'
+alias aptrm='sudo apt remove'
+alias aptupd='sudo apt update'
+alias aptupg='sudo apt upgrade'
+alias aptlist='apt list --installed | grep'
 
 alias ds='pwd > /tmp/cwd'
 alias dr='cd "$(</tmp/cwd)"'

@@ -1,3 +1,5 @@
+!! Colorscheme
+
 ! special
 *.foreground:   #ffffff
 *.background:   #000000
@@ -9,71 +11,31 @@
 
 ! red
 *.color1:       #db2d20
-*.color9:       #db2d20
+*.color9:       #f33224
 
 ! green
-*.color2:       #01b25a
-*.color10:      #01b25a
+*.color2:       #01d66c
+*.color10:      #01eb77
 
 ! yellow
-*.color3:       #fded02
-*.color11:      #fded02
+*.color3:       #d6c902
+*.color11:      #e9da02
 
 ! blue
 *.color4:       #01a0e4
-*.color12:      #01a0e4
+*.color12:      #01aaf2
 
 ! magenta
 *.color5:       #ad729f
-*.color13:      #ad729f
+*.color13:      #c17fb2
 
 ! cyan
-*.color6:       #a2ccda
+*.color6:       #98bfcc
 *.color14:      #a2ccda
 
 ! white
 *.color7:       #a5a2a2
 *.color15:      #ffffff
-
-
-!! Colorscheme
-
-!! special
-!*.foreground:   #ffffff
-!*.background:   #000000
-!*.cursorColor:  #ffffff
-!
-!! black
-!*.color0:       #000000
-!*.color8:       #323232
-!
-!! red
-!*.color1:       #f06464
-!*.color9:       #fa7878
-!
-!! green
-!*.color2:       #64f064
-!*.color10:      #78fa78
-!
-!! yellow
-!*.color3:       #c8c850
-!*.color11:      #dcdc64
-!
-!! blue
-!*.color4:       #6464f0
-!*.color12:      #7878fa
-!
-!! magenta
-!*.color5:       #c850c8
-!*.color13:      #dc64dc
-!
-!! cyan
-!*.color6:       #46b4b4
-!*.color14:      #5ac8c8
-!
-!! white
-!*.color7:       #c3c3c3
-!*.color15:      #ffffff
 
 
 !! Keybinds for Navigations
