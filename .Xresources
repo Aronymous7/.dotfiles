@@ -38,7 +38,7 @@
 *.color15:      #ffffff
 
 
-!! Keybinds for Navigations
+!! Keybinds for Navigation
 URxvt.keysym.Shift-Up: command:\033]720;1\007
 URxvt.keysym.Shift-Down: command:\033]721;1\007
 
