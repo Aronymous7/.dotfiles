@@ -31,6 +31,3 @@ export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
 
 # Remap caps to AltGr
 setxkbmap -option "lv3:caps_switch"
-
-# Load .Xresources for URxvt
-xrdb .Xresources
