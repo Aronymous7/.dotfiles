@@ -44,11 +44,11 @@ URxvt.keysym.Shift-Down: command:\033]721;1\007
 
 
 !! URxvt Appearance
-URxvt.font: xft:DejaVuSansMono:size=12
-URxvt.boldFont: xft:DejaVuSansMono-Bold:size=12
-URxvt.italicFont: xft:DejaVuSansMono-Oblique:size=12
-URxvt.boldItalicFont: xft:DejaVuSansMono-BoldOblique:size=12
-URxvt.letterSpace: 0
+URxvt.font: xft:Iosevka:size=14:style=Regular
+URxvt.boldFont: xft:Iosevka:size=14:style=Bold
+URxvt.italicFont: xft:Iosevka:size=14:style=Italic
+URxvt.boldItalicFont: xft:Iosevka:size=14:style=Bold Italic
+URxvt.letterSpace: 1
 URxvt.lineSpace: 0
 URxvt.geometry: 86x28
 URxvt.internalBorder: 2
@@ -58,10 +58,8 @@ URxvt.urgentOnBell: true
 
 
 !! Copy Paste
-URxvt.perl-ext-common: default,clipboard,keyboard-select
+URxvt.perl-ext-common: default,clipboard
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
-URxvt.keysym.M-x: perl:keyboard-select:activate
-URxvt.keysym.M-s: perl:keyboard-select:search
