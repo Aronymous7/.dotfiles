@@ -48,7 +48,7 @@ URxvt.font: xft:Iosevka:size=14:style=Regular
 URxvt.boldFont: xft:Iosevka:size=14:style=Bold
 URxvt.italicFont: xft:Iosevka:size=14:style=Italic
 URxvt.boldItalicFont: xft:Iosevka:size=14:style=Bold Italic
-URxvt.letterSpace: 1
+URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 86x28
 URxvt.internalBorder: 2
