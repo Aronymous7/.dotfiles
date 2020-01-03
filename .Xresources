@@ -44,10 +44,10 @@ URxvt.keysym.Shift-Down: command:\033]721;1\007
 
 
 !! URxvt Appearance
-URxvt.font: xft:Iosevka:size=14:style=Regular
-URxvt.boldFont: xft:Iosevka:size=14:style=Bold
-URxvt.italicFont: xft:Iosevka:size=14:style=Italic
-URxvt.boldItalicFont: xft:Iosevka:size=14:style=Bold Italic
+URxvt.font: xft:Iosevka:size=12:style=Regular
+URxvt.boldFont: xft:Iosevka:size=12:style=Bold
+URxvt.italicFont: xft:Iosevka:size=12:style=Italic
+URxvt.boldItalicFont: xft:Iosevka:size=12:style=Bold Italic
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 86x28
@@ -55,6 +55,12 @@ URxvt.internalBorder: 2
 URxvt.saveline: 2048
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
 
 
 !! Copy Paste
