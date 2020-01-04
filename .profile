@@ -31,9 +31,10 @@ fi
 
 # Set default programs
 export TERM="rxvt-unicode-256color"
-export VISUAL="vim"
 export EDITOR="vim"
+export VISUAL="vim"
 export BROWSER="firefox"
+export MAIL="thunderbird"
 
 # Remap caps to AltGr, set key repeat delay and rate
 setxkbmap -option "lv3:caps_switch"
