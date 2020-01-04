@@ -122,8 +122,6 @@ inoremap " ""<++><ESC>4hi
 inoremap ( ()<++><ESC>4hi
 inoremap [ []<++><ESC>4hi
 inoremap { {}<++><ESC>4hi
-inoremap {<CR> {<CR>}<++><ESC>O
-inoremap {;<CR> {<CR>};<++><ESC>O
 
 " Latex bindings
 autocmd FileType tex inoremap $ $$<++><ESC>4hi
