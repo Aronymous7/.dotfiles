@@ -111,10 +111,6 @@ fi
 set -o vi
 bind '"jj":vi-movement-mode'
 
-# Set Vim as default editor
-export EDITOR='vim'
-export VISUAL='vim'
-
 # Disable CTRL-S and CTRL-Q
 stty -ixon
 

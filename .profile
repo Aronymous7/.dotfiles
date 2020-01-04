@@ -29,5 +29,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Remap caps to AltGr
+# Set default programs
+export TERM="rxvt-unicode-256color"
+export VISUAL="vim"
+export EDITOR="vim"
+export BROWSER="firefox"
+
+# Remap caps to AltGr, set key repeat delay and rate
 setxkbmap -option "lv3:caps_switch"
+xset r rate 300 40
