@@ -12,22 +12,12 @@
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+	    . "$HOME/.bashrc"
     fi
 fi
 
 # Set PATH variable
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/snap/bin
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
 
 # Set default programs
 export TERM="rxvt-unicode-256color"
@@ -35,7 +25,3 @@ export EDITOR="vim"
 export VISUAL="vim"
 export BROWSER="firefox"
 export MAIL="thunderbird"
-
-# Remap caps to AltGr, set key repeat delay and rate
-setxkbmap -option "lv3:caps_switch"
-xset r rate 300 40
