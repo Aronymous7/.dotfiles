@@ -20,7 +20,7 @@ hide_edge_borders both
 bindsym $mod+Return exec urxvt
 
 # more execs
-bindsym $mod+shift+x exec i3lock -n -c "#000000"
+bindsym $mod+shift+x exec --no-startup-id i3lock -n -c "#000000"
 bindsym $mod+b exec firefox
 bindsym $mod+m exec thunderbird
 
