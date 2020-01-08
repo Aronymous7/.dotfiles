@@ -5,3 +5,8 @@ fi
 
 # Remap caps to AltGr
 setxkbmap -option "lv3:caps_switch"
+
+
+# optional/temporary
+xset r rate 300 40
+xinput set-prop 14 154 0
