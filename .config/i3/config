@@ -20,7 +20,7 @@ hide_edge_borders both
 bindsym $mod+Return exec $($TERMINAL)
 
 # more execs
-bindsym $mod+shift+x exec --no-startup-id i3lock -n -c "#000000"
+bindsym $mod+shift+x exec --no-startup-id i3lock -n -c 000000
 bindsym $mod+b exec firefox
 bindsym $mod+m exec thunderbird
 
@@ -155,14 +155,15 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 bar {
-    #status_command i3status --config ~/.config/i3/i3status.conf
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
     font pango:DejaVu Sans 12
 }
 
-exec --no-startup-id xautolock -time 11 -locker i3lock -n -c "#000000"
+#exec --no-startup-id xautolock -time 11 -locker "i3lock -n -c 000000"
+exec --no-startup-id xss-lock -- i3lock -n -c 000000
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
+exec --no-startup-id syncthing -no-browser
 
 exec --no-startup-id i3-msg 'workspace $ws2; exec urxvt; exec urxvt'
 exec --no-startup-id i3-msg 'workspace $ws3; exec firefox'
