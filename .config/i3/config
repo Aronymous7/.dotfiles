@@ -17,7 +17,7 @@ focus_follows_mouse no
 hide_edge_borders both
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec $($TERMINAL)
 
 # more execs
 bindsym $mod+shift+x exec --no-startup-id i3lock -n -c "#000000"
@@ -28,7 +28,7 @@ bindsym $mod+m exec thunderbird
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+s exec dmenu_run
+bindsym $mod+s exec --no-startup-id dmenu_run
 
 # change focus
 bindsym $mod+h focus left
