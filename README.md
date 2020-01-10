@@ -11,7 +11,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install adwaita-icon-theme firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd steam syncthing texlive-full thunderbird tldr vifm vim vim-gui-common volumeicon-alsa xsel xss-lock
+sudo apt install adwaita-icon-theme firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd steam syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xsel xss-lock
 
 ### Non-apt stuff
 
