@@ -160,7 +160,6 @@ bar {
     font pango:DejaVu Sans 12
 }
 
-#exec --no-startup-id xautolock -time 11 -locker "i3lock -n -c 000000"
 exec --no-startup-id xss-lock -- i3lock -n -c 000000
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
