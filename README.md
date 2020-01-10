@@ -15,14 +15,14 @@ sudo apt install adwaita-icon-theme firefox-esr flameshot git htop i3 i3blocks l
 
 ### Non-apt stuff
 
-bumblebee (intel + nvidia graphics)
-franz (combines messengers)
-intellij (java IDE)
-iosevka (font)
-vim-plug (vim plugin installer)
+- bumblebee (intel + nvidia graphics)
+- franz (combines messengers)
+- intellij (java IDE)
+- iosevka (font)
+- vim-plug (vim plugin installer)
 
 ### Probably not needed
 
-network-manager (probably already pre-installed)
-pulse-audio (probably already pre-installed if needed)
-rivalcfg (for steelseries rival mice)
+- network-manager (probably already pre-installed)
+- pulse-audio (probably already pre-installed if needed)
+- rivalcfg (for steelseries rival mice)
