@@ -47,7 +47,7 @@ set expandtab
 set noshiftround
 
 " Cursor motion
-set scrolloff=5
+set scrolloff=4
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
