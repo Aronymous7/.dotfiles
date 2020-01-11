@@ -29,10 +29,13 @@ sudo apt install adwaita-icon-theme firefox-esr flameshot git gsimplecal htop i3
 
 ## Fresh Debian setup
 
-1. install apt stuff
-2. setxkbmap de
-3. usermod -a -G sudo aaron
-4. visudo -> %sudo [...] NOPASSWD: ALL
+1. usermod -a -G sudo aaron
+2. visudo -> %sudo [...] NOPASSWD: ALL
+3. install git, xorg
+4. setxkbmap de
+5. pull .dotfiles
+6. install rxvt-unicode, firefox-esr, i3
+7. install apt stuff
 
 ### Manual configuration
 
