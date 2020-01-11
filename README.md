@@ -7,6 +7,7 @@
 2. alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 3. config checkout
 4. config config --local status.showUntrackedFiles no
+5. config update-index --assume-unchanged ~/.config/okularpartrc
 
 ## The software I use
 ### Get everything via apt
