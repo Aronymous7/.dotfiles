@@ -11,7 +11,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install adwaita-icon-theme firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd steam syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xsel xss-lock
+sudo apt install adwaita-icon-theme firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd steam syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xorg xsel xss-lock
 
 ### Non-apt stuff
 
@@ -21,8 +21,15 @@ sudo apt install adwaita-icon-theme firefox-esr flameshot git gsimplecal htop i3
 - iosevka (font)
 - vim-plug (vim plugin installer)
 
-### Probably not needed
+### Optional
 
 - network-manager (probably already pre-installed)
 - pulse-audio (probably already pre-installed if needed)
 - rivalcfg (for steelseries rival mice)
+
+## Fresh Debian setup
+
+1. install apt stuff
+2. setxkbmap de
+3. usermod -a -G sudo aaron
+4. visudo -> %sudo [...] NOPASSWD: ALL
