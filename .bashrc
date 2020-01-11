@@ -126,6 +126,7 @@ alias aptrm='sudo apt remove'
 alias aptupd='sudo apt update'
 alias aptupg='sudo apt upgrade'
 alias aptlist='apt list --installed | grep'
+alias cl='clear -x'
 
 alias ds='pwd > /tmp/cwd'
 alias dr='cd "$(</tmp/cwd)"'
