@@ -11,7 +11,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install adwaita-icon-theme firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd steam syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xorg xsel xss-lock
+sudo apt install adwaita-icon-theme firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xorg xsel xss-lock
 
 ### Non-apt stuff
 
@@ -33,3 +33,12 @@ sudo apt install adwaita-icon-theme firefox-esr flameshot git gsimplecal htop i3
 2. setxkbmap de
 3. usermod -a -G sudo aaron
 4. visudo -> %sudo [...] NOPASSWD: ALL
+
+### Manual configuration
+
+- firefox
+- lxappearance
+- okular
+- syncthing
+- thunderbird
+- volumeicon
