@@ -21,6 +21,7 @@ sudo apt install adwaita-icon-theme arandr entr firefox-esr flameshot git gsimpl
 - intellij (java IDE)
 - iosevka (font)
 - vim-plug (vim plugin installer)
+- mons (mirror screen)
 
 ### Optional
 
