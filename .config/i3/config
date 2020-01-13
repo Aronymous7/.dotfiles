@@ -16,6 +16,10 @@ focus_follows_mouse no
 # Don't show borders and vertical/horizontal split line
 hide_edge_borders both
 
+# Change brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+
 # start a terminal
 bindsym $mod+Return exec $TERMINAL
 
