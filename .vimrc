@@ -7,6 +7,7 @@ filetype off
 " Load plugins here
 call plug#begin()
 Plug 'lervag/vimtex'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " Turn on syntax highlighting
@@ -43,7 +44,6 @@ autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
 set noshiftround
 
 " Cursor motion
@@ -78,6 +78,14 @@ map <leader>q gqip
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
+
+" Highlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 " Color scheme (terminal)
 set background=dark
@@ -122,6 +130,9 @@ inoremap " ""<++><ESC>4hi
 inoremap ( ()<++><ESC>4hi
 inoremap [ []<++><ESC>4hi
 inoremap { {}<++><ESC>4hi
+
+" NERDTree
+map <leader>t :NERDTreeToggle<CR>
 
 " Latex bindings
 autocmd FileType tex inoremap $ $$<++><ESC>4hi
