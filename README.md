@@ -12,7 +12,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install adwaita-icon-theme arandr entr firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xorg xsel xss-lock
+sudo apt install adwaita-icon-theme arandr firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xorg xsel xss-lock
 
 ### Non-apt stuff
 
@@ -34,10 +34,9 @@ sudo apt install adwaita-icon-theme arandr entr firefox-esr flameshot git gsimpl
 1. usermod -a -G sudo aaron
 2. visudo -> %sudo [...] NOPASSWD: ALL
 3. install git, xorg
-4. setxkbmap de
-5. pull .dotfiles
-6. install rxvt-unicode, firefox-esr, i3
-7. install apt stuff
+4. pull .dotfiles
+5. install rxvt-unicode, firefox-esr, i3
+6. install apt stuff
 
 ### Manual configuration
 
