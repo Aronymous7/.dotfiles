@@ -144,12 +144,3 @@ autocmd FileType tex inoremap ööi \textit{}<++><ESC>T{i
 autocmd FileType tex inoremap ööll \begin{itemize}<CR><CR>\end{itemize}<up>\item<space>
 autocmd FileType tex inoremap ööle \begin{enumerate}<CR><CR>\end{enumerate}<up>\item<space>
 autocmd FileType tex inoremap ööli \item<space>
-
-" Java bindings
-autocmd FileType java inoremap ö; <ESC>A;
-autocmd FileType java inoremap öi if<space>(<right><space>{<CR><++><up><ESC>F)i
-autocmd FileType java nnoremap öee A<space>else<space>{<CR>
-autocmd FileType java nnoremap öei A<space>else<space>if<space>(<right><space>{<CR><++><up><ESC>f)i
-autocmd FileType java inoremap öw while<space>(<right><space>{<CR><++><up><ESC>F)i
-autocmd FileType java inoremap öf for<space>(;<++>;<++><right><space>{<CR><++><up><ESC>T(i
-autocmd FileType java inoremap öm (<++><right><space>{<CR><++><up><ESC>F(i

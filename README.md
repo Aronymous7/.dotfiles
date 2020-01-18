@@ -20,8 +20,8 @@ sudo apt install adwaita-icon-theme arandr firefox-esr flameshot git gsimplecal 
 - franz (combines messengers)
 - intellij (java IDE)
 - iosevka (font)
-- vim-plug (vim plugin installer)
 - mons (mirror screen)
+- vim-plug (vim plugin installer)
 
 ### Optional
 
@@ -33,10 +33,9 @@ sudo apt install adwaita-icon-theme arandr firefox-esr flameshot git gsimplecal 
 
 1. usermod -a -G sudo aaron
 2. visudo -> %sudo [...] NOPASSWD: ALL
-3. install git, xorg
+3. install vim, git, xorg
 4. pull .dotfiles
-5. install rxvt-unicode, firefox-esr, i3
-6. install apt stuff
+5. install apt stuff
 
 ### Manual configuration
 
