@@ -121,10 +121,7 @@ alias ideavimrc='vim ~/.ideavimrc'
 
 alias sdn='sudo shutdown now'
 alias rbn='sudo shutdown -r now'
-alias aptins='sudo apt install'
-alias aptrm='sudo apt remove'
-alias aptupd='sudo apt update'
-alias aptupg='sudo apt upgrade'
+alias aptupgrade='sudo apt update && sudo apt upgrade'
 alias aptlist='apt list --installed | grep'
 alias cl='clear -x'
 

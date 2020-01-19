@@ -4,15 +4,15 @@
 [Full tutorial](https://www.atlassian.com/git/tutorials/dotfiles)
 
 1. git clone --bare https://github.com/Aronymous7/.dotfiles $HOME/.dotfiles
-2. alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-3. config checkout
-4. config config --local status.showUntrackedFiles no
-5. config update-index --assume-unchanged ~/.config/okularpartrc
+1. alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+1. config checkout
+1. config config --local status.showUntrackedFiles no
+1. config update-index --assume-unchanged ~/.config/okularpartrc
 
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xorg xsel xss-lock
+sudo apt install arandr firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd sudo syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xorg xsel xss-lock
 
 ### Non-apt stuff
 
@@ -20,6 +20,11 @@ sudo apt install arandr firefox-esr flameshot git gsimplecal htop i3 i3blocks lx
 - franz (combines messengers)
 - intellij (java IDE)
 - iosevka (font)
+	mkd iosevka
+	wget <normal version zip link>
+	unzip <zip-file>
+	sudo mv ttf /usr/share/fonts/truetype/iosevka
+	sudo fc-cache
 - mons (mirror screen)
 - vim-plug (vim plugin installer)
 
