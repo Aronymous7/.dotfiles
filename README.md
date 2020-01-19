@@ -12,7 +12,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd sudo syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xorg xsel xss-lock
+sudo apt install arandr curl firefox-esr flameshot git gnome-themes-extra-data gsimplecal htop i3 i3blocks lxappearance network-manager-gnome nomacs okular rxvt-unicode snapd sudo syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xorg xsel xss-lock
 
 ### Non-apt stuff
 
@@ -27,10 +27,11 @@ sudo apt install arandr firefox-esr flameshot git gsimplecal htop i3 i3blocks lx
 	sudo fc-cache
 - mons (mirror screen)
 - vim-plug (vim plugin installer)
+	curl command on github page
+	:PlugInstall
 
 ### Optional
 
-- network-manager (probably already pre-installed)
 - pulse-audio (probably already pre-installed if needed)
 - rivalcfg (for steelseries rival mice)
 
@@ -53,6 +54,6 @@ sudo apt install arandr firefox-esr flameshot git gsimplecal htop i3 i3blocks lx
 - okular
 - syncthing
 - thunderbird
-- volumeicon
+- volumeicon/alsamixer
 - xbacklight
 - touchpad/mousesens
