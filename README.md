@@ -16,7 +16,8 @@ sudo apt install arandr curl firefox-esr flameshot git gnome-themes-extra-data g
 
 ### Non-apt stuff
 
-- bumblebee (intel + nvidia graphics)
+- bumblebee (intel + nvidia graphics) \
+	sudo apt-get install bumblebee-nvidia primus libgl1-nvidia-glx
 - franz (combines messengers) \
 	download from website + sudo apt install
 - intellij (java IDE) \
