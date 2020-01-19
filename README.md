@@ -12,7 +12,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install adwaita-icon-theme arandr firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xorg xsel xss-lock
+sudo apt install arandr firefox-esr flameshot git gsimplecal htop i3 i3blocks lxappearance nomacs okular rxvt-unicode snapd syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xorg xsel xss-lock
 
 ### Non-apt stuff
 
@@ -31,12 +31,15 @@ sudo apt install adwaita-icon-theme arandr firefox-esr flameshot git gsimplecal 
 
 ## Fresh Debian setup
 
+1. export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
+1. export EDITOR='vi'
+1. apt install sudo
 1. usermod -a -G sudo aaron
-2. visudo -> %sudo [...] NOPASSWD: ALL
-3. enable non-free packages
-4. install vim, git, xorg
-5. pull .dotfiles
-6. install apt stuff
+1. visudo -> %sudo [...] NOPASSWD: ALL
+1. sudo apt install vim git xorg
+1. pull .dotfiles
+1. sudo apt install i3 rxvt-unicode firefox-esr
+1. install apt stuff
 
 ### Manual configuration
 
