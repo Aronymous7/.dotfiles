@@ -17,7 +17,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Set PATH variable
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/snap/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/snap/bin:~/.local/bin
 
 # Set default programs
 export TERM="rxvt-unicode-256color"

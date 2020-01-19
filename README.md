@@ -12,27 +12,31 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr curl firefox-esr flameshot git gnome-themes-extra-data gsimplecal htop i3 i3blocks lxappearance network-manager-gnome nomacs okular rxvt-unicode snapd sudo syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xorg xsel xss-lock
+sudo apt install arandr curl firefox-esr flameshot git gnome-themes-extra-data gsimplecal htop i3 i3blocks lxappearance network-manager-gnome nomacs okular rxvt-unicode snapd sudo syncthing texlive-full thunderbird tldr udevil vifm vim vim-gui-common volumeicon-alsa xbacklight xinput xorg xsel xss-lock
 
 ### Non-apt stuff
 
 - bumblebee (intel + nvidia graphics)
 - franz (combines messengers)
+	download from website + sudo apt install
 - intellij (java IDE)
+	sudo snap install intellij-idea-community --classic
 - iosevka (font)
 	mkd iosevka
-	wget <normal version zip link>
-	unzip <zip-file>
+	wget https://github.com/be5invis/Iosevka/releases/download/v2.3.3/01-iosevka-2.3.3.zip
+	unzip 01-iosevka-2.3.3.zip
 	sudo mv ttf /usr/share/fonts/truetype/iosevka
 	sudo fc-cache
 - mons (mirror screen)
+	git clone --recursive https://github.com/Ventto/mons.git
+	sudo make install
 - vim-plug (vim plugin installer)
-	curl command on github page
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	:PlugInstall
 
 ### Optional
 
-- pulse-audio (probably already pre-installed if needed)
+- pulse-audio/alsa-utils (probably already pre-installed if needed)
 - rivalcfg (for steelseries rival mice)
 
 ## Fresh Debian setup
