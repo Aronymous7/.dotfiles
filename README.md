@@ -33,9 +33,10 @@ sudo apt install adwaita-icon-theme arandr firefox-esr flameshot git gsimplecal 
 
 1. usermod -a -G sudo aaron
 2. visudo -> %sudo [...] NOPASSWD: ALL
-3. install vim, git, xorg
-4. pull .dotfiles
-5. install apt stuff
+3. enable non-free packages
+4. install vim, git, xorg
+5. pull .dotfiles
+6. install apt stuff
 
 ### Manual configuration
 
