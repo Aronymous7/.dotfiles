@@ -16,23 +16,24 @@ sudo apt install arandr curl firefox-esr flameshot git gnome-themes-extra-data g
 
 ### Non-apt stuff
 
-- bumblebee (intel + nvidia graphics) \
+- bumblebee (intel + nvidia graphics)\
 	sudo apt-get install bumblebee-nvidia primus libgl1-nvidia-glx
-- franz (combines messengers) \
-	download from website + sudo apt install
-- intellij (java IDE) \
+- franz (combines messengers)\
+	download from website + sudo apt install\
+	cd /opt/franz + sudo chmod 4755 chrome-sandbox
+- intellij (java IDE)\
 	sudo snap install intellij-idea-community --classic
-- iosevka (font) \
-	mkd iosevka \
-	wget https://github.com/be5invis/Iosevka/releases/download/v2.3.3/01-iosevka-2.3.3.zip \
-	unzip 01-iosevka-2.3.3.zip \
-	sudo mv ttf /usr/share/fonts/truetype/iosevka \
+- iosevka (font)\
+	mkd iosevka\
+	wget https://github.com/be5invis/Iosevka/releases/download/v2.3.3/01-iosevka-2.3.3.zip\
+	unzip 01-iosevka-2.3.3.zip\
+	sudo mv ttf /usr/share/fonts/truetype/iosevka\
 	sudo fc-cache
-- mons (mirror screen) \
-	git clone --recursive https://github.com/Ventto/mons.git \
+- mons (mirror screen)\
+	git clone --recursive https://github.com/Ventto/mons.git\
 	sudo make install
-- vim-plug (vim plugin installer) \
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
+- vim-plug (vim plugin installer)\
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim\
 	:PlugInstall
 
 ### Optional
