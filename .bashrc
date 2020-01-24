@@ -118,6 +118,7 @@ stty -ixon
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias ideavimrc='vim ~/.ideavimrc'
+alias todo='vim ~/Sync/todo'
 
 alias sdn='sudo shutdown now'
 alias rbn='sudo shutdown -r now'
