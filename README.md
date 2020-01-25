@@ -12,7 +12,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr curl firefox-esr flameshot git gnome-themes-extra-data gsimplecal htop i3 i3blocks lxappearance network-manager-gnome nomacs okular rxvt-unicode snapd sudo syncthing texlive-full thunderbird tldr udevil unclutter vifm vim vim-gui-common volumeicon-alsa xbacklight xinput xorg xsel xss-lock
+sudo apt install arandr curl firefox-esr flameshot git gnome-themes-extra-data gsimplecal htop i3 i3blocks lxappearance network-manager-gnome nomacs okular rxvt-unicode snapd sudo syncthing texlive-full thunderbird tldr udevil unclutter vifm vim vim-gui-common vlc volumeicon-alsa xbacklight xinput xorg xsel xss-lock
 
 ### Non-apt stuff
 
