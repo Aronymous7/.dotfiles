@@ -173,3 +173,4 @@ exec --no-startup-id unclutter
 
 exec --no-startup-id i3-msg 'workspace $ws2; exec urxvt; exec urxvt'
 exec --no-startup-id i3-msg 'workspace $ws3; exec firefox'
+exec --no-startup-id i3-msg 'workspace $ws4; exec thunderbird'
