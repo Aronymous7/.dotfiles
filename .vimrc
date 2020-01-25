@@ -146,6 +146,7 @@ autocmd FileType tex inoremap öös \section{}<++><ESC>T{i
 autocmd FileType tex inoremap ööf \begin{frame}{}<CR><++><CR>\end{frame}<ESC>2kf{a
 autocmd FileType tex inoremap ööb \textbf{}<++><ESC>T{i
 autocmd FileType tex inoremap ööi \textit{}<++><ESC>T{i
+autocmd FileType tex inoremap ööc \cite{}<++><ESC>T{i
 autocmd FileType tex inoremap ööll \begin{itemize}<CR><CR>\end{itemize}<up>\item<space>
 autocmd FileType tex inoremap ööle \begin{enumerate}<CR><CR>\end{enumerate}<up>\item<space>
 autocmd FileType tex inoremap ööli \item<space>
