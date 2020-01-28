@@ -44,7 +44,7 @@ URxvt.keysym.Shift-Down: command:\033]721;1\007
 
 
 !! URxvt Appearance
-URxvt.font: xft:Iosevka:size=12:style=Regular
+URxvt.font: xft:Iosevka:size=12
 URxvt.boldFont: xft:Iosevka:size=12:style=Bold
 URxvt.italicFont: xft:Iosevka:size=12:style=Italic
 URxvt.boldItalicFont: xft:Iosevka:size=12:style=Bold Italic

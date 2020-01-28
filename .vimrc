@@ -35,7 +35,7 @@ set ruler
 " Encoding
 set encoding=utf-8
 
-" Whitespace
+" Wrapping and tabbing
 set wrap
 set textwidth=0
 set linebreak
@@ -90,6 +90,14 @@ autocmd BufWinLeave * call clearmatches()
 " Color scheme (terminal)
 set background=dark
 
+" GVim settings
+if has("gui_running")
+	colorscheme industry
+	set guifont=Iosevka\ 12
+	set guicursor=n-v-c-i:block-Cursor
+	set guicursor+=n-v-c-i:blinkon0
+endif
+
 
 set autoindent
 set splitbelow splitright
@@ -109,6 +117,16 @@ set confirm
 " Use system clipboard by default
 set clipboard=unnamedplus
 
+" Visual line movement
+nnoremap j gj
+nnoremap k gk
+nnoremap 0 g0
+nnoremap $ g$
+nnoremap gj j
+nnoremap gk k
+nnoremap g0 0
+nnoremap g$ $
+
 " Map Escape (enter normal mode)
 inoremap jj <ESC>
 
@@ -116,8 +134,10 @@ inoremap jj <ESC>
 nnoremap <C-s> :update<cr>
 inoremap <C-s> <Esc>:update<cr>gi
 
-" Activate spell checking
-nnoremap <leader>s :setlocal spell spelllang=de<CR>
+" Spell checking
+nnoremap <leader>ss :setlocal spell!<CR>
+nnoremap <leader>sd :setlocal spell! spelllang=de<CR>
+nnoremap <leader>se :setlocal spell! spelllang=en<CR>
 
 " Faster scrolling
 nnoremap <C-e> 3<C-e>
@@ -136,7 +156,7 @@ inoremap [ []<++><ESC>4hi
 inoremap { {}<++><ESC>4hi
 
 " NERDTree
-map <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
 
 " Latex bindings
 autocmd FileType tex inoremap $ $$<++><ESC>4hi
