@@ -172,3 +172,4 @@ autocmd FileType tex inoremap ööle \begin{enumerate}<CR><CR>\end{enumerate}<up
 autocmd FileType tex inoremap ööli \item<space>
 autocmd FileType tex inoremap öörl \label{}<++><ESC>T{i
 autocmd FileType tex inoremap öörr \ref{}<++><ESC>T{i
+autocmd FileType tex inoremap öög \includegraphics[width=0.5\textwidth]{}<++><ESC>T{i

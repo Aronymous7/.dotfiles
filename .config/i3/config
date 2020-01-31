@@ -29,6 +29,9 @@ bindsym $mod+b exec $BROWSER
 bindsym $mod+m exec $MAIL
 bindsym $mod+n exec $CALENDAR
 
+bindsym $mod+Print exec flameshot
+bindsym Print exec flameshot gui
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
