@@ -24,13 +24,11 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym $mod+Return exec $TERMINAL
 
 # more execs
-bindsym $mod+shift+x exec --no-startup-id i3lock -n -c 000000
+bindsym $mod+Shift+x exec --no-startup-id i3lock -n -c 000000
 bindsym $mod+b exec $BROWSER
 bindsym $mod+m exec $MAIL
 bindsym $mod+n exec $CALENDAR
-
-bindsym $mod+Print exec flameshot
-bindsym Print exec flameshot gui
+bindsym $mod+Print exec import -window root ~/Pictures/screenshots/screenshot.png
 
 # kill focused window
 bindsym $mod+Shift+q kill
