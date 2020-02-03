@@ -40,6 +40,7 @@ sudo apt install arandr curl firefox-esr git gnome-themes-extra-data gsimplecal 
 
 - pulse-audio/alsa-utils (probably already pre-installed if needed)
 - rivalcfg (for steelseries rival mice)
+- flameshot
 
 ## Fresh Debian setup
 

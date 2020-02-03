@@ -49,8 +49,12 @@ set noshiftround
 " Cursor motion
 set scrolloff=4
 set backspace=indent,eol,start
-set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
+
+" Highlighting
+hi MatchParen cterm=bold ctermbg=darkgray ctermfg=none
+hi CursorLine cterm=none ctermbg=darkgray ctermfg=none
+nnoremap <Leader>c :set cursorline!<CR>
 
 " Allow hidden buffers
 set hidden
@@ -66,14 +70,10 @@ set showmode
 set showcmd
 
 " Searching
-set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-map <leader><space> :noh<CR>
-
-" Formatting
-map <leader>q gqip
+map <leader>h :set hlsearch!<CR>
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
@@ -86,6 +86,11 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" Jump to last position when opening file
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 " Color scheme (terminal)
 set background=dark
