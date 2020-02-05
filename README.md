@@ -69,5 +69,5 @@ sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop i3 i3bloc
 ## Miscellaneous setup/config stuff
 
 - switching to testing-branch
-	- <old-name> -> <new-name>
-	- security: <new-name>-security
+	- oldname -> newname
+	- security: newname-security
