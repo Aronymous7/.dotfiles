@@ -12,12 +12,10 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop i3 i3blocks imagemagick lxappearance neofetch network-manager nm-tray nomacs okular pandoc rxvt-unicode simple-scan snapd sudo syncthing texlive-full thunderbird tldr udevil unclutter unzip vifm vim vim-gui-common vlc volumeicon-alsa xbacklight xinput xorg xsel xss-lock
+sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop imagemagick lxappearance neofetch network-manager nomacs okular pandoc rxvt-unicode simple-scan sudo syncthing texlive-full thunderbird tldr udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xinput xorg xsel xss-lock
 
 ### Non-apt stuff
 
-- bumblebee (intel + nvidia graphics)
-	- sudo apt-get install bumblebee-nvidia primus libgl1-nvidia-glx
 - franz (combines messengers)
 	- download from website + sudo apt install
 	- cd /opt/franz + sudo chmod 4755 chrome-sandbox
@@ -40,7 +38,9 @@ sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop i3 i3bloc
 
 - pulse-audio/alsa-utils (probably already pre-installed if needed)
 - rivalcfg (for steelseries rival mice)
-- flameshot
+- flameshot (screenshots)
+- bumblebee (intel + nvidia graphics)
+	- sudo apt install bumblebee-nvidia primus libgl1-nvidia-glx
 
 ## Fresh Debian setup
 
@@ -52,7 +52,7 @@ sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop i3 i3bloc
 1. visudo -> %sudo [...] NOPASSWD: ALL
 1. sudo apt install vim git xorg
 1. pull .dotfiles
-1. sudo apt install i3 rxvt-unicode firefox-esr unzip xsel
+1. sudo apt install i3 i3blocks rxvt-unicode firefox-esr unzip xsel
 1. install apt stuff
 
 ### Manual configuration
@@ -62,11 +62,11 @@ sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop i3 i3bloc
 - okular
 - syncthing
 - thunderbird
-- volumeicon/alsamixer
-- xbacklight
-- touchpad/mousesens
+- alsamixer
+- etc conf stuff (mousesens, xbacklight)
+- touchpad
 
-## Miscellaneous setup/config stuff
+### Miscellaneous setup/config stuff
 
 - switching to testing-branch
 	- oldname -> newname
