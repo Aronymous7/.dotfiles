@@ -169,8 +169,11 @@ myKeys =
     --- Open Terminal
         , ("M-<Return>", spawn myTerminal)
 
-    --- Dmenu
+    --- Run Programs
         , ("M-s", spawn "dmenu_run")
+        , ("M-b", spawn "firefox")
+        , ("M-n", spawn "gsimplecal")
+        , ("M-m", spawn "thunderbird")
         ] where nonNSP          = WSIs (return (\ws -> W.tag ws /= "nsp"))
                 nonEmptyNonNSP  = WSIs (return (\ws -> isJust (W.stack ws) && W.tag ws /= "nsp"))
 

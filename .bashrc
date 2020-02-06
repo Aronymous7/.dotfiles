@@ -95,6 +95,8 @@ alias bashrc='vim ~/.bashrc'
 alias ideavimrc='vim ~/.ideavimrc'
 alias i3conf='vim ~/.config/i3/config'
 alias qtileconf='vim ~/.config/qtile/config.py'
+alias xmonadconfig='vim ~/.xmonad/xmonad.hs'
+alias xmobarconfig='vim ~/.xmobar/xmobarrc'
 alias tmuxconf='vim ~/.tmux.conf'
 alias todo='vim ~/Sync/todo'
 
