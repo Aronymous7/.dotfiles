@@ -47,6 +47,10 @@ keys = [
     Key([mod], "l", lazy.layout.next()),
     Key([mod], "space", lazy.layout.next()),
 
+    # Resize windows (monadtall)
+    Key([mod, "shift"], "h", lazy.layout.shrink()),
+    Key([mod, "shift"], "l", lazy.layout.grow()),
+
     # Swap panes of split stack
     Key([mod, "shift"], "space", lazy.layout.rotate()),
 
@@ -75,7 +79,7 @@ keys = [
     Key([mod], "XF86MonBrightnessDown", lazy.spawn("xbacklight -dec 10")),
 ]
 
-groups = [Group(i) for i in "uiop789d"]
+groups = [Group(i) for i in "1234567d"]
 
 for i in groups:
     keys.extend([
@@ -116,9 +120,8 @@ screens = [
                 widget.CurrentLayout(),
                 widget.GroupBox(),
                 widget.WindowName(),
-                widget.Systray(),
                 widget.Clock(format='%d.%m.  %H:%M'),
-                widget.QuickExit(),
+                widget.Systray(),
             ],
             24,
         ),
