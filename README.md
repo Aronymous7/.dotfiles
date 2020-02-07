@@ -12,7 +12,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop i3lock imagemagick lxappearance neofetch network-manager nitrogen nomacs okular pandoc rxvt-unicode simple-scan suckless-tools sudo syncthing texlive-full thunderbird tldr udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xinput xorg xsel xss-lock
+sudo apt install arandr arc-theme curl firefox-esr flameshot git gsimplecal htop i3lock imagemagick lxappearance neofetch network-manager nitrogen nomacs okular pandoc rxvt-unicode simple-scan suckless-tools syncthing texlive-full thunderbird tldr udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xinput xorg xsel xss-lock
 
 ### Non-apt stuff
 
@@ -39,7 +39,6 @@ sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop i3lock im
 
 - pulse-audio/alsa-utils (probably already pre-installed if needed)
 - rivalcfg (for steelseries rival mice)
-- flameshot (screenshots)
 - bumblebee (intel + nvidia graphics)
 	- sudo apt install bumblebee-nvidia primus libgl1-nvidia-glx
 
