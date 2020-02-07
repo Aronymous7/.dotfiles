@@ -64,16 +64,17 @@ import XMonad.Prompt (defaultXPConfig, XPConfig(..), XPPosition(Top), Direction1
 ------------------------------------------------------------------------
 ---CONFIG
 ------------------------------------------------------------------------
-myFont          = "xft:DejaVu Sans:pixelsize=12"
-myModMask       = mod4Mask		-- Sets modkey to super/windows key
-myTerminal      = "urxvt"		-- Sets default terminal
-myTextEditor    = "vim"			-- Sets default text editor
-myBorderWidth   = 2				-- Sets border width for windows
-windowCount     = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
+myFont				= "xft:DejaVu Sans:pixelsize=12"
+myModMask			= mod4Mask		-- Sets modkey to super/windows key
+myTerminal			= "urxvt"		-- Sets default terminal
+myTextEditor		= "vim"			-- Sets default text editor
+myBorderWidth		= 2				-- Sets border width for windows
+myFocusFollowsMouse	= False
+windowCount			= gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
 
 main = do
     -- Launching xmobar.
-    xmproc0 <- spawnPipe "xmobar ~/.xmobar/xmobarrc"
+    xmproc0 <- spawnPipe "xmobar"
     -- the xmonad, ya know...what the WM is named after!
     xmonad $ ewmh desktopConfig
         { manageHook = ( isFullscreen --> doFullFloat ) <+> manageHook desktopConfig <+> manageDocks
@@ -89,14 +90,15 @@ main = do
                         , ppExtras  = [windowCount]                           -- # of windows current workspace
                         , ppOrder  = \(ws:l:t:ex) -> [ws,l]++ex++[t]
                         }
-        , modMask            = myModMask
-        , terminal           = myTerminal
-        , startupHook        = myStartupHook
-        , layoutHook         = myLayoutHook
-        , workspaces         = myWorkspaces
-        , borderWidth        = myBorderWidth
-        , normalBorderColor  = "#292d3e"
-        , focusedBorderColor = "#bbc5ff"
+        , modMask				= myModMask
+        , terminal				= myTerminal
+        , startupHook			= myStartupHook
+        , layoutHook			= myLayoutHook
+        , workspaces			= myWorkspaces
+        , borderWidth			= myBorderWidth
+		, focusFollowsMouse		= myFocusFollowsMouse
+        , normalBorderColor		= "#292d3e"
+        , focusedBorderColor	= "#bbc5ff"
         } `additionalKeysP`         myKeys
 
 ------------------------------------------------------------------------
@@ -134,18 +136,6 @@ myKeys =
 
         , ("M-C-M1-<Up>", sendMessage Arrange)
         , ("M-C-M1-<Down>", sendMessage DeArrange)
-        , ("M-<Up>", sendMessage (MoveUp 10))             --  Move focused window to up
-        , ("M-<Down>", sendMessage (MoveDown 10))         --  Move focused window to down
-        , ("M-<Right>", sendMessage (MoveRight 10))       --  Move focused window to right
-        , ("M-<Left>", sendMessage (MoveLeft 10))         --  Move focused window to left
-        , ("M-S-<Up>", sendMessage (IncreaseUp 10))       --  Increase size of focused window up
-        , ("M-S-<Down>", sendMessage (IncreaseDown 10))   --  Increase size of focused window down
-        , ("M-S-<Right>", sendMessage (IncreaseRight 10)) --  Increase size of focused window right
-        , ("M-S-<Left>", sendMessage (IncreaseLeft 10))   --  Increase size of focused window left
-        , ("M-C-<Up>", sendMessage (DecreaseUp 10))       --  Decrease size of focused window up
-        , ("M-C-<Down>", sendMessage (DecreaseDown 10))   --  Decrease size of focused window down
-        , ("M-C-<Right>", sendMessage (DecreaseRight 10)) --  Decrease size of focused window right
-        , ("M-C-<Left>", sendMessage (DecreaseLeft 10))   --  Decrease size of focused window left
 
     --- Layouts
         , ("M-<Tab>", sendMessage NextLayout)				-- Switch to next layout
@@ -201,14 +191,10 @@ myWorkspaces = clickable . (map xmobarEscape)
 myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts floats $
                mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ myDefaultLayout
              where
-                 myDefaultLayout = tall ||| grid ||| threeCol ||| threeRow ||| oneBig ||| noBorders monocle ||| space ||| floats
+                 myDefaultLayout = tall ||| grid ||| noBorders monocle ||| floats
 
 
-tall       = renamed [Replace "tall"]     $ limitWindows 12 $ spacing 6 $ ResizableTall 1 (3/100) (1/2) []
-grid       = renamed [Replace "grid"]     $ limitWindows 12 $ spacing 6 $ mkToggle (single MIRROR) $ Grid (16/10)
-threeCol   = renamed [Replace "threeCol"] $ limitWindows 3  $ ThreeCol 1 (3/100) (1/2)
-threeRow   = renamed [Replace "threeRow"] $ limitWindows 3  $ Mirror $ mkToggle (single MIRROR) zoomRow
-oneBig     = renamed [Replace "oneBig"]   $ limitWindows 6  $ Mirror $ mkToggle (single MIRROR) $ mkToggle (single REFLECTX) $ mkToggle (single REFLECTY) $ OneBig (5/9) (8/12)
-monocle    = renamed [Replace "monocle"]  $ limitWindows 20 $ Full
-space      = renamed [Replace "space"]    $ limitWindows 4  $ spacing 12 $ Mirror $ mkToggle (single MIRROR) $ mkToggle (single REFLECTX) $ mkToggle (single REFLECTY) $ OneBig (2/3) (2/3)
-floats     = renamed [Replace "floats"]   $ limitWindows 20 $ simplestFloat
+tall	= renamed [Replace "tall"]     $ limitWindows 12 $ spacing 6 $ ResizableTall 1 (3/100) (1/2) []
+grid	= renamed [Replace "grid"]     $ limitWindows 12 $ spacing 6 $ mkToggle (single MIRROR) $ Grid (16/10)
+monocle	= renamed [Replace "monocle"]  $ limitWindows 20 $ Full
+floats	= renamed [Replace "floats"]   $ limitWindows 20 $ simplestFloat
