@@ -52,7 +52,7 @@ sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop i3lock im
 1. visudo -> %sudo [...] NOPASSWD: ALL
 1. sudo apt install vim git xorg
 1. pull .dotfiles
-1. sudo apt install i3 i3blocks rxvt-unicode firefox-esr unzip xsel
+1. sudo apt install xmonad xmobar rxvt-unicode firefox-esr unzip xsel
 1. install apt stuff
 
 ### Manual configuration
