@@ -14,16 +14,15 @@ import qualified XMonad.StackSet as W
 import XMonad.Util.Loggers
 import XMonad.Util.EZConfig (additionalKeysP, additionalMouseBindings)
 import XMonad.Util.Run (runInTerm, spawnPipe)
-import XMonad.Util.SpawnOnce
 
     -- Hooks
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, defaultPP, wrap, pad, xmobarPP, xmobarColor, shorten, PP(..))
 import XMonad.Hooks.ManageDocks (avoidStruts, docksStartupHook, manageDocks)
-import XMonad.Hooks.ManageHelpers (isFullscreen, isDialog,  doFullFloat, doCenterFloat)
 import XMonad.Hooks.Place (placeHook, withGaps, smart)
 import XMonad.Hooks.SetWMName
 
     -- Actions
+import XMonad.Actions.SpawnOn
 import XMonad.Actions.Promote
 import XMonad.Actions.RotSlaves (rotSlavesDown, rotAllDown)
 import XMonad.Actions.CopyWindow (kill1)
@@ -67,7 +66,7 @@ main = do
     xmproc0 <- spawnPipe "xmobar"
     -- the xmonad, ya know...what the WM is named after!
     xmonad $ desktopConfig
-        { manageHook = ( isFullscreen --> doFullFloat ) <+> manageHook desktopConfig <+> manageDocks
+        { manageHook = manageSpawn <+> manageHook desktopConfig <+> manageDocks
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = \x -> hPutStrLn xmproc0 x
                         , ppCurrent = xmobarColor "#c3e88d" "" . wrap "[" "]" -- Current workspace in xmobar
@@ -84,6 +83,7 @@ main = do
         , terminal				= myTerminal
         , startupHook			= myStartupHook
         , layoutHook			= myLayoutHook
+		, workspaces			= myWorkspaces
         , borderWidth			= myBorderWidth
 		, focusFollowsMouse		= myFocusFollowsMouse
         , normalBorderColor		= "#292d3e"
@@ -94,7 +94,13 @@ main = do
 ---AUTOSTART
 ------------------------------------------------------------------------
 myStartupHook = do
-          setWMName "LG3D"
+			spawnOn "2" "urxvt"
+			spawnOn "3" "firefox"
+			spawnOn "4" "thunderbird"
+			setWMName "LG3D"
+
+myWorkspaces :: [String]
+myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 ------------------------------------------------------------------------
 ---KEYBINDINGS
@@ -138,11 +144,11 @@ myKeys =
 		, ("M-S-d", shiftTo Next emptyNonNSP)
 
     --- Run Programs
-        , ("M-<Return>", spawn myTerminal)
-        , ("M-s", spawn "dmenu_run")
-        , ("M-b", spawn "firefox")
-        , ("M-n", spawn "gsimplecal")
-        , ("M-m", spawn "thunderbird")
+        , ("M-<Return>", spawnHere myTerminal)
+        , ("M-s", spawnHere "dmenu_run")
+        , ("M-b", spawnHere "firefox")
+        , ("M-n", spawnHere "gsimplecal")
+        , ("M-m", spawnHere "thunderbird")
         ] where nonNSP          = WSIs (return (\ws -> W.tag ws /= "nsp"))
                 nonEmptyNonNSP  = WSIs (return (\ws -> isJust (W.stack ws) && W.tag ws /= "nsp"))
                 emptyNonNSP		= WSIs (return (\ws -> not (isJust (W.stack ws)) && W.tag ws /= "nsp"))

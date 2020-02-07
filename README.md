@@ -20,6 +20,7 @@ sudo apt install arandr arc-theme curl firefox-esr git gsimplecal htop i3lock im
 	- download from website + sudo apt install
 	- cd /opt/franz + sudo chmod 4755 chrome-sandbox
 - intellij (java IDE)
+	- sudo apt install snapd
 	- sudo snap install intellij-idea-community --classic
 - iosevka (font)
 	- mkd iosevka
