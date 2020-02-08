@@ -66,6 +66,7 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 - touchpad
 - nitrogen
 - nomacs (dark theme)
+- cups
 
 ### Miscellaneous setup/config stuff
 
