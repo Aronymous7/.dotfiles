@@ -4,3 +4,4 @@ nitrogen --restore &
 [[ -z $(pgrep syncthing) ]] && syncthing -no-browser &
 [[ -z $(pgrep unclutter) ]] && unclutter &
 [[ -z $(pgrep devmon) ]] && devmon &
+[[ -z $(pgrep dunst) ]] && dunst &

@@ -7,7 +7,7 @@
 1. alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 1. config checkout
 1. config config --local status.showUntrackedFiles no
-1. config update-index --assume-unchanged ~/.config/okularpartrc
+1. config update-index --assume-unchanged ~/.config/okularpartrc ~/.config/Dharkael/flameshot.ini
 
 ## The software I use
 ### Get everything via apt
@@ -19,7 +19,7 @@ sudo apt install arandr arc-theme curl dunst firefox-esr flameshot fonts-inconso
 - st
 	- cd ~/st/
 	- make
-	- sudo make install
+	- sudo make install clean
 - franz (combines messengers)
 	- download from website + sudo apt install
 	- cd /opt/franz + sudo chmod 4755 chrome-sandbox
@@ -35,7 +35,7 @@ sudo apt install arandr arc-theme curl dunst firefox-esr flameshot fonts-inconso
 
 ### Optional
 
-- pulse-audio/alsa-utils (probably already pre-installed if needed)
+- alsa-utils (probably already pre-installed if needed)
 - rivalcfg (for steelseries rival mice)
 - bumblebee (intel + nvidia graphics)
 	- sudo apt install bumblebee-nvidia primus libgl1-nvidia-glx
@@ -65,6 +65,7 @@ sudo apt install arandr arc-theme curl dunst firefox-esr flameshot fonts-inconso
 - etc conf stuff (mousesens, xbacklight)
 - touchpad
 - nitrogen
+- nomacs (dark theme)
 
 ### Miscellaneous setup/config stuff
 
