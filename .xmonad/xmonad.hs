@@ -119,16 +119,17 @@ myKeys =
     --- Windows navigation
         , ("M-i", windows W.focusMaster)             -- Move focus to the master window
         , ("M-j", windows W.focusDown)               -- Move focus to the next window
+        , ("M1-<Tab>", windows W.focusDown)
         , ("M-k", windows W.focusUp)                 -- Move focus to the prev window
+        , ("M1-S-<Tab>", windows W.focusUp)
         , ("M-S-i", windows W.swapMaster)            -- Swap the focused window and the master window
         , ("M-S-j", windows W.swapDown)              -- Swap the focused window with the next window
         , ("M-S-k", windows W.swapUp)                -- Swap the focused window with the prev window
-        , ("M-S-<Tab>", rotSlavesDown)               -- Rotate all windows except master and keep focus in place
         , ("M-C-<Tab>", rotAllDown)                  -- Rotate all the windows in the current stack
         , ("M-<Backspace>", promote)                 -- Moves focused window to master, all others maintain order
 
     --- Layouts
-        , ("M-<Tab>", sendMessage NextLayout)				-- Switch to next layout
+        , ("M-<Space>", sendMessage NextLayout)				-- Switch to next layout
 
         , ("M-C-h", sendMessage Shrink)
         , ("M-C-l", sendMessage Expand)
@@ -137,11 +138,13 @@ myKeys =
 
     --- Workspaces
         , ("M-l", moveTo Next nonEmptyNonNSP)					-- Go to next non-empty workspace
+        , ("M-<Tab>", moveTo Next nonEmptyNonNSP)
         , ("M-h", moveTo Prev nonEmptyNonNSP)					-- Go to previous non-empty workspace
-		, ("M-d", moveTo Next emptyNonNSP)
+        , ("M-S-<Tab>", moveTo Prev nonEmptyNonNSP)
+		, ("M-d", moveTo Next emptyNonNSP)						-- Go to next empty workspace
         , ("M-S-l", shiftTo Next nonNSP >> moveTo Next nonNSP)	-- Shifts focused window to next workspace
         , ("M-S-h", shiftTo Prev nonNSP >> moveTo Prev nonNSP)	-- Shifts focused window to previous workspace
-		, ("M-S-d", shiftTo Next emptyNonNSP)
+		, ("M-S-d", shiftTo Next emptyNonNSP)					-- Shifts focused window to next empty workspace
 
     --- Run Programs
         , ("M-<Return>", spawnHere myTerminal)
