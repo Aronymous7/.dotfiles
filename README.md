@@ -12,7 +12,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr arc-theme curl firefox-esr flameshot fonts-inconsolata git gsimplecal htop i3lock imagemagick lxappearance neofetch network-manager nitrogen nomacs okular pandoc simple-scan suckless-tools syncthing texlive-full thunderbird tldr udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xorg xss-lock
+sudo apt install arandr arc-theme curl firefox-esr flameshot fonts-inconsolata git gsimplecal htop i3lock imagemagick lxappearance neofetch network-manager nitrogen nomacs okular pandoc simple-scan suckless-tools syncthing texlive-full thunderbird tldr tmux udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xorg xss-lock
 
 ### Non-apt stuff
 
