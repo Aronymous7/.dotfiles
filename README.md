@@ -12,22 +12,20 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr arc-theme curl firefox-esr flameshot git gsimplecal htop i3lock imagemagick lxappearance neofetch network-manager nitrogen nomacs okular pandoc rxvt-unicode simple-scan suckless-tools syncthing texlive-full thunderbird tldr udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xinput xorg xsel xss-lock
+sudo apt install arandr arc-theme curl firefox-esr flameshot git gsimplecal htop i3lock imagemagick lxappearance neofetch network-manager nitrogen nomacs okular pandoc simple-scan suckless-tools syncthing texlive-full thunderbird tldr udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xorg xss-lock
 
 ### Non-apt stuff
 
+- st
+	- cd ~/st/
+	- make
+	- sudo make install
 - franz (combines messengers)
 	- download from website + sudo apt install
 	- cd /opt/franz + sudo chmod 4755 chrome-sandbox
 - intellij (java IDE)
 	- sudo apt install snapd
 	- sudo snap install intellij-idea-community --classic
-- iosevka (font)
-	- mkd iosevka
-	- wget https://github.com/be5invis/Iosevka/releases/download/v2.3.3/01-iosevka-2.3.3.zip
-	- unzip 01-iosevka-2.3.3.zip
-	- sudo mv ttf /usr/share/fonts/truetype/iosevka
-	- sudo fc-cache
 - mons (mirror screen)
 	- git clone --recursive https://github.com/Ventto/mons.git
 	- sudo make install
@@ -52,7 +50,8 @@ sudo apt install arandr arc-theme curl firefox-esr flameshot git gsimplecal htop
 1. visudo -> %sudo [...] NOPASSWD: ALL
 1. sudo apt install vim git xorg
 1. pull .dotfiles
-1. sudo apt install xmonad xmobar rxvt-unicode firefox-esr unzip xsel
+1. install st
+1. sudo apt install xmonad xmobar firefox-esr
 1. install apt stuff
 
 ### Manual configuration
@@ -65,6 +64,7 @@ sudo apt install arandr arc-theme curl firefox-esr flameshot git gsimplecal htop
 - alsamixer
 - etc conf stuff (mousesens, xbacklight)
 - touchpad
+- nitrogen
 
 ### Miscellaneous setup/config stuff
 

@@ -55,7 +55,7 @@ import XMonad.Prompt (defaultXPConfig, XPConfig(..), XPPosition(Top), Direction1
 ------------------------------------------------------------------------
 myFont				= "xft:DejaVu Sans:pixelsize=12"
 myModMask			= mod4Mask		-- Sets modkey to super/windows key
-myTerminal			= "urxvt"		-- Sets default terminal
+myTerminal			= "st"			-- Sets default terminal
 myTextEditor		= "vim"			-- Sets default text editor
 myBorderWidth		= 1				-- Sets border width for windows
 myFocusFollowsMouse	= False
@@ -94,7 +94,7 @@ main = do
 ---AUTOSTART
 ------------------------------------------------------------------------
 myStartupHook = do
-			spawnOn "2" "urxvt"
+			spawnOn "2" myTerminal
 			spawnOn "3" "firefox"
 			spawnOn "4" "thunderbird"
 			setWMName "LG3D"
