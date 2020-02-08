@@ -1,0 +1,11 @@
+# monitor brightness
+XF86MonBrightness{Up,Down}
+	xbacklight {-inc 10,-dec 10}
+
+# raise/lower volume
+XF86Audio{Raise,Lower}Volume
+	amixer -M set Master {5%+,5%-} 1>/dev/null
+
+# mute/unmute volume
+XF86AudioMute
+	amixer set Master toggle 1>/dev/null
