@@ -13,6 +13,7 @@ Config { font = "xft:DejaVu Sans:size=12:antialias=true:hinting=true"
        , iconRoot = "."
        , commands = [ Run UnsafeStdinReader
                     , Run Cpu ["-t", "cpu <total>%"] 50
+					, Run Com "/bin/bash" ["-c", "~/scripts/get_master_volume.sh"] "myvolume" 50
                     , Run Memory ["-t", "mem <usedratio>%"] 50
                     , Run DiskU [("/", "root <free> -"), ("/home", "home <free>")] [] 600
 					, Run Battery ["-t", "bat <left>% (<acstatus>)"] 600
@@ -20,5 +21,5 @@ Config { font = "xft:DejaVu Sans:size=12:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %UnsafeStdinReader% }{ <fc=#FFB86C>%cpu%</fc> | <fc=#FF5555>%memory%</fc> | <fc=#82AAFF>%disku%</fc> | <fc=#228833>%battery%</fc> | <fc=#8BE9FD>%date%</fc> "
+       , template = " %UnsafeStdinReader% }{ <fc=#BBBBFF>%myvolume%</fc> | <fc=#FFB86C>%cpu%</fc> | <fc=#FF5555>%memory%</fc> | <fc=#82AAFF>%disku%</fc> | <fc=#228833>%battery%</fc> | <fc=#8BE9FD>%date%</fc> "
        }
