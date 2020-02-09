@@ -12,12 +12,11 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-inconsolata git gsimplecal htop i3lock lxappearance neofetch network-manager nitrogen nomacs okular pandoc simple-scan suckless-tools syncthing texlive-full thunderbird tldr tmux udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xorg xss-lock
+sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-inconsolata git gsimplecal htop i3lock lxappearance neofetch network-manager nitrogen nomacs okular pandoc simple-scan suckless-tools syncthing texlive-full thunderbird tldr tmux udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xmobar xmonad xorg xss-lock
 
 ### Non-apt stuff
 
 - st
-	- cd ~/st/
 	- make
 	- sudo make install clean
 - franz (combines messengers)
@@ -51,22 +50,32 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 1. sudo apt install vim git xorg
 1. pull .dotfiles
 1. install st
-1. sudo apt install xmonad xmobar firefox-esr
-1. install apt stuff
+1. install apt stuff (eval $(sed '15q;d' ~/README.md))
 
 ### Manual configuration
 
 - firefox
+	- sync, preferences
 - lxappearance
+	- set themes
 - okular
+	- set keybindings
 - syncthing
+	- sync folders (Sync, Studium)
 - thunderbird
+	- connect webmail accounts (yahoo, tu, hotmail)
 - alsamixer
-- etc conf stuff (mousesens, xbacklight)
+	- set default soundcard (optional)
+- etc\_conf\_stuff
+	- copy to respective files, adjust mousesens, intel backlight (optional)
 - touchpad
+	- disable (optional)
 - nitrogen
-- nomacs (dark theme)
+	- select wallpaper
+- nomacs
+	- dark theme
 - cups
+	- add and configure printer
 
 ### Miscellaneous setup/config stuff
 
