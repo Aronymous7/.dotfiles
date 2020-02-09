@@ -148,7 +148,6 @@ myKeys =
 
     --- Run Programs
         , ("M-<Return>", spawnHere myTerminal)
-        , ("M-s", spawnHere "dmenu_run")
         , ("M-b", spawnHere "firefox")
         , ("M-n", spawnHere "gsimplecal")
         , ("M-m", spawnHere "thunderbird")

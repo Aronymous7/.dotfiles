@@ -9,3 +9,7 @@ XF86Audio{Raise,Lower}Volume
 # mute/unmute volume
 XF86AudioMute
 	amixer set Master toggle 1>/dev/null
+
+# launch programs
+super + s
+	dmenu_run
