@@ -137,23 +137,23 @@ myKeys =
         , ("M-C-k", sendMessage MirrorExpand)
 
     --- Workspaces
-        , ("M-l", moveTo Next nonEmptyNonNSP)					-- Go to next non-empty workspace
-        , ("M-<Tab>", moveTo Next nonEmptyNonNSP)
-        , ("M-h", moveTo Prev nonEmptyNonNSP)					-- Go to previous non-empty workspace
-        , ("M-S-<Tab>", moveTo Prev nonEmptyNonNSP)
-		, ("M-d", moveTo Next emptyNonNSP)						-- Go to next empty workspace
-        , ("M-S-l", shiftTo Next nonNSP >> moveTo Next nonNSP)	-- Shifts focused window to next workspace
-        , ("M-S-h", shiftTo Prev nonNSP >> moveTo Prev nonNSP)	-- Shifts focused window to previous workspace
-		, ("M-S-d", shiftTo Next emptyNonNSP)					-- Shifts focused window to next empty workspace
+        , ("M-l", moveTo Next nonEmptyWSs)					-- Go to next non-empty workspace
+        , ("M-<Tab>", moveTo Next nonEmptyWSs)
+        , ("M-h", moveTo Prev nonEmptyWSs)					-- Go to previous non-empty workspace
+        , ("M-S-<Tab>", moveTo Prev nonEmptyWSs)
+		, ("M-d", moveTo Next emptyWSs)						-- Go to next empty workspace
+        , ("M-S-l", shiftTo Next allWSs >> moveTo Next allWSs)	-- Shifts focused window to next workspace
+        , ("M-S-h", shiftTo Prev allWSs >> moveTo Prev allWSs)	-- Shifts focused window to previous workspace
+		, ("M-S-d", shiftTo Next emptyWSs)					-- Shifts focused window to next empty workspace
 
     --- Run Programs
         , ("M-<Return>", spawnHere myTerminal)
         , ("M-b", spawnHere "firefox")
         , ("M-n", spawnHere "gsimplecal")
         , ("M-m", spawnHere "thunderbird")
-        ] where nonNSP          = WSIs (return (\ws -> W.tag ws /= "nsp"))
-                nonEmptyNonNSP  = WSIs (return (\ws -> isJust (W.stack ws) && W.tag ws /= "nsp"))
-                emptyNonNSP		= WSIs (return (\ws -> not (isJust (W.stack ws)) && W.tag ws /= "nsp"))
+        ] where allWSs          = WSIs (return (\ws -> W.tag ws /= "nsp"))
+                nonEmptyWSs		= WSIs (return (\ws -> isJust (W.stack ws)))
+                emptyWSs		= WSIs (return (\ws -> not (isJust (W.stack ws))))
 
 ------------------------------------------------------------------------
 ---LAYOUTS
