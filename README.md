@@ -78,6 +78,8 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 	- add and configure printer
 - grub-theme
 	- download theme, sudo bash install.sh
+- github ssh
+	- generate key-pair, add to ssh-agent, add to github, https -> ssh
 
 ### Miscellaneous setup/config stuff
 
