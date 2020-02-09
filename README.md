@@ -50,7 +50,7 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 1. sudo apt install vim git xorg
 1. pull .dotfiles
 1. install st
-1. install apt stuff (eval $(sed '15q;d' ~/README.md))
+1. eval $(sed '15q;d' ~/README.md)
 
 ### Manual configuration
 
@@ -76,6 +76,8 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 	- dark theme
 - cups
 	- add and configure printer
+- grub-theme
+	- download theme, sudo bash install.sh
 
 ### Miscellaneous setup/config stuff
 
