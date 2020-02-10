@@ -44,7 +44,7 @@ windowCount		= gets $ Just . show . length . W.integrate' . W.stack . W.workspac
 main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ desktopConfig
-        { manageHook = manageSpawn
+        { manageHook = manageSpawn <+> myComposeOne
         , logHook = dynamicLogWithPP xmobarPP
             { ppOutput = \x -> hPutStrLn xmproc x
             , ppCurrent = xmobarColor "#c3e88d" "" . wrap "[" "]" -- Current workspace in xmobar
@@ -67,6 +67,12 @@ main = do
         , focusedBorderColor	= "#bbc5ff"
         } `additionalKeysP`     myKeys
           `removeKeysP`         myRemoveKeys
+
+myComposeOne = composeOne
+	[ isDialog					-?> doFloat
+	, className =? "Nitrogen"	-?> doFloat
+	, return True				-?> doF W.swapDown
+	]
 
 ------------------------------------------------------------------------
 ---AUTOSTART
