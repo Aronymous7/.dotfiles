@@ -64,12 +64,15 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 	- sync folders (Sync, Studium)
 - thunderbird
 	- connect webmail accounts (yahoo, tu, hotmail)
-- alsamixer
-	- set default soundcard (optional)
+- alsamixer (optional)
+	- cat /proc/asound/cards
+	- create /etc/asound.conf
+	- 2 lines: defaults.pcm.card num & defaults.ctl.card num
 - etc\_conf\_stuff
-	- copy to respective files, adjust mousesens, intel backlight (optional)
-- touchpad
-	- disable (optional)
+	- mouse acceleration, adjust accel speed
+	- intel backlight (optional)
+- disable touchpad (optional)
+	- alien: xinput --disable 14
 - nitrogen
 	- select wallpaper
 - nomacs
@@ -77,9 +80,11 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 - cups
 	- add and configure printer
 - grub-theme
-	- download theme, sudo bash install.sh
+	- sudo bash install.sh
 - github ssh
 	- generate key-pair, add to ssh-agent, add to github, https -> ssh
+- bluetooth
+	- sudo systemctl disable bluetooth
 
 ### Miscellaneous setup/config stuff
 
