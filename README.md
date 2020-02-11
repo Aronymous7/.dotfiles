@@ -19,18 +19,21 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 - st
 	- make
 	- sudo make install clean
-- franz (combines messengers)
+- franz
 	- download from website + sudo apt install
 	- cd /opt/franz + sudo chmod 4755 chrome-sandbox
-- intellij (java IDE)
+- intellij
 	- sudo apt install snapd
 	- sudo snap install intellij-idea-community --classic
-- mons (mirror screen)
+- mons
 	- git clone --recursive https://github.com/Ventto/mons.git
 	- sudo make install
-- vim-plug (vim plugin installer)
+- vim-plug
 	- curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	- :PlugInstall
+- tpm
+	- git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	- in tmux: prefix+I
 
 ### Optional
 

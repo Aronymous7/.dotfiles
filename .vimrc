@@ -8,6 +8,7 @@ filetype off
 call plug#begin()
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
+Plug 'tpope/vim-obsession'
 call plug#end()
 
 " Turn on syntax highlighting
