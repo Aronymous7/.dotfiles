@@ -108,6 +108,9 @@ endif
 set autoindent
 set splitbelow splitright
 
+set ttymouse=xterm2
+set mouse=a
+
 " Beam-cursor in insert mode
 let &t_EI .= "\<Esc>[2 q"
 let &t_SR .= "\<Esc>[2 q"
