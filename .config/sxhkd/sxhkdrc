@@ -8,6 +8,10 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
 	amixer set Master toggle 1>/dev/null
 
+# lock screen
+super + shift + x
+	i3lock -n -c 000000
+
 # launch programs
 super + s
 	dmenu_run
