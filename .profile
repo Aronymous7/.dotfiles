@@ -20,7 +20,6 @@ fi
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/snap/bin:~/.local/bin
 
 # Set default programs
-export TERM="st-256color"
 export TERMINAL="st"
 export EDITOR="vim"
 export VISUAL="vim"
