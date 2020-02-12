@@ -12,7 +12,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-inconsolata git gsimplecal htop i3lock lxappearance neofetch network-manager nitrogen nomacs okular pandoc simple-scan suckless-tools sxhkd syncthing texlive-full thunderbird tldr tmux udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xmobar xmonad xorg xss-lock
+sudo apt install alsa-utils arandr arc-theme cups curl dunst firefox-esr flameshot fonts-inconsolata git gsimplecal htop i3lock lxappearance neofetch network-manager nitrogen nomacs okular pandoc simple-scan suckless-tools sxhkd syncthing texlive-full thunderbird tldr tmux udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xmobar xmonad xorg xss-lock
 
 ### Non-apt stuff
 
@@ -71,7 +71,7 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 	- create /etc/asound.conf
 	- 2 lines: defaults.pcm.card num & defaults.ctl.card num
 - etc\_conf\_stuff
-	- mouse acceleration, adjust accel speed (T440s: -0.6)
+	- mouse acceleration, adjust accel speed
 	- intel backlight (optional)
 - disable touchpad (optional)
 	- alien: xinput --disable 14
