@@ -151,6 +151,7 @@ nnoremap g$ $
 
 " Map Escape (enter normal mode)
 inoremap jj <ESC>
+vnoremap <space> <ESC>
 
 " Save file
 nnoremap <C-s> :update<cr>
