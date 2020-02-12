@@ -22,9 +22,6 @@ sudo apt install alsa-utils arandr arc-theme cups curl dunst firefox-esr flamesh
 - franz
 	- download from website + sudo apt install
 	- cd /opt/franz + sudo chmod 4755 chrome-sandbox
-- intellij
-	- sudo apt install snapd
-	- sudo snap install intellij-idea-community --classic
 - mons
 	- git clone --recursive https://github.com/Ventto/mons.git
 	- sudo make install
@@ -37,8 +34,6 @@ sudo apt install alsa-utils arandr arc-theme cups curl dunst firefox-esr flamesh
 
 ### Optional
 
-- alsa-utils (probably already pre-installed if needed)
-- rivalcfg (for steelseries rival mice)
 - bumblebee (intel + nvidia graphics)
 	- sudo apt install bumblebee-nvidia primus libgl1-nvidia-glx
 
@@ -84,7 +79,12 @@ sudo apt install alsa-utils arandr arc-theme cups curl dunst firefox-esr flamesh
 - grub-theme
 	- sudo bash install.sh
 - github ssh
-	- generate key-pair, add to ssh-agent, add to github, https -> ssh
+	- ssh-keygen -t rsa -b 4096 -C "aaron.beigelbeck@yahoo.de"
+	- eval "$(ssh-agent -s)"
+	- ssh-add ~/.ssh/id\_rsa
+	- add id\_rsa.pub to github
+	- ssh -T git@github.com
+	- config remote set-url origin git@github.com:Aronymous7/.dotfiles.git
 - bluetooth
 	- sudo systemctl disable bluetooth
 
