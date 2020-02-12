@@ -27,11 +27,10 @@ let maplocalleader = "ü"
 " Security
 set modelines=0
 
-" Show line numbers
+" Line numbers and status bar
 set number
-
-" Show file stats
 set ruler
+set laststatus=2
 
 " Encoding
 set encoding=utf-8
@@ -40,12 +39,20 @@ set encoding=utf-8
 set wrap
 set textwidth=0
 set linebreak
-set formatoptions=tcqn1
-autocmd FileType * setlocal formatoptions-=r formatoptions-=o
-set tabstop=4
 set shiftwidth=4
+set tabstop=4
 set softtabstop=4
+set smarttab
 set noshiftround
+set autoindent
+
+" Show as many lines as possible
+set display+=lastline
+
+" Formatting
+set formatoptions=tcqn1j
+autocmd FileType * setlocal formatoptions-=r formatoptions-=o
+set nrformats-=octal
 
 " Cursor motion
 set scrolloff=4
@@ -62,9 +69,6 @@ set hidden
 
 " Rendering
 set ttyfast
-
-" Status bar
-set laststatus=2
 
 " Last line
 set showmode
@@ -105,9 +109,17 @@ if has("gui_running")
 endif
 
 
-set autoindent
+" More intuitive splitting
 set splitbelow splitright
 
+" Always read external changes
+set autoread
+
+" Timeout on keycodes
+set ttimeout
+set ttimeoutlen=100
+
+" Enable mouse
 set ttymouse=xterm2
 set mouse=a
 
@@ -119,6 +131,7 @@ let &t_SI .= "\<Esc>[6 q"
 " Better command line completion
 set wildmenu
 set wildmode=longest,list,full
+set complete-=i
 
 " Ask for confirmation when :q and not saved
 set confirm
