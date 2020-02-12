@@ -16,7 +16,7 @@ super + shift + x
 super + s
 	dmenu_run
 super + Return
-	$TERMINAL
+	$TERMINAL -- tmux
 super + b
 	$BROWSER
 super + n
