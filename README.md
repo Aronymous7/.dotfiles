@@ -45,15 +45,14 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 ## Fresh Debian setup
 
 1. apt edit-sources -> enable contrib & non-free (optional: go testing or unstable)
+1. sudo apt update && sudo apt dist-upgrade
 1. export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
 1. export EDITOR='vi'
-1. apt install sudo
-1. usermod -a -G sudo aaron
 1. visudo -> %sudo [...] NOPASSWD: ALL
 1. sudo apt install vim git xorg
 1. pull .dotfiles
-1. install st
 1. eval $(sed '15q;d' ~/README.md)
+1. install st
 
 ### Manual configuration
 
@@ -72,7 +71,7 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 	- create /etc/asound.conf
 	- 2 lines: defaults.pcm.card num & defaults.ctl.card num
 - etc\_conf\_stuff
-	- mouse acceleration, adjust accel speed
+	- mouse acceleration, adjust accel speed (T440s: -0.6)
 	- intel backlight (optional)
 - disable touchpad (optional)
 	- alien: xinput --disable 14
@@ -91,6 +90,6 @@ sudo apt install arandr arc-theme cups curl dunst firefox-esr flameshot fonts-in
 
 ### Miscellaneous setup/config stuff
 
-- switching to testing-branch
+- switching to testing/sid
 	- oldname -> newname
 	- security: newname-security
