@@ -87,6 +87,8 @@ sudo apt install alsa-utils arandr arc-theme cups curl dunst firefox-esr flamesh
 	- config remote set-url origin git@github.com:Aronymous7/.dotfiles.git
 - bluetooth
 	- sudo systemctl disable bluetooth
+- network-manager
+	- manage ethernet: delete lines in /etc/network/interfaces
 
 ### Miscellaneous setup/config stuff
 

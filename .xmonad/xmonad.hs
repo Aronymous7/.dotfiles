@@ -78,7 +78,7 @@ myComposeOne = composeOne
 ---AUTOSTART
 ------------------------------------------------------------------------
 myStartupHook = do
-	spawnOn "2" myTerminal
+	spawnOn "2" "st -- tmux"
 	spawnOn "3" "firefox"
 	spawnOn "4" "thunderbird"
 	setWMName "LG3D"
