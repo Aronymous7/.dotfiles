@@ -12,6 +12,14 @@ XF86AudioMute
 super + shift + x
 	i3lock -n -c 000000
 
+# screenshots
+super + Print
+	flameshot
+super + shift + Print
+	pkill flameshot
+Print
+	flameshot gui
+
 # launch programs
 super + s
 	dmenu_run
