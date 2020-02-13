@@ -28,15 +28,12 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst fir
 - mons
 	- git clone --recursive https://github.com/Ventto/mons.git
 	- sudo make install
-- franz
-	- download from website + sudo apt install
-	- cd /opt/franz + sudo chmod 4755 chrome-sandbox
-	- settings: general off, appearance on
 
 ### Optional
 
 - bumblebee (intel + nvidia graphics)
-	- sudo apt install bumblebee-nvidia primus libgl1-nvidia-glx
+	- free: sudo apt install bumblebee primus
+	- proprietary: sudo apt install bumblebee-nvidia primus libgl1-nvidia-glx
 
 ## Fresh Debian setup
 
@@ -59,8 +56,6 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst fir
 - etc\_conf\_stuff
 	- mouse acceleration, adjust accel speed
 	- intel backlight (optional)
-- okular
-	- set keybindings
 - syncthing
 	- sync folders (Sync, Studium)
 - thunderbird
@@ -75,12 +70,14 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst fir
 	- sudo systemctl disable bluetooth
 - disable touchpad (optional)
 	- alien: xinput --disable 14
-- nitrogen
-	- select wallpaper
+- okular
+	- set keybindings
 - nomacs
 	- dark theme
 - vifm
 	- comment out "highlight OtherWin [...]" in ~/.config/vifm/colors/Default.vifm
+- nitrogen
+	- select wallpaper
 - grub-theme
 	- sudo bash install.sh
 - github ssh
