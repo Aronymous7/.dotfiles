@@ -19,18 +19,19 @@ sudo apt install alsa-utils arandr arc-theme cups curl dunst firefox-esr flamesh
 - st
 	- make
 	- sudo make install clean
-- franz
-	- download from website + sudo apt install
-	- cd /opt/franz + sudo chmod 4755 chrome-sandbox
-- mons
-	- git clone --recursive https://github.com/Ventto/mons.git
-	- sudo make install
 - vim-plug
 	- curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	- :PlugInstall
 - tpm
 	- git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	- in tmux: prefix+I
+- mons
+	- git clone --recursive https://github.com/Ventto/mons.git
+	- sudo make install
+- franz
+	- download from website + sudo apt install
+	- cd /opt/franz + sudo chmod 4755 chrome-sandbox
+	- settings: general off, appearance on
 
 ### Optional
 
@@ -55,6 +56,9 @@ sudo apt install alsa-utils arandr arc-theme cups curl dunst firefox-esr flamesh
 	- sync, preferences
 - lxappearance
 	- set themes
+- etc\_conf\_stuff
+	- mouse acceleration, adjust accel speed
+	- intel backlight (optional)
 - okular
 	- set keybindings
 - syncthing
@@ -65,17 +69,18 @@ sudo apt install alsa-utils arandr arc-theme cups curl dunst firefox-esr flamesh
 	- cat /proc/asound/cards
 	- create /etc/asound.conf
 	- 2 lines: defaults.pcm.card num & defaults.ctl.card num
-- etc\_conf\_stuff
-	- mouse acceleration, adjust accel speed
-	- intel backlight (optional)
+- network-manager
+	- manage ethernet: delete lines in /etc/network/interfaces
+- bluetooth
+	- sudo systemctl disable bluetooth
 - disable touchpad (optional)
 	- alien: xinput --disable 14
 - nitrogen
 	- select wallpaper
 - nomacs
 	- dark theme
-- cups
-	- add and configure printer
+- vifm
+	- comment out "highlight OtherWin [...]" in ~/.config/vifm/colors/Default.vifm
 - grub-theme
 	- sudo bash install.sh
 - github ssh
@@ -85,10 +90,8 @@ sudo apt install alsa-utils arandr arc-theme cups curl dunst firefox-esr flamesh
 	- add id\_rsa.pub to github
 	- ssh -T git@github.com
 	- config remote set-url origin git@github.com:Aronymous7/.dotfiles.git
-- bluetooth
-	- sudo systemctl disable bluetooth
-- network-manager
-	- manage ethernet: delete lines in /etc/network/interfaces
+- cups
+	- add and configure printer
 
 ### Miscellaneous setup/config stuff
 

@@ -5,18 +5,18 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Inconsolata:size=14:antialias=true:autohint=true";
+static char *font = "Inconsolata:size=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
- * What program is execed by st depends of these precedence rules:
+ * What program is executed by st depends on these precedence rules:
  * 1: program passed with -e
  * 2: utmp option
  * 3: SHELL environment variable
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
