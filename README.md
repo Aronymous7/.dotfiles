@@ -68,6 +68,7 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst fir
 	- cat /proc/asound/cards
 	- create /etc/asound.conf
 	- 2 lines: defaults.pcm.card num & defaults.ctl.card num
+	- alien: unmute HP/Speaker Auto Detect
 - disable touchpad (optional)
 	- alien: xinput --disable 14
 - okular
