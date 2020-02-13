@@ -49,25 +49,25 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst fir
 
 ### Manual configuration
 
-- firefox
-	- sync, preferences
 - lxappearance
 	- set themes
+- thunderbird
+	- connect webmail accounts (yahoo, tu, hotmail)
 - etc\_conf\_stuff
 	- mouse acceleration, adjust accel speed
 	- intel backlight (optional)
-- syncthing
-	- sync folders (Sync, Studium)
-- thunderbird
-	- connect webmail accounts (yahoo, tu, hotmail)
-- alsamixer (optional)
-	- cat /proc/asound/cards
-	- create /etc/asound.conf
-	- 2 lines: defaults.pcm.card num & defaults.ctl.card num
 - network-manager
 	- manage ethernet: delete lines in /etc/network/interfaces
 - bluetooth
 	- sudo systemctl disable bluetooth
+- firefox
+	- sync, preferences
+- syncthing
+	- sync folders (Sync, Studium)
+- alsamixer (optional)
+	- cat /proc/asound/cards
+	- create /etc/asound.conf
+	- 2 lines: defaults.pcm.card num & defaults.ctl.card num
 - disable touchpad (optional)
 	- alien: xinput --disable 14
 - okular
