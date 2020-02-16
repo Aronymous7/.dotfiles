@@ -91,6 +91,7 @@ stty -ixon
 
 # Custom aliases
 alias vimrc='vim ~/.vimrc'
+alias vifmrc='vim ~/.config/vifm/vifmrc'
 alias bashrc='vim ~/.bashrc'
 alias ideavimrc='vim ~/.ideavimrc'
 alias i3conf='vim ~/.config/i3/config'
