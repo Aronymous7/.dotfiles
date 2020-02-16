@@ -102,7 +102,7 @@ set background=dark
 " GVim settings
 if has("gui_running")
 	colorscheme industry
-	set guifont=Iosevka\ 12
+	set guifont=Inconsolata\ 12
 	set guicursor=n-v-c-i:block-Cursor
 	set guicursor+=n-v-c-i:blinkon0
 endif

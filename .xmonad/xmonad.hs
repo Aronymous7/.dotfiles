@@ -78,7 +78,7 @@ myComposeOne = composeOne
 ---AUTOSTART
 ------------------------------------------------------------------------
 myStartupHook = do
-	spawnOn "2" "st -- tmux"
+	spawnOn "2" "st -- tmux new-session -s main \\; split-window -h \\; split-window -v \\; select-pane -U \\; select-pane -L"
 	spawnOn "3" "firefox"
 	spawnOn "4" "thunderbird"
 	setWMName "LG3D"
