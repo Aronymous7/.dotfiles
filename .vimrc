@@ -166,7 +166,11 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 " Surrounding
-vnoremap ö( "sc()<ESC>"sP
+vnoremap ö( "sc()<ESC>"sP<right>
+vnoremap ö[ "sc[]<ESC>"sP<right>
+vnoremap ö{ "sc{}<ESC>"sP<right>
+vnoremap ö" "sc""<ESC>"sP<right>
+vnoremap ö' "sc''<ESC>"sP<right>
 
 " Jump to tags
 inoremap ö<space> <ESC>/<++><CR>:noh<CR>"_c4l
