@@ -31,3 +31,5 @@ super + n
 	$CALENDAR
 super + m
 	$MAIL
+super + r
+	$READER

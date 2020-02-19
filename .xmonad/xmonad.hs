@@ -27,7 +27,7 @@ import XMonad.Actions.MouseResize
 
     -- Layouts modifiers
 import XMonad.Layout.Renamed (renamed, Rename(Replace))
-import XMonad.Layout.Spacing (spacing)
+import XMonad.Layout.Spacing (spacingWithEdge)
 import XMonad.Layout.NoBorders
 
     -- Layouts
@@ -61,7 +61,7 @@ main = do
         , terminal				= myTerminal
         , startupHook			= myStartupHook
         , layoutHook			= myLayoutHook
-        , borderWidth			= 1
+        , borderWidth			= 2
 		, focusFollowsMouse		= False
         , normalBorderColor		= "#292d3e"
         , focusedBorderColor	= "#bbc5ff"
@@ -81,6 +81,7 @@ myStartupHook = do
 	spawnOn "2" "st -- tmux new-session -s main \\; split-window -h \\; split-window -v \\; select-pane -U \\; select-pane -L"
 	spawnOn "3" "firefox"
 	spawnOn "4" "thunderbird"
+	spawnOn "5" "transmission-gtk"
 	setWMName "LG3D"
 
 ------------------------------------------------------------------------
@@ -124,6 +125,10 @@ myRemoveKeys =
 	, ("M-b")
 	, ("M-n")
 	, ("M-m")
+	, ("M-w")
+	, ("M-e")
+	, ("M-r")
+	, ("M-S-w")
 	]
 
 ------------------------------------------------------------------------
@@ -131,8 +136,9 @@ myRemoveKeys =
 ------------------------------------------------------------------------
 myLayoutHook = avoidStruts $ mouseResize $ myDefaultLayout
              where
-                 myDefaultLayout = tall ||| grid ||| noBorders Full
+                 myDefaultLayout = tall ||| grid ||| noBorders full
 
 
-tall	= renamed [Replace "tall"] $ spacing 6 $ ResizableTall 1 (3/100) (1/2) []
-grid	= renamed [Replace "grid"] $ spacing 6 $ Grid (16/10)
+tall	= renamed [Replace "tall"] $ spacingWithEdge 4 $ ResizableTall 1 (3/100) (1/2) []
+grid	= renamed [Replace "grid"] $ spacingWithEdge 4 $ Grid (16/9)
+full	= renamed [Replace "full"] $ Full
