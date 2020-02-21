@@ -46,7 +46,7 @@ set noshiftround
 set autoindent
 
 " Show as many lines as possible
-set display+=lastline
+set display+=truncate
 
 " Formatting
 set formatoptions=tcqn1j
