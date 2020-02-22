@@ -15,7 +15,7 @@ import XMonad.Util.Run (spawnPipe)
 
     -- Hooks
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, wrap, xmobarPP, xmobarColor, shorten, PP(..))
-import XMonad.Hooks.ManageDocks (avoidStruts)
+import XMonad.Hooks.ManageDocks (avoidStruts, ToggleStruts(..))
 import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
 
@@ -105,6 +105,7 @@ myKeys =
     , ("M-C-l", sendMessage Expand)
     , ("M-C-j", sendMessage MirrorShrink)		 -- Resize vertically
     , ("M-C-k", sendMessage MirrorExpand)
+	, ("M-<Delete>", sendMessage ToggleStruts)	 -- Cover status bar on/off
 
     , ("M-l", moveTo Next nonEmptyWSs)						-- Go to next non-empty workspace
     , ("M-<Tab>", moveTo Next nonEmptyWSs)

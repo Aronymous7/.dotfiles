@@ -30,6 +30,8 @@ set modelines=0
 set number
 set ruler
 set laststatus=2
+set showmode
+set showcmd
 
 " Encoding
 set encoding=utf-8
@@ -69,10 +71,6 @@ set hidden
 " Rendering
 set ttyfast
 
-" Last line
-set showmode
-set showcmd
-
 " Searching
 set incsearch
 set ignorecase
@@ -80,7 +78,7 @@ set smartcase
 map <leader>h :set hlsearch!<CR>
 
 " Visualize tabs and newlines
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,space:•
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Highlight trailing whitespaces
@@ -130,7 +128,6 @@ let &t_SI .= "\<Esc>[6 q"
 " Better command line completion
 set wildmenu
 set wildmode=longest,list,full
-set complete-=i
 
 " Ask for confirmation when :q and not saved
 set confirm
@@ -154,7 +151,7 @@ vnoremap <space> <ESC>
 
 " Save file
 nnoremap <C-s> :update<cr>
-inoremap <C-s> <Esc>:update<cr>gi
+inoremap <C-s> <Esc>:update<CR>gi
 
 " Spell checking
 nnoremap <leader>ss :setlocal spell!<CR>
