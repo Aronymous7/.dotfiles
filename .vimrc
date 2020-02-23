@@ -9,6 +9,7 @@ call plug#begin()
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
+Plug 'ervandew/supertab'
 call plug#end()
 
 " Turn on syntax highlighting
@@ -17,7 +18,7 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
-" Set default pdf-viewer for vimtex
+" Vimtex options
 let g:vimtex_view_general_viewer='okular'
 
 " Syntastic options
@@ -25,6 +26,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Supertab options
+let g:SuperTabDefaultCompletionType = "context"
 
 " Pick a leader key
 let mapleader = "ä"
@@ -127,14 +131,16 @@ set ttimeoutlen=100
 set ttymouse=xterm2
 set mouse=a
 
+" General completion settings
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<space>\<backspace>" : "\<CR>"
+set wildmenu
+set wildmode=list:longest,full
+
 " Beam-cursor in insert mode
 let &t_EI .= "\<Esc>[2 q"
 let &t_SR .= "\<Esc>[2 q"
 let &t_SI .= "\<Esc>[6 q"
-
-" Better command line completion
-set wildmenu
-set wildmode=longest,list,full
 
 " Ask for confirmation when :q and not saved
 set confirm
