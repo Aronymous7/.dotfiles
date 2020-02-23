@@ -77,6 +77,8 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst fir
 	- dark theme
 - vifm
 	- comment out "highlight OtherWin [...]" in ~/.config/vifm/colors/Default.vifm
+- tmuxinator
+	- sudo wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -O /etc/bash\_completion.d/tmuxinator.bash
 - nitrogen
 	- select wallpaper
 - grub-theme
