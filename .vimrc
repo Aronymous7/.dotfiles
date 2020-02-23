@@ -87,11 +87,11 @@ set ttyfast
 set incsearch
 set ignorecase
 set smartcase
-map <leader>h :set hlsearch!<CR>
+nnoremap <leader>h :set hlsearch!<CR>
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬,space:•
-map <leader>l :set list!<CR> " Toggle tabs and EOL
+nnoremap <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Highlight trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -100,6 +100,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+nnoremap <leader>w :%s/\s\+$//e<CR>
 
 " Jump to last position when opening file
 if has("autocmd")
