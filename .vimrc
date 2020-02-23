@@ -29,6 +29,7 @@ let g:syntastic_check_on_wq = 0
 
 " Supertab options
 let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabLongestEnhanced = 1
 
 " Pick a leader key
 let mapleader = "ä"
