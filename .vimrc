@@ -8,6 +8,7 @@ filetype off
 call plug#begin()
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 " Turn on syntax highlighting
@@ -18,6 +19,12 @@ filetype plugin indent on
 
 " Set default pdf-viewer for vimtex
 let g:vimtex_view_general_viewer='okular'
+
+" Syntastic options
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Pick a leader key
 let mapleader = "ä"
