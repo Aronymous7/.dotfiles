@@ -27,6 +27,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Syntastic linters
+let g:syntastic_ruby_checkers = ['rubocop']
+
 " Supertab options
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabLongestEnhanced = 1
@@ -55,8 +58,6 @@ set linebreak
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-set smarttab
-set noshiftround
 set autoindent
 
 " Show as many lines as possible
@@ -86,7 +87,6 @@ set ttyfast
 " Searching
 set incsearch
 set ignorecase
-set smartcase
 nnoremap <leader>h :set hlsearch!<CR>
 
 " Visualize tabs and newlines
