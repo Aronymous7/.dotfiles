@@ -7,6 +7,9 @@ filetype off
 " Load plugins here
 call plug#begin()
 Plug 'nanotech/jellybeans.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
@@ -22,6 +25,9 @@ filetype plugin indent on
 " Vimtex options
 let g:vimtex_view_general_viewer='okular'
 
+" NERDTree options
+nnoremap <leader>t :NERDTreeToggle<CR>
+
 " Syntastic options
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -31,6 +37,12 @@ let g:syntastic_check_on_wq = 0
 " Supertab options
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabLongestEnhanced = 1
+
+" General completion settings
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<space>\<backspace>" : "\<CR>"
+set wildmenu
+set wildmode=list:longest,full
 
 " Pick a leader key
 let mapleader = "ä"
@@ -71,13 +83,6 @@ set scrolloff=4
 set backspace=indent,eol,start
 runtime! macros/matchit.vim
 
-" Highlighting
-hi PmenuSel cterm=bold ctermbg=darkgray ctermfg=none
-hi MatchParen cterm=bold ctermbg=darkgray ctermfg=none
-hi CursorLine cterm=none ctermbg=darkgray ctermfg=none
-nnoremap <Leader>c :set cursorline!<CR>
-set cursorline
-
 " Allow hidden buffers
 set hidden
 
@@ -93,19 +98,17 @@ nnoremap <leader>h :set hlsearch!<CR>
 set listchars=tab:▸\ ,eol:¬,space:•
 nnoremap <leader>l :set list!<CR> " Toggle tabs and EOL
 
-" Highlight trailing whitespaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-nnoremap <leader>w :%s/\s\+$//e<CR>
-
 " Jump to last position when opening file
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" Highlighting
+hi PmenuSel cterm=bold ctermbg=darkgray ctermfg=none
+hi MatchParen cterm=bold ctermbg=darkgray ctermfg=none
+hi CursorLine cterm=none ctermbg=darkgray ctermfg=none
+nnoremap <Leader>c :set cursorline!<CR>
+set cursorline
 
 " Color scheme (terminal)
 set t_Co=256
@@ -114,11 +117,20 @@ set background=dark
 
 " GVim settings
 if has("gui_running")
-	colorscheme industry
+	colorscheme jellybeans
 	set guifont=Inconsolata\ 12
 	set guicursor=n-v-c-i:block-Cursor
 	set guicursor+=n-v-c-i:blinkon0
 endif
+
+" Highlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+nnoremap <leader>w :%s/\s\+$//e<CR>
 
 
 " More intuitive splitting
@@ -134,12 +146,6 @@ set ttimeoutlen=100
 " Enable mouse
 set ttymouse=xterm2
 set mouse=a
-
-" General completion settings
-set completeopt=longest,menuone
-inoremap <expr> <CR> pumvisible() ? "\<space>\<backspace>" : "\<CR>"
-set wildmenu
-set wildmode=list:longest,full
 
 " Beam-cursor in insert mode
 let &t_EI .= "\<Esc>[2 q"
@@ -175,28 +181,8 @@ nnoremap <leader>ss :setlocal spell!<CR>
 nnoremap <leader>sd :setlocal spell! spelllang=de<CR>
 nnoremap <leader>se :setlocal spell! spelllang=en<CR>
 
-" Faster scrolling
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
-
-" Surrounding
-vnoremap ö( "sc()<ESC>"sP<right>
-vnoremap ö[ "sc[]<ESC>"sP<right>
-vnoremap ö{ "sc{}<ESC>"sP<right>
-vnoremap ö" "sc""<ESC>"sP<right>
-vnoremap ö' "sc''<ESC>"sP<right>
-
 " Jump to tags
 inoremap ö<space> <ESC>/<++><CR>:noh<CR>"_c4l
-
-" Auto close brackets
-inoremap " ""<++><ESC>4hi
-inoremap ( ()<++><ESC>4hi
-inoremap [ []<++><ESC>4hi
-inoremap { {}<++><ESC>4hi
-
-" NERDTree
-nnoremap <leader>t :NERDTreeToggle<CR>
 
 " Latex bindings
 autocmd FileType tex inoremap $ $$<++><ESC>4hi

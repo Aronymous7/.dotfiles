@@ -21,9 +21,6 @@ HISTFILESIZE=2000
 # check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
@@ -42,8 +39,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto --group-directories-first'
 
     alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
 fi
 
 # some more ls aliases
@@ -69,11 +64,8 @@ stty -ixon
 
 # Custom aliases
 alias vimrc='vim ~/.vimrc'
-alias vifmrc='vim ~/.config/vifm/vifmrc'
 alias bashrc='vim ~/.bashrc'
-alias ideavimrc='vim ~/.ideavimrc'
-alias i3conf='vim ~/.config/i3/config'
-alias qtileconf='vim ~/.config/qtile/config.py'
+alias profileconf='vim ~/.profile'
 alias xmonadconfig='vim ~/.xmonad/xmonad.hs'
 alias xmobarconfig='vim ~/.config/xmobar/xmobarrc'
 alias sxhkdconf='vim ~/.config/sxhkd/sxhkdrc'
