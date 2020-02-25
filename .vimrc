@@ -9,6 +9,7 @@ call plug#begin()
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
@@ -24,9 +25,6 @@ filetype plugin indent on
 
 " Vimtex options
 let g:vimtex_view_general_viewer='okular'
-
-" NERDTree options
-nnoremap <leader>t :NERDTreeToggle<CR>
 
 " Syntastic options
 let g:syntastic_always_populate_loc_list = 1
@@ -112,6 +110,7 @@ set cursorline
 
 " Color scheme (terminal)
 set t_Co=256
+let g:jellybeans_overrides = { 'background': { 'guibg': '000000' } }
 colorscheme jellybeans
 set background=dark
 
@@ -180,6 +179,9 @@ inoremap <C-s> <Esc>:update<CR>gi
 nnoremap <leader>ss :setlocal spell!<CR>
 nnoremap <leader>sd :setlocal spell! spelllang=de<CR>
 nnoremap <leader>se :setlocal spell! spelllang=en<CR>
+
+" NERDTree options
+nnoremap <leader>t :NERDTreeToggle<CR>
 
 " Jump to tags
 inoremap ö<space> <ESC>/<++><CR>:noh<CR>"_c4l

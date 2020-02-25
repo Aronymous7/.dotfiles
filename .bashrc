@@ -65,6 +65,7 @@ stty -ixon
 # Custom aliases
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
+alias xinitrc='vim ~/.xinitrc'
 alias profileconf='vim ~/.profile'
 alias xmonadconfig='vim ~/.xmonad/xmonad.hs'
 alias xmobarconfig='vim ~/.config/xmobar/xmobarrc'
