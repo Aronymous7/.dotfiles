@@ -6,6 +6,7 @@ filetype off
 
 " Load plugins here
 call plug#begin()
+Plug 'nanotech/jellybeans.vim'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
@@ -26,9 +27,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" Syntastic linters
-let g:syntastic_ruby_checkers = ['rubocop']
 
 " Supertab options
 let g:SuperTabDefaultCompletionType = "context"
@@ -74,9 +72,11 @@ set backspace=indent,eol,start
 runtime! macros/matchit.vim
 
 " Highlighting
+hi PmenuSel cterm=bold ctermbg=darkgray ctermfg=none
 hi MatchParen cterm=bold ctermbg=darkgray ctermfg=none
 hi CursorLine cterm=none ctermbg=darkgray ctermfg=none
 nnoremap <Leader>c :set cursorline!<CR>
+set cursorline
 
 " Allow hidden buffers
 set hidden
@@ -108,6 +108,8 @@ if has("autocmd")
 endif
 
 " Color scheme (terminal)
+set t_Co=256
+colorscheme jellybeans
 set background=dark
 
 " GVim settings
