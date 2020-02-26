@@ -179,10 +179,14 @@ nnoremap <leader>ss :setlocal spell!<CR>
 nnoremap <leader>sg :setlocal spell! spelllang=de<CR>
 nnoremap <leader>se :setlocal spell! spelllang=en<CR>
 
-" Open NERDTree
+" Fugitive bindings
+nnoremap <leader>gg :G<CR>
+nnoremap <leader>gp :Gpush<CR>
+
+" NERDTree bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
 
-" Toggle Syntastic
+" Syntastic bindings
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
