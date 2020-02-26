@@ -176,11 +176,15 @@ inoremap <C-s> <Esc>:update<CR>gi
 
 " Spell checking
 nnoremap <leader>ss :setlocal spell!<CR>
-nnoremap <leader>sd :setlocal spell! spelllang=de<CR>
+nnoremap <leader>sg :setlocal spell! spelllang=de<CR>
 nnoremap <leader>se :setlocal spell! spelllang=en<CR>
 
-" NERDTree options
+" Open NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
+
+" Toggle Syntastic
+nnoremap <leader>st :SyntasticToggleMode<CR>
+nnoremap <leader>sc :SyntasticCheck<space>
 
 " Insert mode mappings
 inoremap ö<space> <right>
