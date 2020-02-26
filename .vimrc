@@ -88,7 +88,6 @@ set hidden
 set ttyfast
 
 " Searching
-set incsearch
 set ignorecase
 nnoremap <leader>h :set hlsearch!<CR>
 
@@ -178,6 +177,11 @@ inoremap <C-s> <Esc>:update<CR>gi
 nnoremap <leader>ss :setlocal spell!<CR>
 nnoremap <leader>sg :setlocal spell! spelllang=de<CR>
 nnoremap <leader>se :setlocal spell! spelllang=en<CR>
+
+" Subsitution bindings
+nnoremap <leader>rr :%s//gI<left><left><left>
+nnoremap <leader>rg :bufdo %s//geI<left><left><left><left>
+vnoremap <leader>r :s//gI<left><left><left>
 
 " Fugitive bindings
 nnoremap <leader>gg :G<CR>
