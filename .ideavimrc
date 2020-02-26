@@ -13,39 +13,23 @@ set matchpairs+=<:> " use % to jump between pairs
 set showmode
 
 " Searching
-set hlsearch
 set incsearch
 set ignorecase
-set smartcase
-map <leader><space> :noh<CR>
-
+nnoremap <leader>h :set hlsearch!<CR>
 
 " Map Escape (enter normal mode)
 inoremap jj <ESC>
 
-" Faster scrolling
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
-
-" Surrounding
-vnoremap ö( "sc()<ESC>"sP
-
 " Jump to tags
-inoremap ö<space> <ESC>/<++><CR>:noh<CR>"_c4l
-
-" Auto close brackets
-inoremap " ""<++><ESC>4hi
-inoremap ( ()<++><ESC>4hi
-inoremap [ []<++><ESC>4hi
-inoremap { {}<++><ESC>4hi
+inoremap ö<space> <right>
 
 " Various bindings
 inoremap ö; <ESC>A;
-inoremap öi if<space>(<right><space>{<CR><++><up><ESC>F)i
+inoremap öi if<space>(<right><space>{<CR><up><ESC>F)i
 inoremap öee <space>else<space>{<CR>
-inoremap öei <space>else<space>if<space>(<right><space>{<CR><++><up><ESC>f)i
-inoremap öw while<space>(<right><space>{<CR><++><up><ESC>F)i
-inoremap öf for<space>(;<++>;<++><right><space>{<CR><++><up><ESC>T(i
-inoremap öm (<++><right><space>{<CR><++><up><ESC>F(i
-inoremap ötc try<space>{<CR><down><space>catch<space>(<++><right><space>{<CR><++><up><up>
-inoremap ötf try<space>{<CR><down><space>catch<space>(<++><right><space>{<CR><++><down><space>finally<space>{<CR><++><ESC>4kA
+inoremap öei <space>else<space>if<space>(<right><space>{<CR><up><ESC>f)i
+inoremap öw while<space>(<right><space>{<CR><up><ESC>F)i
+inoremap öf for<space>(;;<right><space>{<CR><up><ESC>T(i
+inoremap öm (<right><space>{<CR><up><ESC>F(i
+inoremap ötc try<space>{<CR><down><space>catch<space>(<right><space>{<CR><up><up>
+inoremap ötf try<space>{<CR><down><space>catch<space>(<right><space>{<CR><down><space>finally<space>{<CR><ESC>4kA

@@ -131,7 +131,6 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 nnoremap <leader>w :%s/\s\+$//e<CR>
 
-
 " More intuitive splitting
 set splitbelow splitright
 
@@ -183,21 +182,21 @@ nnoremap <leader>se :setlocal spell! spelllang=en<CR>
 " NERDTree options
 nnoremap <leader>t :NERDTreeToggle<CR>
 
-" Jump to tags
-inoremap ö<space> <ESC>/<++><CR>:noh<CR>"_c4l
+" Insert mode mappings
+inoremap ö<space> <right>
+inoremap ö<CR> <ESC>o
 
 " Latex bindings
-autocmd FileType tex inoremap $ $$<++><ESC>4hi
-autocmd FileType tex inoremap öö<CR> \\<CR>
+autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
 autocmd FileType tex inoremap ööe <ESC>0"zdwA\begin{<ESC>"zpa}<CR><CR>\end{<ESC>"zpa}<up>
-autocmd FileType tex inoremap öös \section{}<++><ESC>T{i
-autocmd FileType tex inoremap ööf \begin{frame}{}<CR><++><CR>\end{frame}<ESC>2kf{a
-autocmd FileType tex inoremap ööb \textbf{}<++><ESC>T{i
-autocmd FileType tex inoremap ööi \textit{}<++><ESC>T{i
-autocmd FileType tex inoremap ööc \cite{}<++><ESC>T{i
+autocmd FileType tex inoremap öös \section{}<left>
+autocmd FileType tex inoremap ööf \begin{frame}{}<CR>\end{frame}<ESC>kf{a
+autocmd FileType tex inoremap ööb \textbf{}<left>
+autocmd FileType tex inoremap ööi \textit{}<left>
+autocmd FileType tex inoremap ööc \cite{}<left>
 autocmd FileType tex inoremap ööll \begin{itemize}<CR><CR>\end{itemize}<up>\item<space>
 autocmd FileType tex inoremap ööle \begin{enumerate}<CR><CR>\end{enumerate}<up>\item<space>
 autocmd FileType tex inoremap ööli \item<space>
-autocmd FileType tex inoremap öörl \label{}<++><ESC>T{i
-autocmd FileType tex inoremap öörr \ref{}<++><ESC>T{i
-autocmd FileType tex inoremap öög \includegraphics[width=0.5\textwidth]{}<++><ESC>T{i
+autocmd FileType tex inoremap öörl \label{}<left>
+autocmd FileType tex inoremap öörr \ref{}<left>
+autocmd FileType tex inoremap öög \includegraphics[width=0.8\textwidth]{}<left>
