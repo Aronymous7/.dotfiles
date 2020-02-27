@@ -23,6 +23,10 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
+" Auto-Pairs options
+let g:AutoPairsShortcutJump = 'ö<space>'
+let g:AutoPairsShortcutFastWrap = 'ä<space>'
+
 " Vimtex options
 let g:vimtex_view_general_viewer='okular'
 
@@ -195,8 +199,16 @@ nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
 " Insert mode mappings
-inoremap ö<space> <right>
+inoremap Ö<space> <right>
 inoremap ö<CR> <ESC>o
+inoremap Ö<CR> <ESC>O
+
+" (e)Ruby bindings
+autocmd FileType ruby,eruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
+autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<p>':'</p>//n', '<h1>':'</h1>//n', '<h2>':'</h2>//n', '<h3>':'</h3>//n', '<table>':'</table>//n', '<tr>':'</tr>//n', '<td>':'</td>//n', '<th>':'</th>//n'})
+
+" HTML bindings
+autocmd FileType html let b:AutoPairs = AutoPairsDefine({'<p>':'</p>//n'})
 
 " Latex bindings
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
