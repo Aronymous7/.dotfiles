@@ -215,7 +215,7 @@ nnoremap <leader>sc :SyntasticCheck<space>
 
 " (e)Ruby bindings
 autocmd FileType ruby,eruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
-autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<p>':'</p>//n', '<h1>':'</h1>//n', '<h2>':'</h2>//n', '<h3>':'</h3>//n', '<table>':'</table>//n', '<tr>':'</tr>//n', '<td>':'</td>//n', '<th>':'</th>//n', '<div>':'</div>//n', '<ul>':'</ul>//n', '<li>':'</li>//n'})
+autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<!--':'-->//n', '<p>':'</p>//n', '<h1>':'</h1>//n', '<h2>':'</h2>//n', '<h3>':'</h3>//n', '<table>':'</table>//n', '<tr>':'</tr>//n', '<td>':'</td>//n', '<th>':'</th>//n', '<div>':'</div>//n', '<ul>':'</ul>//n', '<li>':'</li>//n'})
 
 " Latex bindings
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
