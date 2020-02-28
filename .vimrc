@@ -35,6 +35,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { "passive_filetypes": ["tex"] }
 
 " Supertab options
 let g:SuperTabDefaultCompletionType = "context"
@@ -65,7 +66,7 @@ set encoding=utf-8
 
 " Wrapping and tabbing
 set wrap
-set textwidth=0
+set colorcolumn=81
 set linebreak
 set shiftwidth=4
 set tabstop=4
@@ -125,8 +126,11 @@ if has("gui_running")
 	set guicursor+=n-v-c-i:blinkon0
 endif
 
+" Highlighting after setting color scheme
+hi ColorColumn ctermbg=darkgray guibg=darkgray
+
 " Highlight trailing whitespaces
-highlight ExtraWhitespace ctermbg=red guibg=red
+hi ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
@@ -205,13 +209,14 @@ inoremap Ö<CR> <ESC>O
 
 " (e)Ruby bindings
 autocmd FileType ruby,eruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
-autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<p>':'</p>//n', '<h1>':'</h1>//n', '<h2>':'</h2>//n', '<h3>':'</h3>//n', '<table>':'</table>//n', '<tr>':'</tr>//n', '<td>':'</td>//n', '<th>':'</th>//n'})
+autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<p>':'</p>//n', '<h1>':'</h1>//n', '<h2>':'</h2>//n', '<h3>':'</h3>//n', '<table>':'</table>//n', '<tr>':'</tr>//n', '<td>':'</td>//n', '<th>':'</th>//n', '<div>':'</div>//n', '<ul>':'</ul>//n', '<li>':'</li>//n'})
 
 " HTML bindings
 autocmd FileType html let b:AutoPairs = AutoPairsDefine({'<p>':'</p>//n'})
 
 " Latex bindings
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
+autocmd FileType tex set colorcolumn = ""
 autocmd FileType tex inoremap ööe <ESC>0"zdwA\begin{<ESC>"zpa}<CR><CR>\end{<ESC>"zpa}<up>
 autocmd FileType tex inoremap öös \section{}<left>
 autocmd FileType tex inoremap ööf \begin{frame}{}<CR>\end{frame}<ESC>kf{a
