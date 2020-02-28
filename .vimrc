@@ -173,9 +173,10 @@ nnoremap gk k
 nnoremap g0 0
 nnoremap g$ $
 
-" Map Escape (enter normal mode)
+" Map Escape
 inoremap jj <ESC>
 vnoremap <space> <ESC>
+nnoremap <space> <ESC>
 
 " Save file
 nnoremap <C-s> :update<cr>
@@ -186,14 +187,24 @@ nnoremap <leader>ss :setlocal spell!<CR>
 nnoremap <leader>sg :setlocal spell! spelllang=de<CR>
 nnoremap <leader>se :setlocal spell! spelllang=en<CR>
 
-" Subsitution bindings
+" Substitution bindings
 nnoremap <leader>rr :%s//gI<left><left><left>
 nnoremap <leader>rg :bufdo %s//geI<left><left><left><left>
 vnoremap <leader>r :s//gI<left><left><left>
 
+" Insert mode mappings
+inoremap Ö<space> <right>
+inoremap ö<CR> <ESC>o
+inoremap Ö<CR> <ESC>O
+
+" Switch windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Fugitive bindings
-nnoremap <leader>gg :G<CR>
-nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>g :G<CR>
 
 " NERDTree bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
@@ -202,17 +213,9 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
-" Insert mode mappings
-inoremap Ö<space> <right>
-inoremap ö<CR> <ESC>o
-inoremap Ö<CR> <ESC>O
-
 " (e)Ruby bindings
 autocmd FileType ruby,eruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
 autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<p>':'</p>//n', '<h1>':'</h1>//n', '<h2>':'</h2>//n', '<h3>':'</h3>//n', '<table>':'</table>//n', '<tr>':'</tr>//n', '<td>':'</td>//n', '<th>':'</th>//n', '<div>':'</div>//n', '<ul>':'</ul>//n', '<li>':'</li>//n'})
-
-" HTML bindings
-autocmd FileType html let b:AutoPairs = AutoPairsDefine({'<p>':'</p>//n'})
 
 " Latex bindings
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
