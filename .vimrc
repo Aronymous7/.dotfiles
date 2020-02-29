@@ -203,6 +203,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Find and edit file
+nnoremap <leader>ee :e<space>**/
+nnoremap <leader>es :split<space>**/
+
+" Abbreviations
+nnoremap <leader>ae :e abbreviations.vim<CR>
+nnoremap <leader>as :source abbreviations.vim<CR>
+nnoremap <leader>age :e ~/.vim/plugin/abbreviations.vim<CR>
+nnoremap <leader>ags :source ~/.vim/plugin/abbreviations.vim<CR>
+
 " Fugitive bindings
 nnoremap <leader>g :G<CR>
 
