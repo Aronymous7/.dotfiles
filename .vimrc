@@ -6,6 +6,7 @@ filetype off
 
 " Load plugins here
 call plug#begin()
+Plug 'adelarsq/vim-matchit'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -84,7 +85,6 @@ set nrformats-=octal
 " Cursor motion
 set scrolloff=4
 set backspace=indent,eol,start
-runtime! macros/matchit.vim
 
 " Allow hidden buffers
 set hidden
@@ -215,7 +215,16 @@ nnoremap <leader>sc :SyntasticCheck<space>
 
 " (e)Ruby bindings
 autocmd FileType ruby,eruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
-autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<!--':'-->//n', '<p>':'</p>//n', '<h1>':'</h1>//n', '<h2>':'</h2>//n', '<h3>':'</h3>//n', '<table>':'</table>//n', '<tr>':'</tr>//n', '<td>':'</td>//n', '<th>':'</th>//n', '<div>':'</div>//n', '<ul>':'</ul>//n', '<li>':'</li>//n'})
+autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<!--':'-->//n'})
+autocmd FileType ruby inoremap öe <ESC>oend<ESC>O
+autocmd FileType eruby inoremap öe <ESC>o<%<space>end<space>%><ESC>O
+autocmd FileType eruby inoremap ö< <%<space><space>%><ESC>2hi
+autocmd FileType eruby inoremap öy <%=<space><space>%><ESC>2hi
+autocmd FileType eruby inoremap öb <br>
+autocmd FileType eruby inoremap ött <ESC>b"zdwi<<ESC>"zpa></<ESC>"zpa><ESC>F<i
+autocmd FileType eruby inoremap öto <ESC>b"zdwi<<ESC>"zpa><CR></<ESC>"zpa><ESC>O
+autocmd FileType eruby inoremap öta <ESC>b"zdwi<<ESC>"zpa><CR></<ESC>"zpa><ESC>ki<space>
+autocmd FileType eruby inoremap öc <!----><ESC>2hi
 
 " Latex bindings
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
