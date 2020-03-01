@@ -55,6 +55,9 @@ let maplocalleader = "ü"
 " Security
 set modelines=0
 
+" Path for find
+set path^=**/
+
 " Line numbers and status bar
 set number
 set ruler
@@ -203,9 +206,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Find and edit file
-nnoremap <leader>ee :e<space>**/
-nnoremap <leader>es :split<space>**/
+" Find file
+nnoremap <leader>ff :find<space>
+nnoremap <leader>fs :sf<space>
 
 " Abbreviations
 nnoremap <leader>ae :e abbreviations.vim<CR>
@@ -231,15 +234,16 @@ autocmd FileType eruby inoremap öe <ESC>o<%<space>end<space>%><ESC>O
 autocmd FileType eruby inoremap ö< <%<space><space>%><ESC>2hi
 autocmd FileType eruby inoremap öy <%=<space><space>%><ESC>2hi
 autocmd FileType eruby inoremap öb <br>
-autocmd FileType eruby inoremap ött <ESC>b"zdwi<<ESC>"zpa></<ESC>"zpa><ESC>F<i
-autocmd FileType eruby inoremap öto <ESC>b"zdwi<<ESC>"zpa><CR></<ESC>"zpa><ESC>O
-autocmd FileType eruby inoremap öta <ESC>b"zdwi<<ESC>"zpa><CR></<ESC>"zpa><ESC>ki<space>
+autocmd FileType eruby inoremap ött <ESC>"zdiwa<<ESC>"zpa></<ESC>"zpa><ESC>F<i
+autocmd FileType eruby inoremap öto <ESC>"zdiwa<<ESC>"zpa><CR></<ESC>"zpa><ESC>O
+autocmd FileType eruby inoremap öta <ESC>"zdiwa<<ESC>"zpa></<ESC>"zpa><ESC>F>i<space>
+autocmd FileType eruby inoremap ötn <ESC>"zdiwa<<ESC>"zpa><CR></<ESC>"zpa><ESC>ki<space>
 autocmd FileType eruby inoremap öc <!----><ESC>2hi
 
 " Latex bindings
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
 autocmd FileType tex set colorcolumn = ""
-autocmd FileType tex inoremap ööe <ESC>0"zdwA\begin{<ESC>"zpa}<CR><CR>\end{<ESC>"zpa}<up>
+autocmd FileType tex inoremap ööe <ESC>"zdiwa\begin{<ESC>"zpa}<CR><CR>\end{<ESC>"zpa}<up>
 autocmd FileType tex inoremap öös \section{}<left>
 autocmd FileType tex inoremap ööf \begin{frame}{}<CR>\end{frame}<ESC>kf{a
 autocmd FileType tex inoremap ööb \textbf{}<left>
