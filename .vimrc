@@ -216,8 +216,11 @@ nnoremap <leader>as :source abbreviations.vim<CR>
 nnoremap <leader>age :e ~/.vim/plugin/abbreviations.vim<CR>
 nnoremap <leader>ags :source ~/.vim/plugin/abbreviations.vim<CR>
 
-" Fugitive bindings
-nnoremap <leader>g :G<CR>
+" Arglist
+nnoremap + :arga<CR>:ar<CR>
+nnoremap - :.argd<CR>:ar<CR>
+nnoremap <C-p> :prev<CR>
+nnoremap <C-n> :n<CR>
 
 " NERDTree bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
