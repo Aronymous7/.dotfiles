@@ -54,13 +54,9 @@ set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
 " Ignore case in search patterns unless it contains at least one uppercase
 " letter
 set ignorecase
-set smartcase
 
 " Don't highlight search results automatically
 set nohlsearch
-
-" Use increment searching (search while typing)
-set incsearch
 
 " Try to leave some space from cursor to upper/lower border in lists
 set scrolloff=4
@@ -335,6 +331,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 " ------------------------------------------------------------------------------
 
 " Sample mappings
+
+nnoremap o l
+nnoremap x h
 
 " Start shell in current directory
 nnoremap s :shell<cr>
