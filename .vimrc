@@ -70,8 +70,8 @@ set encoding=utf-8
 
 " Wrapping and tabbing
 set wrap
-set colorcolumn=81
 set linebreak
+set colorcolumn=81
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
@@ -123,7 +123,6 @@ set background=dark
 
 " GVim settings
 if has("gui_running")
-	colorscheme jellybeans
 	set guifont=Inconsolata\ 12
 	set guicursor=n-v-c-i:block-Cursor
 	set guicursor+=n-v-c-i:blinkon0
