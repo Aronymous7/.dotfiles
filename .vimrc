@@ -228,19 +228,22 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
-" (e)Ruby bindings
+" (e)Ruby & HTML bindings
 autocmd FileType ruby,eruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
 autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<!--':'-->//n'})
+autocmd FileType html let b:AutoPairs = AutoPairsDefine({'<!--':'-->//n'})
 autocmd FileType ruby inoremap öe <ESC>oend<ESC>O
 autocmd FileType eruby inoremap öe <ESC>o<%<space>end<space>%><ESC>O
 autocmd FileType eruby inoremap ö< <%<space><space>%><ESC>2hi
 autocmd FileType eruby inoremap öy <%=<space><space>%><ESC>2hi
-autocmd FileType eruby inoremap öb <br>
-autocmd FileType eruby inoremap ött <ESC>"zdiwa<<ESC>"zpa></<ESC>"zpa><ESC>F<i
-autocmd FileType eruby inoremap öto <ESC>"zdiwa<<ESC>"zpa><CR></<ESC>"zpa><ESC>O
-autocmd FileType eruby inoremap öta <ESC>"zdiwa<<ESC>"zpa></<ESC>"zpa><ESC>F>i<space>
-autocmd FileType eruby inoremap ötn <ESC>"zdiwa<<ESC>"zpa><CR></<ESC>"zpa><ESC>ki<space>
-autocmd FileType eruby inoremap öc <!----><ESC>2hi
+autocmd FileType eruby,html inoremap öb <br<space>/>
+autocmd FileType eruby,html inoremap öt <ESC>"zdiwa<<ESC>"zpa></<ESC>"zpa><ESC>F<i
+autocmd FileType eruby,html inoremap öo <ESC>"zdiwa<<ESC>"zpa><CR></<ESC>"zpa><ESC>O
+autocmd FileType eruby,html inoremap öaa <ESC>"zdiwa<<ESC>"zpa></<ESC>"zpa><ESC>F>i<space>
+autocmd FileType eruby,html inoremap öao <ESC>"zdiwa<<ESC>"zpa><CR></<ESC>"zpa><ESC>ki<space>
+autocmd FileType eruby,html inoremap öcc <ESC>"zdiwa<<ESC>"zpa<space>/>
+autocmd FileType eruby,html inoremap öca <ESC>"zdiwa<<ESC>"zpa<space><space>/><ESC>2hi
+autocmd FileType eruby,html inoremap ö# <!----><ESC>2hi
 
 " Latex bindings
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})

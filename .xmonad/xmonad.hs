@@ -109,8 +109,10 @@ myKeys =
 
     , ("M-l", moveTo Next nonEmptyWSs)						-- Go to next non-empty workspace
     , ("M-<Tab>", moveTo Next nonEmptyWSs)
+    , ("M-<Right>", moveTo Next allWSs)						-- Go to next non-empty workspace
     , ("M-h", moveTo Prev nonEmptyWSs)						-- Go to previous non-empty workspace
     , ("M-S-<Tab>", moveTo Prev nonEmptyWSs)
+    , ("M-<Left>", moveTo Prev allWSs)						-- Go to previous non-empty workspace
 	, ("M-d", moveTo Next emptyWSs)							-- Go to next empty workspace
     , ("M-S-l", shiftTo Next allWSs >> moveTo Next allWSs)	-- Shifts focused window to next workspace
     , ("M-S-h", shiftTo Prev allWSs >> moveTo Prev allWSs)	-- Shifts focused window to previous workspace
