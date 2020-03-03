@@ -112,7 +112,6 @@ endif
 hi PmenuSel cterm=bold ctermbg=darkgray ctermfg=none
 hi MatchParen cterm=bold ctermbg=darkgray ctermfg=none
 hi CursorLine cterm=none ctermbg=darkgray ctermfg=none
-nnoremap <Leader>c :set cursorline!<CR>
 set cursorline
 
 " Color scheme (terminal)
@@ -162,8 +161,11 @@ let &t_SI .= "\<Esc>[6 q"
 " Ask for confirmation when :q and not saved
 set confirm
 
-" Use system clipboard by default
-set clipboard=unnamedplus
+" Copy/paste to/from system clipboard
+nnoremap <leader>c "+y
+vnoremap <leader>c "+y
+nnoremap <leader>v "+p
+vnoremap <leader>v "+p
 
 " Visual line movement
 nnoremap j gj
@@ -190,8 +192,8 @@ nnoremap <leader>sg :setlocal spell! spelllang=de<CR>
 nnoremap <leader>se :setlocal spell! spelllang=en<CR>
 
 " Substitution bindings
-nnoremap <leader>rr :%s//gI<left><left><left>
-nnoremap <leader>rg :bufdo %s//geI<left><left><left><left>
+nnoremap <leader>rr yiw:%s/<C-r>"//gI<left><left><left>
+nnoremap <leader>rg yiw:bufdo %s/<C-r>"//geI<left><left><left><left>
 vnoremap <leader>r :s//gI<left><left><left>
 
 " Insert mode mappings
