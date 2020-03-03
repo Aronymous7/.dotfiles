@@ -260,3 +260,7 @@ autocmd FileType tex inoremap ööli \item<space>
 autocmd FileType tex inoremap öörl \label{}<left>
 autocmd FileType tex inoremap öörr \ref{}<left>
 autocmd FileType tex inoremap öög \includegraphics[width=0.8\textwidth]{}<left>
+
+" Skeletons for new files
+autocmd BufNewFile *.html 0r ~/.vim/templates/skel.html
+autocmd BufNewFile *.xml 0r ~/.vim/templates/skel.xml
