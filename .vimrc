@@ -196,13 +196,11 @@ nnoremap <leader>se :setlocal spell! spelllang=en<CR>
 
 " Substitution bindings
 nnoremap <leader>rr yiw:%s/<C-r>"//gI<left><left><left>
-nnoremap <leader>rg yiw:bufdo %s/<C-r>"//geI<left><left><left><left>
+nnoremap <leader>rg yiw:bufdo<space>%s/<C-r>"//geI<left><left><left><left>
 vnoremap <leader>r :s//gI<left><left><left>
 
-" Insert mode mappings
+" Move right in insert mode
 inoremap Ö<space> <right>
-inoremap ö<CR> <ESC>o
-inoremap Ö<CR> <ESC>O
 
 " Switch windows
 nnoremap <C-h> <C-w>h
@@ -210,15 +208,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Find file
-nnoremap <leader>ff :find<space>
-nnoremap <leader>fs :sf<space>
-
 " Abbreviations
-nnoremap <leader>ae :e abbreviations.vim<CR>
-nnoremap <leader>as :source abbreviations.vim<CR>
-nnoremap <leader>age :e ~/.vim/plugin/abbreviations.vim<CR>
-nnoremap <leader>ags :source ~/.vim/plugin/abbreviations.vim<CR>
+nnoremap <leader>ae :e ~/.vim/plugin/abbreviations.vim<CR>
+nnoremap <leader>as :source ~/.vim/plugin/abbreviations.vim<CR>
 
 " Arglist
 nnoremap + :arga<CR>:ar<CR>
@@ -233,22 +225,13 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
-" (e)Ruby & HTML bindings
+" (e)Ruby bindings
 autocmd FileType ruby,eruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
-autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n', '<!--':'-->//n'})
-autocmd FileType html let b:AutoPairs = AutoPairsDefine({'<!--':'-->//n'})
+autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n'})
 autocmd FileType ruby inoremap öe <ESC>oend<ESC>O
 autocmd FileType eruby inoremap öe <ESC>o<%<space>end<space>%><ESC>O
 autocmd FileType eruby inoremap ö< <%<space><space>%><ESC>2hi
 autocmd FileType eruby inoremap öy <%=<space><space>%><ESC>2hi
-autocmd FileType eruby,html inoremap öb <br<space>/>
-autocmd FileType eruby,html inoremap öt <ESC>"zdiwa<<ESC>"zpa></<ESC>"zpa><ESC>F<i
-autocmd FileType eruby,html inoremap öo <ESC>"zdiwa<<ESC>"zpa><CR></<ESC>"zpa><ESC>O
-autocmd FileType eruby,html inoremap öaa <ESC>"zdiwa<<ESC>"zpa></<ESC>"zpa><ESC>F>i<space>
-autocmd FileType eruby,html inoremap öao <ESC>"zdiwa<<ESC>"zpa><CR></<ESC>"zpa><ESC>ki<space>
-autocmd FileType eruby,html inoremap öcc <ESC>"zdiwa<<ESC>"zpa<space>/>
-autocmd FileType eruby,html inoremap öca <ESC>"zdiwa<<ESC>"zpa<space><space>/><ESC>2hi
-autocmd FileType eruby,html inoremap ö# <!----><ESC>2hi
 
 " Latex bindings
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
