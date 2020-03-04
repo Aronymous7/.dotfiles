@@ -39,7 +39,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { "passive_filetypes": ["tex"] }
 
 " Emmet options
-let g:user_emmet_leader_key = 'ö'
+let g:user_emmet_leader_key = 'Ö'
 
 " Supertab options
 let g:SuperTabDefaultCompletionType = "context"
