@@ -266,3 +266,4 @@ autocmd FileType tex inoremap öög \includegraphics[width=0.8\textwidth]{}<left
 " Skeletons for new files
 autocmd BufNewFile *.html 0r ~/.vim/templates/skel.html
 autocmd BufNewFile *.xml 0r ~/.vim/templates/skel.xml
+autocmd BufNewFile *.sh 0r ~/.vim/templates/skel.sh
