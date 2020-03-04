@@ -15,6 +15,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
+Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
 call plug#end()
 
@@ -26,7 +27,6 @@ filetype plugin indent on
 
 " Auto-Pairs options
 let g:AutoPairsShortcutJump = 'ö<space>'
-let g:AutoPairsShortcutFastWrap = 'ä<space>'
 
 " Vimtex options
 let g:vimtex_view_general_viewer='okular'
@@ -37,6 +37,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { "passive_filetypes": ["tex"] }
+
+" Emmet options
+let g:user_emmet_leader_key = 'ö'
 
 " Supertab options
 let g:SuperTabDefaultCompletionType = "context"
@@ -264,6 +267,5 @@ autocmd FileType tex inoremap öörr \ref{}<left>
 autocmd FileType tex inoremap öög \includegraphics[width=0.8\textwidth]{}<left>
 
 " Skeletons for new files
-autocmd BufNewFile *.html 0r ~/.vim/templates/skel.html
 autocmd BufNewFile *.xml 0r ~/.vim/templates/skel.xml
 autocmd BufNewFile *.sh 0r ~/.vim/templates/skel.sh

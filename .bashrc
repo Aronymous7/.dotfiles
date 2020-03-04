@@ -85,8 +85,15 @@ alias dr='cd "$(</tmp/cwd)"'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias configupd='config add -u && config commit -m "some changes" && config push'
 
-# Custom functions
-mkd () {
+# Make directory ans move into it
+mkd() {
     mkdir -pv $1
     cd $1
+}
+
+# Unzip into folder of the same name in current directory
+unzd() {
+    if [[ $# != 1 ]]; then echo I need a single argument, the name of the archive to extract; return 1; fi
+    target="${1%.zip}"
+    unzip "$1" -d "${target##*/}"
 }
