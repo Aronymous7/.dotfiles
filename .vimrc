@@ -8,6 +8,7 @@ filetype off
 call plug#begin()
 Plug 'adelarsq/vim-matchit'
 Plug 'nanotech/jellybeans.vim'
+Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
@@ -25,6 +26,9 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
+" Airline options
+let g:airline#extensions#tabline#enabled = 1
+
 " Auto-Pairs options
 let g:AutoPairsShortcutJump = 'ö<space>'
 
@@ -39,7 +43,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { "passive_filetypes": ["tex"] }
 
 " Emmet options
-let g:user_emmet_leader_key = 'Ö'
+let g:user_emmet_leader_key = ','
+let g:user_emmet_install_global = 0
+autocmd FileType html,xml,css EmmetInstall
 
 " Supertab options
 let g:SuperTabDefaultCompletionType = "context"
@@ -52,7 +58,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Pick a leader key
-let mapleader = "ä"
+let mapleader = "ö"
 let maplocalleader = "ü"
 
 " Security
@@ -63,10 +69,8 @@ set path^=**/
 
 " Line numbers and status bar
 set number
-set ruler
-set laststatus=2
-set showmode
 set showcmd
+set noshowmode
 
 " Encoding
 set encoding=utf-8
@@ -140,7 +144,8 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-nnoremap <leader>w :%s/\s\+$//e<CR>
+nnoremap <leader>wc :call<space>clearmatches()<CR>
+nnoremap <leader>wd :%s/\s\+$//e<CR>
 
 " More intuitive splitting
 set splitbelow splitright
@@ -183,7 +188,6 @@ nnoremap g$ $
 " Map Escape
 inoremap jj <ESC>
 vnoremap <space> <ESC>
-nnoremap <space> <ESC>
 
 " Save file
 nnoremap <C-s> :update<cr>
@@ -199,9 +203,6 @@ nnoremap <leader>rr yiw:%s/<C-r>"//gI<left><left><left>
 nnoremap <leader>rg yiw:bufdo<space>%s/<C-r>"//geI<left><left><left><left>
 vnoremap <leader>r :s//gI<left><left><left>
 
-" Move right in insert mode
-inoremap Ö<space> <right>
-
 " Switch windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -212,11 +213,14 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>ae :e ~/.vim/plugin/abbreviations.vim<CR>
 nnoremap <leader>as :source ~/.vim/plugin/abbreviations.vim<CR>
 
-" Arglist
-nnoremap + :arga<CR>:ar<CR>
-nnoremap - :.argd<CR>:ar<CR>
-nnoremap <C-p> :prev<CR>
-nnoremap <C-n> :n<CR>
+" Buffers
+nnoremap <C-p> :bp<CR>
+nnoremap <C-n> :bn<CR>
+nnoremap + :badd<space>
+nnoremap - :bd<space>
+
+" Move right in insert mode
+inoremap Ö<space> <right>
 
 " NERDTree bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
