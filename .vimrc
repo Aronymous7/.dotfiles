@@ -50,8 +50,8 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,xml,css EmmetInstall
 
 " UltiSnips options
-let g:UltiSnipsExpandTrigger = 'ä'
-let g:UltiSnipsListSnippets = 'Ä'
+let g:UltiSnipsExpandTrigger = 'öö'
+let g:UltiSnipsListSnippets = 'ÖÖ'
 
 " Pick a leader key
 let mapleader = "ö"
@@ -108,7 +108,7 @@ nnoremap <leader>h :set hlsearch!<CR>
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬,space:•
-nnoremap <leader>l :set list!<CR> " Toggle tabs and EOL
+nnoremap <leader>l :set list!<CR>
 
 " Jump to last position when opening file
 if has("autocmd")
@@ -170,10 +170,10 @@ let &t_SI .= "\<Esc>[6 q"
 set confirm
 
 " Copy/paste to/from system clipboard
-nnoremap <leader>c "+y
-vnoremap <leader>c "+y
-nnoremap <leader>v "+p
-vnoremap <leader>v "+p
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
 
 " Visual line movement
 nnoremap j gj
@@ -187,7 +187,10 @@ nnoremap g$ $
 
 " Map Escape
 inoremap jj <ESC>
+inoremap <C-j> <ESC>
+inoremap <C-k> <ESC>
 vnoremap <space> <ESC>
+snoremap <space> <ESC>
 
 " Save file
 nnoremap <C-s> :update<cr>
@@ -220,7 +223,7 @@ nnoremap + :badd<space>
 nnoremap - :bd<space>
 
 " Move right in insert mode
-inoremap Ö<space> <right>
+inoremap <C-l> <right>
 
 " NERDTree bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
@@ -229,26 +232,10 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
-" (e)Ruby bindings
+" (e)Ruby settings
 autocmd FileType ruby,eruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
 autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n'})
-autocmd FileType ruby inoremap öe <ESC>oend<ESC>O
-autocmd FileType eruby inoremap öe <ESC>o<%<space>end<space>%><ESC>O
-autocmd FileType eruby inoremap ö< <%<space><space>%><ESC>2hi
-autocmd FileType eruby inoremap öy <%=<space><space>%><ESC>2hi
 
-" Latex bindings
+" Latex settings
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
 autocmd FileType tex set colorcolumn = ""
-autocmd FileType tex inoremap ööe <ESC>"zdiwa\begin{<ESC>"zpa}<CR><CR>\end{<ESC>"zpa}<up>
-autocmd FileType tex inoremap öös \section{}<left>
-autocmd FileType tex inoremap ööf \begin{frame}{}<CR>\end{frame}<ESC>kf{a
-autocmd FileType tex inoremap ööb \textbf{}<left>
-autocmd FileType tex inoremap ööi \textit{}<left>
-autocmd FileType tex inoremap ööc \cite{}<left>
-autocmd FileType tex inoremap ööll \begin{itemize}<CR><CR>\end{itemize}<up>\item<space>
-autocmd FileType tex inoremap ööle \begin{enumerate}<CR><CR>\end{enumerate}<up>\item<space>
-autocmd FileType tex inoremap ööli \item<space>
-autocmd FileType tex inoremap öörl \label{}<left>
-autocmd FileType tex inoremap öörr \ref{}<left>
-autocmd FileType tex inoremap öög \includegraphics[width=0.8\textwidth]{}<left>

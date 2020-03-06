@@ -37,6 +37,8 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 - bumblebee (intel + nvidia graphics)
 	- free: sudo apt install bumblebee primus
 	- proprietary: sudo apt install bumblebee-nvidia primus libgl1-nvidia-glx
+- python stuff for UltiSnips
+	- python3-unidecode
 
 ## Fresh Debian setup
 
