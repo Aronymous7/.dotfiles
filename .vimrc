@@ -51,10 +51,7 @@ autocmd FileType html,xml,css EmmetInstall
 
 " UltiSnips options
 let g:UltiSnipsExpandTrigger = 'ä'
-
-" General completion settings
-set wildmenu
-set wildmode=list:longest,full
+let g:UltiSnipsListSnippets = 'Ä'
 
 " Pick a leader key
 let mapleader = "ö"
@@ -100,6 +97,10 @@ set hidden
 
 " Rendering
 set ttyfast
+
+" Wildmenu for command completion
+set wildmenu
+set wildmode=list:longest,full
 
 " Searching
 set ignorecase
@@ -251,7 +252,3 @@ autocmd FileType tex inoremap ööli \item<space>
 autocmd FileType tex inoremap öörl \label{}<left>
 autocmd FileType tex inoremap öörr \ref{}<left>
 autocmd FileType tex inoremap öög \includegraphics[width=0.8\textwidth]{}<left>
-
-" Skeletons for new files
-autocmd BufNewFile *.xml 0r ~/.vim/templates/skel.xml
-autocmd BufNewFile *.sh 0r ~/.vim/templates/skel.sh
