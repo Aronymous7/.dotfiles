@@ -28,6 +28,9 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 - mons
 	- git clone --recursive https://github.com/Ventto/mons.git
 	- sudo make install
+- YCM
+	- sudo apt install build-essential cmake vim python3-dev (nodejs npm)
+	- cd -> python3 install.py (--ts-complete)
 
 ### Optional
 

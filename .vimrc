@@ -17,7 +17,9 @@ Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'mattn/emmet-vim'
-Plug 'ervandew/supertab'
+Plug 'honza/vim-snippets'
+Plug 'sirver/UltiSnips'
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 " Turn on syntax highlighting
@@ -47,13 +49,10 @@ let g:user_emmet_leader_key = ','
 let g:user_emmet_install_global = 0
 autocmd FileType html,xml,css EmmetInstall
 
-" Supertab options
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabLongestEnhanced = 1
+" UltiSnips options
+let g:UltiSnipsExpandTrigger = 'ä'
 
 " General completion settings
-set completeopt=longest,menuone
-inoremap <expr> <CR> pumvisible() ? "\<space>\<backspace>" : "\<CR>"
 set wildmenu
 set wildmode=list:longest,full
 
