@@ -115,10 +115,10 @@ if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-" Highlighting
-hi PmenuSel cterm=bold ctermbg=darkgray ctermfg=none
-hi MatchParen cterm=bold ctermbg=darkgray ctermfg=none
-hi CursorLine cterm=none ctermbg=darkgray ctermfg=none
+" Highlighting ()
+"hi PmenuSel cterm=bold ctermbg=darkgray ctermfg=none
+"hi MatchParen cterm=bold ctermbg=darkgray ctermfg=none
+"hi CursorLine cterm=none ctermbg=darkgray ctermfg=none
 set cursorline
 
 " Color scheme (terminal)
@@ -211,10 +211,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-" Abbreviations
-nnoremap <leader>ae :e ~/.vim/plugin/abbreviations.vim<CR>
-nnoremap <leader>as :source ~/.vim/plugin/abbreviations.vim<CR>
 
 " Buffers
 nnoremap <C-p> :bp<CR>
