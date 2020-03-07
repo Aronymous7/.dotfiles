@@ -12,7 +12,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exuberant-ctags firefox-esr flameshot fonts-inconsolata git gsimplecal htop httpie i3lock imagemagick lxappearance neofetch network-manager network-manager-gnome nitrogen nomacs okular pandoc simple-scan suckless-tools sxhkd syncthing texlive-full thunderbird tldr tmux tmuxinator udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xmobar xmonad xorg xss-lock
+sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exuberant-ctags firefox-esr flameshot fonts-inconsolata git gsimplecal htop httpie i3lock imagemagick lxappearance neofetch network-manager network-manager-gnome nitrogen nodejs nomacs npm okular pandoc simple-scan suckless-tools sxhkd syncthing texlive-full thunderbird tldr tmux tmuxinator udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xmobar xmonad xorg xss-lock
 
 ### Non-apt stuff
 
@@ -29,8 +29,8 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 	- git clone --recursive https://github.com/Ventto/mons.git
 	- sudo make install
 - YCM
-	- sudo apt install build-essential cmake vim python3-dev (nodejs npm)
-	- cd -> python3 install.py (--ts-complete)
+	- sudo apt install build-essential cmake vim python3-dev
+	- cd -> python3 install.py --ts-complete
 
 ### Optional
 

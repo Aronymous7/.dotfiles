@@ -78,6 +78,7 @@ alias rbn='sudo shutdown -r now'
 alias aptupgrade='sudo apt update && sudo apt upgrade'
 alias aptlist='apt list --installed | grep'
 alias cl='clear -x'
+alias gtags='ctags -R --fields=+l .'
 
 alias ds='pwd > /tmp/cwd'
 alias dr='cd "$(</tmp/cwd)"'

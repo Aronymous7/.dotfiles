@@ -20,6 +20,11 @@ Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
 Plug 'sirver/UltiSnips'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'gko/vim-coloresque'
+Plug 'prettier/vim-prettier', {
+	\ 'do': 'npm install',
+	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json',
+			\ 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
 " Turn on syntax highlighting
@@ -52,6 +57,11 @@ autocmd FileType html,xml,css EmmetInstall
 " UltiSnips options
 let g:UltiSnipsExpandTrigger = 'öö'
 let g:UltiSnipsListSnippets = 'ÖÖ'
+let g:UltiSnipsJumpForwardTrigger = 'ö<Tab>'
+let g:UltiSnipsJumpBackwardTrigger = 'Ö<Tab>'
+
+" YCM options
+let g:ycm_collect_identifiers_from_tags_files = 1
 
 " Pick a leader key
 let mapleader = "ö"
@@ -79,6 +89,7 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set autoindent
+set smartindent
 
 " Show as many lines as possible
 set display+=truncate
@@ -104,6 +115,7 @@ set wildmode=list:longest,full
 
 " Searching
 set ignorecase
+set smartcase
 nnoremap <leader>h :set hlsearch!<CR>
 
 " Visualize tabs and newlines
@@ -187,8 +199,6 @@ nnoremap g$ $
 
 " Map Escape
 inoremap jj <ESC>
-inoremap <C-j> <ESC>
-inoremap <C-k> <ESC>
 vnoremap <space> <ESC>
 snoremap <space> <ESC>
 
@@ -219,7 +229,7 @@ nnoremap + :badd<space>
 nnoremap - :bd<space>
 
 " Move right in insert mode
-inoremap <C-l> <right>
+inoremap Ö<space> <right>
 
 " NERDTree bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
