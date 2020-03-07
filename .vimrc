@@ -12,6 +12,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
@@ -35,6 +37,10 @@ filetype plugin indent on
 
 " Airline options
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" CtrlP options
+let g:ctrlp_map = '<leader>f'
 
 " Auto-Pairs options
 let g:AutoPairsShortcutJump = 'ö<space>'
@@ -225,7 +231,6 @@ nnoremap <C-l> <C-w>l
 " Buffers
 nnoremap <C-p> :bp<CR>
 nnoremap <C-n> :bn<CR>
-nnoremap + :badd<space>
 nnoremap - :bd<space>
 
 " Move right in insert mode
