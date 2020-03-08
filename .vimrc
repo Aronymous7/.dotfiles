@@ -186,6 +186,10 @@ set ttimeoutlen=100
 set ttymouse=xterm2
 set mouse=a
 
+" Folding
+set foldmethod=syntax
+set nofoldenable
+
 " Beam-cursor in insert mode
 let &t_EI .= "\<Esc>[2 q"
 let &t_SR .= "\<Esc>[2 q"
