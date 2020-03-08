@@ -78,6 +78,7 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 	- alien: xinput --disable 14
 - okular
 	- set keybindings
+	- editor-settings: vim --remote-silent +%l "%f"
 - nomacs
 	- dark theme
 - vifm

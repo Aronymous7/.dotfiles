@@ -46,7 +46,14 @@ let g:ctrlp_map = '<leader>f'
 let g:AutoPairsShortcutJump = 'ö<space>'
 
 " Vimtex options
-let g:vimtex_view_general_viewer='okular'
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_imaps_leader = 'ä'
+if !exists('g:ycm_semantic_triggers')
+	let g:ycm_semantic_triggers = {}
+endif
+autocmd VimEnter * let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 
 " Syntastic options
 let g:syntastic_always_populate_loc_list = 1
@@ -58,7 +65,7 @@ let g:syntastic_mode_map = { "passive_filetypes": ["tex"] }
 " Emmet options
 let g:user_emmet_leader_key = ','
 let g:user_emmet_install_global = 0
-autocmd FileType html,xml,css EmmetInstall
+autocmd FileType html,xml,css,scss EmmetInstall
 
 " UltiSnips options
 let g:UltiSnipsExpandTrigger = 'öö'
