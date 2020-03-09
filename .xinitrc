@@ -1,6 +1,5 @@
 xrdb ~/.Xresources
-setxkbmap de
-setxkbmap -option "lv3:caps_switch"
+setxkbmap de -option "lv3:caps_switch,shift:both_capslock"
 xset r rate 300 40
 
 ~/scripts/autostart.sh

@@ -41,6 +41,8 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " CtrlP options
 let g:ctrlp_map = '<leader>f'
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_open_multiple_files = 'i'
 
 " Auto-Pairs options
 let g:AutoPairsShortcutJump = 'ö<space>'
