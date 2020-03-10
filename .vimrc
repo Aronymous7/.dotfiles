@@ -130,7 +130,6 @@ set wildmode=list:longest,full
 
 " Searching
 set ignorecase
-set smartcase
 nnoremap <leader>h :set hlsearch!<CR>
 
 " Visualize tabs and newlines
@@ -256,10 +255,8 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
-" (e)Ruby settings
-autocmd FileType ruby,eruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
-autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'<%':'%>//n', '<%=':'%>//n'})
-
-" Latex settings
+" FileType settings
+autocmd FileType ruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
+autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'|':'|', '<%':'%>//n', '<%=':'%>//n'})
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
-autocmd FileType tex set colorcolumn = ""
+autocmd FileType tex,rmd set colorcolumn = ""
