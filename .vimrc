@@ -114,15 +114,35 @@ set formatoptions=tcqn1j
 autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 set nrformats-=octal
 
-" Cursor motion
+" Cursor motion and cursorline
 set scrolloff=4
 set backspace=indent,eol,start
+set cursorline
 
-" Allow hidden buffers
+" Allow hidden buffers and ask for confirmation when :q and not saved
 set hidden
+set confirm
 
 " Rendering
 set ttyfast
+
+" More intuitive splitting
+set splitbelow splitright
+
+" Always read external changes
+set autoread
+
+" Timeout on keycodes
+set ttimeout
+set ttimeoutlen=100
+
+" Enable mouse
+set ttymouse=xterm2
+set mouse=a
+
+" Folding
+set foldmethod=syntax
+set nofoldenable
 
 " Wildmenu for command completion
 set wildmenu
@@ -140,12 +160,6 @@ nnoremap <leader>l :set list!<CR>
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-" Highlighting ()
-"hi PmenuSel cterm=bold ctermbg=darkgray ctermfg=none
-"hi MatchParen cterm=bold ctermbg=darkgray ctermfg=none
-"hi CursorLine cterm=none ctermbg=darkgray ctermfg=none
-set cursorline
 
 " Color scheme (terminal)
 set t_Co=256
@@ -173,31 +187,10 @@ autocmd BufWinLeave * call clearmatches()
 nnoremap <leader>wc :call<space>clearmatches()<CR>
 nnoremap <leader>wd :%s/\s\+$//e<CR>
 
-" More intuitive splitting
-set splitbelow splitright
-
-" Always read external changes
-set autoread
-
-" Timeout on keycodes
-set ttimeout
-set ttimeoutlen=100
-
-" Enable mouse
-set ttymouse=xterm2
-set mouse=a
-
-" Folding
-set foldmethod=syntax
-set nofoldenable
-
 " Beam-cursor in insert mode
 let &t_EI .= "\<Esc>[2 q"
 let &t_SR .= "\<Esc>[2 q"
 let &t_SI .= "\<Esc>[6 q"
-
-" Ask for confirmation when :q and not saved
-set confirm
 
 " Copy/paste to/from system clipboard
 nnoremap <leader>y "+y
@@ -259,4 +252,4 @@ nnoremap <leader>sc :SyntasticCheck<space>
 autocmd FileType ruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
 autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'|':'|', '<%':'%>//n', '<%=':'%>//n'})
 autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
-autocmd FileType tex,rmd set colorcolumn = ""
+autocmd FileType tex,markdown,rmd,html,xml,text set colorcolumn = ""
