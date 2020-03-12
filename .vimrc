@@ -99,7 +99,7 @@ set encoding=utf-8
 " Wrapping and tabbing
 set wrap
 set linebreak
-set colorcolumn=81
+set colorcolumn=101
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
