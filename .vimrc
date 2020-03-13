@@ -251,5 +251,7 @@ nnoremap <leader>sc :SyntasticCheck<space>
 " FileType settings
 autocmd FileType ruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
 autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'|':'|', '<%':'%>//n', '<%=':'%>//n'})
-autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
+autocmd FileType tex,markdown let b:AutoPairs = AutoPairsDefine({'$' : '$'})
 autocmd FileType tex,markdown,rmd,html,xml,text set colorcolumn = ""
+
+autocmd FileType markdown nnoremap <leader>c :!pandoc<space><C-r>%<space>-o<space><C-r>%<BS><BS>html<CR>
