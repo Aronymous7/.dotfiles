@@ -174,7 +174,7 @@ if has("gui_running")
 	set guicursor+=n-v-c-i:blinkon0
 endif
 
-" Highlighting after setting color scheme
+" Vertical line for character limit
 hi ColorColumn ctermbg=darkgray guibg=darkgray
 
 " Highlight trailing whitespaces
