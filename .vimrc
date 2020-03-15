@@ -45,7 +45,7 @@ let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_open_multiple_files = 'i'
 
 " Auto-Pairs options
-let g:AutoPairsShortcutJump = 'ö<space>'
+let g:AutoPairsShortcutJump = 'Ö<space>'
 
 " Vimtex options
 let g:vimtex_view_general_viewer = 'okular'
@@ -239,7 +239,7 @@ nnoremap <C-n> :bn<CR>
 nnoremap - :bd<space>
 
 " Move right in insert mode
-inoremap Ö<space> <right>
+inoremap ö<space> <right>
 
 " NERDTree bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
