@@ -54,6 +54,8 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 
 ### Manual configuration
 
+- vim
+	- mkdir ~/.config/vimundo
 - lxappearance
 	- set themes
 - thunderbird

@@ -144,6 +144,10 @@ set mouse=a
 set foldmethod=syntax
 set nofoldenable
 
+" Store undo buffers in files
+set undofile
+set undodir=~/.config/vimundo
+
 " Wildmenu for command completion
 set wildmenu
 set wildmode=list:longest,full
@@ -191,6 +195,9 @@ nnoremap <leader>wd :%s/\s\+$//e<CR>
 let &t_EI .= "\<Esc>[2 q"
 let &t_SR .= "\<Esc>[2 q"
 let &t_SI .= "\<Esc>[6 q"
+
+" Unbind enter Ex-mode
+nnoremap Q <nop>
 
 " Copy/paste to/from system clipboard
 nnoremap <leader>y "+y
