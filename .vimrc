@@ -13,6 +13,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-unimpaired'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
@@ -148,17 +150,18 @@ set nofoldenable
 set undofile
 set undodir=~/.config/vimundo
 
+" Spell checking in english and german
+set spelllang=en,de
+
 " Wildmenu for command completion
 set wildmenu
 set wildmode=list:longest,full
 
-" Searching
+" Case insensitivity for searching, autocompletion etc.
 set ignorecase
-nnoremap <leader>h :set hlsearch!<CR>
 
-" Visualize tabs and newlines
+" Visualize tabs, newlines and spaces
 set listchars=tab:▸\ ,eol:¬,space:•
-nnoremap <leader>l :set list!<CR>
 
 " Jump to last position when opening file
 if has("autocmd")
@@ -223,11 +226,6 @@ snoremap <space> <ESC>
 " Save file
 nnoremap <C-s> :update<cr>
 inoremap <C-s> <Esc>:update<CR>gi
-
-" Spell checking
-nnoremap <leader>ss :setlocal spell!<CR>
-nnoremap <leader>sg :setlocal spell! spelllang=de<CR>
-nnoremap <leader>se :setlocal spell! spelllang=en<CR>
 
 " Substitution bindings
 nnoremap <leader>rr yiw:%s/<C-r>"//gI<left><left><left>
