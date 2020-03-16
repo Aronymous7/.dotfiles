@@ -22,15 +22,13 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 - vim-plug
 	- curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	- :PlugInstall
-- tpm
-	- git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-	- in tmux: prefix+I
 - mons
 	- git clone --recursive https://github.com/Ventto/mons.git
 	- sudo make install
 - YCM
 	- sudo apt install build-essential cmake vim python3-dev
 	- cd -> python3 install.py --ts-complete
+	- sudo npm install --global vscode-css-languageserver-bin
 
 ### Optional
 

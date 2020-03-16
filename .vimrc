@@ -8,6 +8,7 @@ filetype off
 call plug#begin()
 Plug 'adelarsq/vim-matchit'
 Plug 'nanotech/jellybeans.vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -20,6 +21,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
+Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
 Plug 'sirver/UltiSnips'
@@ -79,6 +81,14 @@ let g:UltiSnipsJumpBackwardTrigger = 'Ö<Tab>'
 
 " YCM options
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_language_server =
+	\[
+	\	{
+	\		'name': 'css',
+	\		'cmdline': [ '/usr/local/bin/css-languageserver', '--stdio' ],
+	\		'filetypes': [ 'css' ]
+	\	}
+	\]
 
 " Pick a leader key
 let mapleader = "ö"
@@ -101,7 +111,6 @@ set encoding=utf-8
 " Wrapping and tabbing
 set wrap
 set linebreak
-set colorcolumn=101
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
@@ -153,12 +162,17 @@ set undodir=~/.config/vimundo
 " Spell checking in english and german
 set spelllang=en,de
 
+" Column at 100 characters and gutter
+set colorcolumn=101
+set signcolumn=yes
+
 " Wildmenu for command completion
 set wildmenu
 set wildmode=list:longest,full
 
 " Case insensitivity for searching, autocompletion etc.
 set ignorecase
+set incsearch
 
 " Visualize tabs, newlines and spaces
 set listchars=tab:▸\ ,eol:¬,space:•
@@ -231,12 +245,6 @@ inoremap <C-s> <Esc>:update<CR>gi
 nnoremap <leader>rr yiw:%s/<C-r>"//gI<left><left><left>
 nnoremap <leader>rg yiw:bufdo<space>%s/<C-r>"//geI<left><left><left><left>
 vnoremap <leader>r :s//gI<left><left><left>
-
-" Switch windows
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 " Buffers
 nnoremap <C-p> :bp<CR>
