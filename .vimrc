@@ -239,7 +239,6 @@ snoremap <space> <ESC>
 
 " Save file
 nnoremap <C-s> :update<cr>
-inoremap <C-s> <Esc>:update<CR>gi
 
 " Substitution bindings
 nnoremap <leader>rr yiw:%s/<C-r>"//gI<left><left><left>
