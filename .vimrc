@@ -261,8 +261,7 @@ nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
 " Compile markdown files
-autocmd FileType markdown nnoremap <leader>c :!pandoc<space><C-r>%<space>-o<space><C-r>%
-			\<BS><BS>html<CR>
+autocmd FileType markdown nnoremap <leader>c :!pandoc<space>%<space>-o<space>%<.html<CR>
 
 " Remove vertical line-limit-column for some filetypes
 autocmd FileType tex,markdown,rmd,html,xml,text set colorcolumn = ""
