@@ -260,11 +260,24 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
-" FileType settings
-autocmd FileType ruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
-autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'|':'|', '<%':'%>//n', '<%=':'%>//n'})
-autocmd FileType tex,markdown let b:AutoPairs = AutoPairsDefine({'$' : '$'})
-autocmd FileType tex,markdown,rmd,html,xml,text set colorcolumn = ""
-
+" Compile markdown files
 autocmd FileType markdown nnoremap <leader>c :!pandoc<space><C-r>%<space>-o<space><C-r>%
 			\<BS><BS>html<CR>
+
+" Remove vertical line-limit-column for some filetypes
+autocmd FileType tex,markdown,rmd,html,xml,text set colorcolumn = ""
+
+" Add some AutoPairs for different filetypes
+augroup auto_pairs
+	autocmd FileType ruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
+	autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'|':'|', '<%':'%>//n', '<%=':'%>//n'})
+	autocmd FileType tex,markdown let b:AutoPairs = AutoPairsDefine({'$' : '$'})
+augroup END
+
+" Different tabbing for css files (tabs to spaces, tabwidth 2)
+augroup css_tabbing
+	autocmd FileType css set shiftwidth=2
+	autocmd FileType css set tabstop=2
+	autocmd FileType css set softtabstop=2
+	autocmd FileType css set expandtab
+augroup END
