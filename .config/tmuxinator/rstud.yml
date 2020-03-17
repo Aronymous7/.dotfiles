@@ -1,8 +1,0 @@
-# /home/aaron/.config/tmuxinator/rstud.yml
-
-name: rstud
-root: ~/Studium/StatComp/ue/ue2
-
-windows:
-  - main:
-    - vim ue2.Rmd
