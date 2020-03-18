@@ -48,14 +48,10 @@ let g:ctrlp_map = '<leader>f'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_open_multiple_files = 'i'
 
-" Auto-Pairs options
-let g:AutoPairsShortcutJump = 'Ö<space>'
-
 " Vimtex options
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
-let g:vimtex_imaps_leader = 'ä'
 if !exists('g:ycm_semantic_triggers')
 	let g:ycm_semantic_triggers = {}
 endif
@@ -66,18 +62,17 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { "passive_filetypes": ["tex"] }
 
 " Emmet options
 let g:user_emmet_leader_key = ','
 let g:user_emmet_install_global = 0
-autocmd FileType html,xml,css,scss EmmetInstall
+autocmd FileType html,xml,css EmmetInstall
 
 " UltiSnips options
-let g:UltiSnipsExpandTrigger = 'öö'
-let g:UltiSnipsListSnippets = 'ÖÖ'
-let g:UltiSnipsJumpForwardTrigger = 'ö<Tab>'
-let g:UltiSnipsJumpBackwardTrigger = 'Ö<Tab>'
+let g:UltiSnipsExpandTrigger = '<leader><leader>'
+let g:UltiSnipsListSnippets = '<leader>:'
+let g:UltiSnipsJumpForwardTrigger = ';<Tab>'
+let g:UltiSnipsJumpBackwardTrigger = ':<Tab>'
 
 " YCM options
 let g:ycm_collect_identifiers_from_tags_files = 1
@@ -91,8 +86,8 @@ let g:ycm_language_server =
 	\]
 
 " Pick a leader key
-let mapleader = "ö"
-let maplocalleader = "ü"
+let mapleader = ";"
+let maplocalleader = "\\"
 
 " Security
 set modelines=0
@@ -165,6 +160,9 @@ set spelllang=en,de
 " Column at 100 characters and gutter
 set colorcolumn=101
 set signcolumn=yes
+
+" Update time for swap-files and gitgutter
+set updatetime=1000
 
 " Wildmenu for command completion
 set wildmenu
@@ -246,12 +244,10 @@ nnoremap <leader>rg yiw:bufdo<space>%s/<C-r>"//geI<left><left><left><left>
 vnoremap <leader>r :s//gI<left><left><left>
 
 " Buffers
-nnoremap <C-p> :bp<CR>
-nnoremap <C-n> :bn<CR>
-nnoremap - :bd<space>
+nnoremap <leader>b :bd<space>
 
 " Move right in insert mode
-inoremap ö<space> <right>
+inoremap <C-l> <right>
 
 " NERDTree bindings
 nnoremap <leader>t :NERDTreeToggle<CR>

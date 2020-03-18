@@ -12,7 +12,7 @@
 ## The software I use
 ### Get everything via apt
 
-sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exuberant-ctags firefox-esr flameshot fonts-inconsolata git gsimplecal htop httpie i3lock imagemagick libreoffice lxappearance neofetch network-manager network-manager-gnome nitrogen nodejs nomacs npm okular pandoc simple-scan suckless-tools sxhkd syncthing texlive-full thunderbird tldr tmux tmuxinator udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xmobar xmonad xorg xss-lock
+sudo apt install alsa-utils arandr arc-theme build-essential catdoc cups curl docx2txt dunst exuberant-ctags firefox-esr flameshot fonts-inconsolata git gsimplecal htop httpie i3lock imagemagick libreoffice lxappearance neofetch network-manager network-manager-gnome nitrogen nodejs nomacs npm okular pandoc simple-scan suckless-tools sxhkd syncthing texlive-full thunderbird tldr tmux tmuxinator udevil unclutter unzip vifm vim vim-gui-common vlc xbacklight xclip xinput xmobar xmonad xorg xss-lock
 
 ### Non-apt stuff
 

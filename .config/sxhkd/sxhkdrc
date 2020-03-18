@@ -1,3 +1,9 @@
+# switch keyboard layout between qwerty and qwertz
+super + e
+	setxkbmap us
+super + g
+	setxkbmap de
+
 # monitor brightness
 XF86MonBrightness{Up,Down}
 	xbacklight {-inc 10,-dec 10}
