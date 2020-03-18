@@ -28,6 +28,10 @@ export BROWSER="firefox"
 export MAIL="thunderbird"
 export CALENDAR="gsimplecal"
 
+# For chromium sandbox (puppeteer)
+export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
+
+# Launch X-server if logged in on TTY-1
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
  . startx
 fi

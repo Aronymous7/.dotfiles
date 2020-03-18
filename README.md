@@ -58,7 +58,7 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 	- set themes
 - thunderbird
 	- connect webmail accounts (yahoo, tu, hotmail)
-- etc\_conf\_stuff
+- etc_conf_stuff
 	- mouse acceleration, adjust accel speed
 	- intel backlight (optional)
 - network-manager
@@ -84,7 +84,7 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 - vifm
 	- comment out "highlight OtherWin [...]" in ~/.config/vifm/colors/Default.vifm
 - tmuxinator
-	- sudo wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -O /etc/bash\_completion.d/tmuxinator.bash
+	- sudo wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -O /etc/bash_completion.d/tmuxinator.bash
 - nitrogen
 	- select wallpaper
 - grub-theme
@@ -92,8 +92,8 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 - github ssh
 	- ssh-keygen -t rsa -b 4096 -C "aaron.beigelbeck@yahoo.de"
 	- eval "$(ssh-agent -s)"
-	- ssh-add ~/.ssh/id\_rsa
-	- add id\_rsa.pub to github
+	- ssh-add ~/.ssh/id_rsa
+	- add id_rsa.pub to github
 	- ssh -T git@github.com
 	- config remote set-url origin git@github.com:Aronymous7/.dotfiles.git
 - cups
@@ -104,3 +104,8 @@ sudo apt install alsa-utils arandr arc-theme build-essential cups curl dunst exu
 - switching to testing/sid
 	- oldname -> newname
 	- security: newname-security
+- chromium-sandbox (puppeteer)
+	- cd <project-dir-path>/node_modules/puppeteer/.local-chromium/linux-<revision>/chrome-linux/
+	- sudo chown root:root chrome_sandbox
+	- sudo chmod 4755 chrome_sandbox
+	- sudo cp -p chrome_sandbox /usr/local/sbin/chrome-devel-sandbox
