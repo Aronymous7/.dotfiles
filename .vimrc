@@ -273,10 +273,10 @@ augroup auto_pairs
 	autocmd FileType tex,markdown let b:AutoPairs = AutoPairsDefine({'$' : '$'})
 augroup END
 
-" Different tabbing for css files (tabs to spaces, tabwidth 2)
-augroup css_tabbing
-	autocmd FileType css set shiftwidth=2
-	autocmd FileType css set tabstop=2
-	autocmd FileType css set softtabstop=2
-	autocmd FileType css set expandtab
+" Different tabbing for some filetypes (tabs to spaces, tabwidth 2)
+augroup custom_tabbing
+	autocmd FileType html,css set shiftwidth=2
+	autocmd FileType html,css set tabstop=2
+	autocmd FileType html,css set softtabstop=2
+	autocmd FileType html,css set expandtab
 augroup END
