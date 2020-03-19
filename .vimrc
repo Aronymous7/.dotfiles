@@ -260,13 +260,14 @@ nnoremap <leader>sc :SyntasticCheck<space>
 autocmd FileType markdown nnoremap <leader>c :!pandoc<space>%<space>-o<space>%<.html<CR>
 
 " Remove vertical line-limit-column for some filetypes
-autocmd FileType tex,markdown,rmd,html,xml,text set colorcolumn = ""
+autocmd FileType tex,markdown,rmd,html,xml,text setlocal colorcolumn = ""
 
 " Add some AutoPairs for different filetypes
 augroup auto_pairs
 	autocmd FileType ruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
 	autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'|':'|', '<%':'%>//n', '<%=':'%>//n'})
 	autocmd FileType tex,markdown let b:AutoPairs = AutoPairsDefine({'$' : '$'})
+	autocmd FileType html,xml let b:AutoPairs = AutoPairsDefine({'<' : '>'})
 augroup END
 
 " Different tabbing for some filetypes (tabs to spaces, tabwidth 2)

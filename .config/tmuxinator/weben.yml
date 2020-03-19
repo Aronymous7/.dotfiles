@@ -1,0 +1,11 @@
+# /home/aaron/.config/tmuxinator/weben.yml
+
+name: weben
+root: ~/Projects/a1-group-54
+
+windows:
+  - main:
+      layout: main-horizontal
+      panes:
+        - vim
+        - cd test/
