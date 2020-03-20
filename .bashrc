@@ -56,18 +56,12 @@ stty -ixon
 # Custom aliases
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
-alias xinitrc='vim ~/.xinitrc'
 alias profileconf='vim ~/.profile'
-alias xmonadconfig='vim ~/.xmonad/xmonad.hs'
-alias xmobarconfig='vim ~/.config/xmobar/xmobarrc'
-alias sxhkdconf='vim ~/.config/sxhkd/sxhkdrc'
 alias tmuxconf='vim ~/.tmux.conf'
 alias todo='vim ~/Sync/todo'
 
 alias sdn='sudo shutdown now'
 alias rbn='sudo shutdown -r now'
-alias aptupgrade='sudo apt update && sudo apt upgrade'
-alias aptlist='apt list --installed | grep'
 alias cl='clear -x'
 alias gtags='ctags -R --fields=+l .'
 

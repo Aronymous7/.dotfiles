@@ -16,9 +16,6 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# Set PATH variable
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/snap/bin:~/.local/bin
-
 # Set default programs
 export TERMINAL="st"
 export EDITOR="vim"
@@ -26,12 +23,3 @@ export VISUAL="vim"
 export READER="okular"
 export BROWSER="firefox"
 export MAIL="thunderbird"
-export CALENDAR="gsimplecal"
-
-# For chromium sandbox (puppeteer)
-export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
-
-# Launch X-server if logged in on TTY-1
-if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
- . startx
-fi
