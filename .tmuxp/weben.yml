@@ -1,0 +1,9 @@
+session_name: weben
+windows:
+    - window_name: main
+      layout: ae6b,199x47,0,0[199x32,0,0,33,199x14,0,33,34]
+      shell_command_before:
+          - cd ~/Projects/a1-group-54/
+      panes:
+          - vim
+          - cd test/

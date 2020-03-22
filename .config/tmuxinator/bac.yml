@@ -1,8 +1,0 @@
-# /home/aaron/.config/tmuxinator/bacn.yml
-
-name: bac
-root: ~/Studium/Bachelor/
-
-windows:
-  - main:
-      - vim notes.md

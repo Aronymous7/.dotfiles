@@ -109,3 +109,13 @@ sudo apt install alsa-utils arandr arc-theme build-essential catdoc cups curl do
 	- sudo chown root:root chrome_sandbox
 	- sudo chmod 4755 chrome_sandbox
 	- sudo cp -p chrome_sandbox /usr/local/sbin/chrome-devel-sandbox
+
+## Manjaro (XFCE)
+
+sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox git gvim httpie libreoffice-fresh neofetch nodejs nomacs npm okular pandoc python simple-scan syncthing texlive-most thunderbird tldr tmux tmuxp ttf-inconsolata unclutter vifm vlc xrandr
+
+- st, vim-plug, mons, YCM
+
+### Fresh setup
+
+- create ssh-key for github

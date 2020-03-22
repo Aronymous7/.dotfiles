@@ -1,0 +1,7 @@
+session_name: bac
+windows:
+    - window_name: main
+      shell_command_before:
+          - cd ~/Studium/Bachelor/
+      panes:
+          - vim notes.md
