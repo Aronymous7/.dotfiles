@@ -112,11 +112,20 @@ sudo apt install alsa-utils arandr arc-theme build-essential catdoc cups curl do
 
 ## Manjaro (XFCE)
 
-sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox git gvim httpie libreoffice-fresh neofetch nodejs nomacs npm okular pandoc python simple-scan syncthing texlive-most thunderbird tldr tmux tmuxp ttf-inconsolata unclutter vifm vlc xrandr
+sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox git gvim httpie libreoffice-fresh neofetch nomacs okular pandoc python simple-scan syncthing texlive-most thunderbird tldr tmux tmuxp ttf-inconsolata unclutter vifm vlc xrandr
 
+- nodejs or nodejs-lts-erbium and npm
 - st, vim-plug, mons, YCM
 
 ### Fresh setup
 
+- visudo and delete /etc/sudoers.d/...
+- vimundo folder
+- thunderbird setup (app password for hotmail and yahoo)
+- disable bluetooth
+- firefox settings
+- syncthing setup
+- okular bindings and editor setting
+- nomacs dark theme
+- vifm color fix
 - ssh-key for github
-- app password for hotmail
