@@ -118,4 +118,5 @@ sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox
 
 ### Fresh setup
 
-- create ssh-key for github
+- ssh-key for github
+- app password for hotmail
