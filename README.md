@@ -112,7 +112,9 @@ sudo apt install alsa-utils arandr arc-theme build-essential catdoc cups curl do
 
 ## Manjaro (XFCE)
 
-sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox git gvim httpie libreoffice-fresh neofetch nomacs okular pandoc python simple-scan syncthing texlive-most thunderbird tldr tmux tmuxp ttf-inconsolata unclutter vifm vlc xorg-xrandr
+sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox git gvim httpie libreoffice-fresh neofetch nomacs okular pandoc python simple-scan syncthing texlive-most thunderbird tldr tmux tmuxp ttf-inconsolata unclutter vifm vlc xorg-xrandr yay
+
+yay -S rstudio-desktop-bin
 
 - nodejs or nodejs-lts-erbium and npm
 - st, vim-plug, mons, YCM
