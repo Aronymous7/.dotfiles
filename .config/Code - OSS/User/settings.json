@@ -1,0 +1,18 @@
+{
+    "editor.accessibilitySupport": "off",
+    "editor.accessibilityPageSize": 1,
+    "editor.renderLineHighlight": "all",
+    "editor.roundedSelection": false,
+    "editor.smoothScrolling": true,
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 2,
+    "editor.unfoldOnClickAfterEndOfLine": true,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSurroundingLines": 4,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ]
+}
