@@ -27,10 +27,6 @@ Plug 'honza/vim-snippets'
 Plug 'sirver/UltiSnips'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'gko/vim-coloresque'
-Plug 'prettier/vim-prettier', {
-	\ 'do': 'npm install',
-	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json',
-			\ 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
 " Turn on syntax highlighting
@@ -44,7 +40,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " CtrlP options
-let g:ctrlp_map = '<leader>f'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_open_multiple_files = 'i'
 
