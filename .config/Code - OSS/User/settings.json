@@ -6,13 +6,57 @@
     "editor.smoothScrolling": true,
     "editor.tabCompletion": "on",
     "editor.tabSize": 2,
-    "editor.unfoldOnClickAfterEndOfLine": true,
     "editor.cursorBlinking": "solid",
     "editor.cursorSurroundingLines": 4,
-    "vim.insertModeKeyBindings": [
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideTabs": false,
+    "zenMode.silentNotifications": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "window.menuBarVisibility": "toggle",
+    "update.mode": "manual",
+    "update.showReleaseNotes": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [":"],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        },
+        {
+            "before": ["<C-h>"],
+            "commands": [
+                "workbench.action.focusSideBar"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
         {
             "before": ["j", "j"],
             "after": ["<Esc>"]
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["<Right>"]
         }
-    ]
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Space>"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.handleKeys":
+        {
+            "<C-f>": false,
+            "<C-b>": false,
+            "<C-w>": false
+        }
 }

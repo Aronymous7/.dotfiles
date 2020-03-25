@@ -60,8 +60,6 @@ alias profileconf='vim ~/.profile'
 alias tmuxconf='vim ~/.tmux.conf'
 alias todo='vim ~/Sync/todo'
 
-alias sdn='poweroff'
-alias rbn='reboot'
 alias paci='sudo pacman --needed -S'
 alias pacr='sudo pacman -Rns'
 alias pacs='pacman -Ss'
