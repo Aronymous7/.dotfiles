@@ -16,17 +16,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-unimpaired'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'airblade/vim-gitgutter'
-Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
 Plug 'sirver/UltiSnips'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'gko/vim-coloresque'
 call plug#end()
 
 " Turn on syntax highlighting
@@ -38,10 +35,6 @@ filetype plugin indent on
 " Airline options
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-" CtrlP options
-let g:ctrlp_open_new_file = 'r'
-let g:ctrlp_open_multiple_files = 'i'
 
 " Vimtex options
 let g:vimtex_view_general_viewer = 'okular'
@@ -58,11 +51,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Emmet options
-let g:user_emmet_leader_key = ','
-let g:user_emmet_install_global = 0
-autocmd FileType html,xml,css EmmetInstall
-
 " UltiSnips options
 let g:UltiSnipsExpandTrigger = '<leader><leader>'
 let g:UltiSnipsListSnippets = '<leader>:'
@@ -71,14 +59,6 @@ let g:UltiSnipsJumpBackwardTrigger = ':<Tab>'
 
 " YCM options
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_language_server =
-	\[
-	\	{
-	\		'name': 'css',
-	\		'cmdline': [ '/usr/local/bin/css-languageserver', '--stdio' ],
-	\		'filetypes': [ 'css' ]
-	\	}
-	\]
 
 " Pick a leader key
 let mapleader = ";"
@@ -101,9 +81,9 @@ set encoding=utf-8
 " Wrapping and tabbing
 set wrap
 set linebreak
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set autoindent
 set smartindent
 
@@ -230,19 +210,20 @@ inoremap jj <ESC>
 vnoremap <space> <ESC>
 snoremap <space> <ESC>
 
-" Save file
+" Save and find file
 nnoremap <C-s> :update<cr>
+nnoremap <C-p> :find<space>
+
+" Move right in insert mode
+inoremap <C-l> <right>
+
+" Delete buffer
+nnoremap - :bd<space>
 
 " Substitution bindings
 nnoremap <leader>rr yiw:%s/<C-r>"//gI<left><left><left>
 nnoremap <leader>rg yiw:bufdo<space>%s/<C-r>"//geI<left><left><left><left>
 vnoremap <leader>r :s//gI<left><left><left>
-
-" Buffers
-nnoremap <leader>b :bd<space>
-
-" Move right in insert mode
-inoremap <C-l> <right>
 
 " NERDTree bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
@@ -255,7 +236,7 @@ nnoremap <leader>sc :SyntasticCheck<space>
 autocmd FileType markdown nnoremap <leader>c :!pandoc<space>%<space>-o<space>%<.html<CR>
 
 " Remove vertical line-limit-column for some filetypes
-autocmd FileType tex,markdown,rmd,html,xml,text setlocal colorcolumn = ""
+autocmd FileType tex,markdown,rmd,xml,text setlocal colorcolumn = ""
 
 " Add some AutoPairs for different filetypes
 augroup auto_pairs
@@ -263,12 +244,4 @@ augroup auto_pairs
 	autocmd FileType eruby let b:AutoPairs = AutoPairsDefine({'|':'|', '<%':'%>//n', '<%=':'%>//n'})
 	autocmd FileType tex,markdown let b:AutoPairs = AutoPairsDefine({'$' : '$'})
 	autocmd FileType html,xml let b:AutoPairs = AutoPairsDefine({'<' : '>'})
-augroup END
-
-" Different tabbing for some filetypes (tabs to spaces, tabwidth 2)
-augroup custom_tabbing
-	autocmd FileType html,css set shiftwidth=2
-	autocmd FileType html,css set tabstop=2
-	autocmd FileType html,css set softtabstop=2
-	autocmd FileType html,css set expandtab
 augroup END
