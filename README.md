@@ -129,12 +129,10 @@ __vscode extensions:__ tomorrow and tomorrow night, trailing spaces, vim, xml, x
 ### Fresh setup
 
 - visudo and delete /etc/sudoers.d/...
-- vimundo folder
+- mkdir ~/.config/vimundo
 - thunderbird setup (app password for hotmail and yahoo)
 - disable bluetooth
-- firefox settings
+- firefox sync
 - syncthing setup
-- editor setting
 - nomacs dark theme
-- vifm color fix
 - ssh-key for github
