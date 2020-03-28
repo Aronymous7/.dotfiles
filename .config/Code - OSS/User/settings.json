@@ -10,8 +10,9 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorSurroundingLines": 4,
     "editor.minimap.enabled": false,
-    "editor.rulers": [100],
-    "workbench.colorTheme": "Tomorrow Night Bright",
+    "editor.rulers": [
+        100
+    ],
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "zenMode.hideLineNumbers": false,
@@ -34,28 +35,44 @@
     },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": [":"],
-            "commands": ["workbench.action.showCommands"]
+            "before": [
+                ":"
+            ],
+            "commands": [
+                "workbench.action.showCommands"
+            ]
         }
     ],
     "vim.insertModeKeyBindingsNonRecursive": [
         {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         },
         {
-            "before": ["<C-l>"],
-            "after": ["<Right>"]
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<Right>"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": ["<Space>"],
-            "after": ["<Esc>"]
+            "before": [
+                "<Space>"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
-    "vim.handleKeys":
-    {
+    "vim.handleKeys": {
         "<C-f>": false,
         "<C-b>": false,
         "<C-w>": false,

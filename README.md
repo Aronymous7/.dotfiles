@@ -124,7 +124,7 @@ __gaming:__ wine, steam-manjaro, vukan-icd-loader, lib32-vulkan-icd-loader, lutr
 
 __manual:__ st, vim-plug, mons, YCM
 
-__vscode extensions:__ tomorrow and tomorrow night, trailing spaces, vim, xml, xml tools
+__vscode extensions:__ Trailing Spaces, Vim, XML, XML Tools
 
 ### Fresh setup
 
