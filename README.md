@@ -114,12 +114,17 @@ sudo apt install alsa-utils arandr arc-theme build-essential catdoc cups curl do
 
 sudo pacman-mirrors -c Germany
 
-sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox git gvim httpie libreoffice-fresh neofetch nomacs okular pandoc python simple-scan syncthing texlive-most thunderbird timeshift tldr tmux tmuxp ttf-droid ttf-inconsolata unclutter vifm vlc xorg-xrandr yay
+sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox git gvim httpie jdk-openjdk jre-openjdk libreoffice-fresh neofetch nomacs okular pandoc python simple-scan syncthing texlive-most thunderbird timeshift tldr tmux tmuxp ttf-droid ttf-inconsolata unclutter vifm vlc xorg-xrandr yay
 
-yay -S rstudio-desktop-bin
+yay -S rstudio-desktop-bin saxon-he
 
-- nodejs or nodejs-lts-erbium and npm
-- st, vim-plug, mons, YCM
+__node/npm:__ nodejs / nodejs-lts-erbium, npm
+
+__gaming:__ wine, steam-manjaro, vukan-icd-loader, lib32-vulkan-icd-loader, lutris
+
+__manual:__ st, vim-plug, mons, YCM
+
+__vscode extensions:__ tomorrow and tomorrow night, trailing spaces, vim, xml, xml tools
 
 ### Fresh setup
 
@@ -129,7 +134,7 @@ yay -S rstudio-desktop-bin
 - disable bluetooth
 - firefox settings
 - syncthing setup
-- okular bindings and editor setting
+- editor setting
 - nomacs dark theme
 - vifm color fix
 - ssh-key for github

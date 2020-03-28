@@ -11,6 +11,7 @@
     "editor.cursorSurroundingLines": 4,
     "editor.minimap.enabled": false,
     "editor.rulers": [100],
+    "workbench.colorTheme": "Tomorrow Night Bright",
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "zenMode.hideLineNumbers": false,
@@ -28,6 +29,9 @@
     "html.format.wrapLineLength": 100,
     "html.mirrorCursorOnMatchingTag": true,
     "trailing-spaces.highlightCurrentLine": false,
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [":"],
@@ -56,6 +60,5 @@
         "<C-b>": false,
         "<C-w>": false,
         "<C-k>": false
-    },
-    "window.zoomLevel": 0
+    }
 }
