@@ -120,7 +120,7 @@ yay -S rstudio-desktop-bin saxon-he
 
 __node/npm:__ nodejs / nodejs-lts-erbium, npm
 
-__gaming:__ wine, steam-manjaro, vukan-icd-loader, lib32-vulkan-icd-loader, lutris
+__gaming:__ steam-manjaro, [lutris](https://github.com/lutris/lutris/wiki/Wine-Dependencies), wine-mono, wine-gecko, gamemode, lib32-gamemode
 
 __manual:__ st, vim-plug, mons, YCM
 
