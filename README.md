@@ -114,7 +114,7 @@ sudo apt install alsa-utils arandr arc-theme build-essential catdoc cups curl do
 
 sudo pacman-mirrors -c Germany
 
-sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox git gvim httpie jdk-openjdk jre-openjdk libreoffice-fresh neofetch nomacs okular pandoc python simple-scan syncthing texlive-most thunderbird timeshift tldr tmux tmuxp ttf-droid ttf-inconsolata unclutter vifm vlc xorg-xrandr yay
+sudo pacman --needed -S base-devel catdoc cmake code ctags cups docx2txt firefox git gvim httpie jdk-openjdk jre-openjdk libreoffice-fresh neofetch nomacs okular pandoc python simple-scan syncthing texlive-most thunderbird timeshift tldr tmux tmuxp ttf-droid ttf-inconsolata unclutter vifm vlc xdotool xorg-xrandr yay zathura zathura-pdf-mupdf
 
 yay -S rstudio-desktop-bin saxon-he
 
@@ -134,5 +134,4 @@ __vscode extensions:__ Trailing Spaces, Vim, XML, XML Tools
 - disable bluetooth
 - firefox sync
 - syncthing setup
-- nomacs dark theme
 - ssh-key for github

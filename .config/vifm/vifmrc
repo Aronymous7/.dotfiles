@@ -122,7 +122,7 @@ command! mkd :mkdir %a | cd %a
 " program.
 
 " Pdf
-filextype *.pdf okular %c %i &
+filextype *.pdf zathura %c %i &
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " Audio

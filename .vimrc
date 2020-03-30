@@ -37,9 +37,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Vimtex options
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_view_method = 'zathura'
 if !exists('g:ycm_semantic_triggers')
 	let g:ycm_semantic_triggers = {}
 endif
@@ -194,16 +192,6 @@ nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
-
-" Visual line movement
-nnoremap j gj
-nnoremap k gk
-nnoremap 0 g0
-nnoremap $ g$
-nnoremap gj j
-nnoremap gk k
-nnoremap g0 0
-nnoremap g$ $
 
 " Map Escape
 inoremap jj <ESC>

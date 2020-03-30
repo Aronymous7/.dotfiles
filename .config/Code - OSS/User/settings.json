@@ -6,7 +6,6 @@
     "editor.smoothScrolling": true,
     "editor.tabCompletion": "on",
     "editor.tabSize": 2,
-    "editor.insertSpaces": false,
     "editor.cursorBlinking": "solid",
     "editor.cursorSurroundingLines": 4,
     "editor.minimap.enabled": false,
@@ -78,6 +77,7 @@
         "<C-b>": false,
         "<C-w>": false,
         "<C-k>": false,
-        "<C-j>": false
+        "<C-j>": false,
+        "<C-h>": false
     }
 }

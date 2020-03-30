@@ -1,0 +1,10 @@
+set selection-clipboard clipboard
+set window-title-basename
+set statusbar-home-tilde
+set zoom-center
+map J zoom out
+map K zoom in
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map i recolor
