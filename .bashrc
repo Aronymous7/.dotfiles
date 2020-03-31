@@ -64,6 +64,7 @@ alias todo='vim ~/Sync/todo'
 alias paci='sudo pacman --needed -S'
 alias pacr='sudo pacman -Rns'
 alias pacs='pacman -Ss'
+alias pacq='pacman -Q | grep -i'
 alias cl='clear -x'
 alias gtags='ctags -R --fields=+l .'
 
