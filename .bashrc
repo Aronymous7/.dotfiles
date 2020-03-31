@@ -56,9 +56,6 @@ stty -ixon
 # Custom aliases
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
-alias zathurarc='vim ~/.config/zathura/zathurarc'
-alias profileconf='vim ~/.profile'
-alias tmuxconf='vim ~/.tmux.conf'
 alias todo='vim ~/Sync/todo'
 
 alias paci='sudo pacman --needed -S'

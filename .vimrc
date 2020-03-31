@@ -36,6 +36,11 @@ filetype plugin indent on
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+" AutoPairs options
+let g:AutoPairsMultilineClose = 0
+let g:AutoPairsCenterLine = 0
+let g:AutoPairsMapCh = 0
+
 " Vimtex options
 let g:vimtex_view_method = 'zathura'
 if !exists('g:ycm_semantic_triggers')
@@ -79,6 +84,7 @@ set encoding=utf-8
 " Wrapping and tabbing
 set wrap
 set linebreak
+set expandtab
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
@@ -224,7 +230,7 @@ nnoremap <leader>sc :SyntasticCheck<space>
 autocmd FileType markdown nnoremap <leader>c :!pandoc<space>%<space>-o<space>%<.html<CR>
 
 " Remove vertical line-limit-column for some filetypes
-autocmd FileType tex,markdown,rmd,xml,text setlocal colorcolumn = ""
+autocmd FileType tex,markdown,rmd,text setlocal colorcolumn = ""
 
 " Add some AutoPairs for different filetypes
 augroup auto_pairs

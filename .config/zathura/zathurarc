@@ -2,6 +2,10 @@ set selection-clipboard clipboard
 set window-title-basename
 set statusbar-home-tilde
 set zoom-center
+set recolor-keephue
+set recolor-reverse-video
+set guioptions sv
+
 map J zoom out
 map K zoom in
 map u scroll half-up
