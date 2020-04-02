@@ -17,26 +17,26 @@ sudo apt install alsa-utils arandr arc-theme build-essential catdoc cups curl do
 ### Non-apt stuff
 
 - st
-	- make
-	- sudo make install clean
+  - make
+  - sudo make install clean
 - vim-plug
-	- curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	- :PlugInstall
+  - curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  - :PlugInstall
 - mons
-	- git clone --recursive https://github.com/Ventto/mons.git
-	- sudo make install
+  - git clone --recursive https://github.com/Ventto/mons.git
+  - sudo make install
 - YCM
-	- sudo apt install build-essential cmake vim python3-dev
-	- cd -> python3 install.py --ts-complete
-	- sudo npm install --global vscode-css-languageserver-bin
+  - sudo apt install build-essential cmake vim python3-dev
+  - cd -> python3 install.py --ts-complete
+  - sudo npm install --global vscode-css-languageserver-bin
 
 ### Optional
 
 - bumblebee (intel + nvidia graphics)
-	- free: sudo apt install bumblebee primus
-	- proprietary: sudo apt install bumblebee-nvidia primus libgl1-nvidia-glx
+  - free: sudo apt install bumblebee primus
+  - proprietary: sudo apt install bumblebee-nvidia primus libgl1-nvidia-glx
 - python stuff for UltiSnips
-	- python3-unidecode
+  - python3-unidecode
 
 ## Fresh Debian setup
 
@@ -53,62 +53,62 @@ sudo apt install alsa-utils arandr arc-theme build-essential catdoc cups curl do
 ### Manual configuration
 
 - vim
-	- mkdir ~/.config/vimundo
+  - mkdir ~/.config/vimundo
 - lxappearance
-	- set themes
+  - set themes
 - thunderbird
-	- connect webmail accounts (yahoo, tu, hotmail)
+  - connect webmail accounts (yahoo, tu, hotmail)
 - etc_conf_stuff
-	- mouse acceleration, adjust accel speed
-	- intel backlight (optional)
+  - mouse acceleration, adjust accel speed
+  - intel backlight (optional)
 - network-manager
-	- manage ethernet: delete lines in /etc/network/interfaces
+  - manage ethernet: delete lines in /etc/network/interfaces
 - bluetooth
-	- sudo systemctl disable bluetooth
+  - sudo systemctl disable bluetooth
 - firefox
-	- sync, preferences
+  - sync, preferences
 - syncthing
-	- sync folders (Sync, Studium)
+  - sync folders (Sync, Studium)
 - alsamixer (optional)
-	- cat /proc/asound/cards
-	- create /etc/asound.conf
-	- 2 lines: defaults.pcm.card num & defaults.ctl.card num
-	- alien: unmute HP/Speaker Auto Detect
+  - cat /proc/asound/cards
+  - create /etc/asound.conf
+  - 2 lines: defaults.pcm.card num & defaults.ctl.card num
+  - alien: unmute HP/Speaker Auto Detect
 - disable touchpad (optional)
-	- alien: xinput --disable 14
+  - alien: xinput --disable 14
 - okular
-	- set keybindings
-	- editor-settings: vim --remote-silent +%l "%f"
+  - set keybindings
+  - editor-settings: vim --remote-silent +%l "%f"
 - nomacs
-	- dark theme
+  - dark theme
 - vifm
-	- comment out "highlight OtherWin [...]" in ~/.config/vifm/colors/Default.vifm
+  - comment out "highlight OtherWin [...]" in ~/.config/vifm/colors/Default.vifm
 - tmuxinator
-	- sudo wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -O /etc/bash_completion.d/tmuxinator.bash
+  - sudo wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -O /etc/bash_completion.d/tmuxinator.bash
 - nitrogen
-	- select wallpaper
+  - select wallpaper
 - grub-theme
-	- sudo bash install.sh
+  - sudo bash install.sh
 - github ssh
-	- ssh-keygen -t rsa -b 4096 -C "aaron.beigelbeck@yahoo.de"
-	- eval "$(ssh-agent -s)"
-	- ssh-add ~/.ssh/id_rsa
-	- add id_rsa.pub to github
-	- ssh -T git@github.com
-	- config remote set-url origin git@github.com:Aronymous7/.dotfiles.git
+  - ssh-keygen -t rsa -b 4096 -C "aaron.beigelbeck@yahoo.de"
+  - eval "$(ssh-agent -s)"
+  - ssh-add ~/.ssh/id_rsa
+  - add id_rsa.pub to github
+  - ssh -T git@github.com
+  - config remote set-url origin git@github.com:Aronymous7/.dotfiles.git
 - cups
-	- add and configure printer
+  - add and configure printer
 
 ### Miscellaneous setup/config stuff
 
 - switching to testing/sid
-	- oldname -> newname
-	- security: newname-security
+  - oldname -> newname
+  - security: newname-security
 - chromium-sandbox (puppeteer)
-	- cd <project-dir-path>/node_modules/puppeteer/.local-chromium/linux-<revision>/chrome-linux/
-	- sudo chown root:root chrome_sandbox
-	- sudo chmod 4755 chrome_sandbox
-	- sudo cp -p chrome_sandbox /usr/local/sbin/chrome-devel-sandbox
+  - cd <project-dir-path>/node_modules/puppeteer/.local-chromium/linux-<revision>/chrome-linux/
+  - sudo chown root:root chrome_sandbox
+  - sudo chmod 4755 chrome_sandbox
+  - sudo cp -p chrome_sandbox /usr/local/sbin/chrome-devel-sandbox
 
 ## Manjaro (XFCE)
 
@@ -126,7 +126,7 @@ __manual:__ st, vim-plug, mons, YCM
 
 __vscode extensions:__ Trailing Spaces, Vim, XML, XML Tools
 
-### Fresh setup
+### Manual configuration
 
 - visudo and delete /etc/sudoers.d/...
 - mkdir ~/.config/vimundo
@@ -136,3 +136,7 @@ __vscode extensions:__ Trailing Spaces, Vim, XML, XML Tools
 - syncthing setup
 - ssh-key for github
 - enable printing: sudo systemctl enable --now org.cups.cupsd.service
+- snapd (optional)
+  - sudo systemctl enable --now snapd.socket
+  - sudo ln -s /var/lib/snapd/snap /snap
+  - restart

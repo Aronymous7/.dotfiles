@@ -1,10 +1,3 @@
-" Pick a leader key
-let mapleader = "ö"
-let maplocalleader = "ü"
-
-" Show line numbers
-set number
-
 " Cursor motion
 set scrolloff=4
 
@@ -13,15 +6,10 @@ set showmode
 
 " Searching
 set ignorecase
-nnoremap <leader>h :set hlsearch!<CR>
+nnoremap yoh :set hlsearch!<CR>
 
 " Map Escape (enter normal mode)
 inoremap jj <ESC>
 
 " Move cursor right in insert mode
-inoremap ö<space> <right>
-
-" Various bindings
-inoremap ö, <ESC>A;<CR>
-inoremap öe <ESC>A<space>{<CR>
-inoremap öf for<space>(int i = 0; i < ; i++<ESC>F;i
+inoremap <C-l> <right>

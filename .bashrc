@@ -4,8 +4,8 @@
 
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+  *i*) ;;
+    *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history. See bash(1) for more options
@@ -26,10 +26,9 @@ PS1='\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto --group-directories-first'
-
-    alias grep='grep --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto --group-directories-first'
+  alias grep='grep --color=auto'
 fi
 
 # some more ls aliases
@@ -73,15 +72,15 @@ alias configupd='config add -u && config commit -m "some changes" && config push
 
 # Make directory ans move into it
 mkd() {
-    mkdir -pv $1
-    cd $1
+  mkdir -pv $1
+  cd $1
 }
 
 # Unzip into folder of the same name in current directory
 unzd() {
-    if [[ $# != 1 ]]; then echo I need a single argument, the name of the archive to extract; return 1; fi
-    target="${1%.zip}"
-    unzip "$1" -d "${target##*/}"
+  if [[ $# != 1 ]]; then echo I need a single argument, the name of the archive to extract; return 1; fi
+  target="${1%.zip}"
+  unzip "$1" -d "${target##*/}"
 }
 
 # ex - archive extractor - usage: ex <file>
