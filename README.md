@@ -120,6 +120,8 @@ yay -S rstudio-desktop-bin saxon-he
 
 __node/npm:__ nodejs / nodejs-lts-erbium, npm
 
+__ruby/rails:__ ruby, ruby-irb, ruby-rdoc, ruby-docs, yarn, gem install rails (-v ...)
+
 __gaming:__ steam-manjaro, [lutris](https://github.com/lutris/lutris/wiki/Wine-Dependencies), wine-mono, wine-gecko, gamemode, lib32-gamemode
 
 __manual:__ st, vim-plug, mons, YCM

@@ -16,6 +16,9 @@ if [ -n "$BASH_VERSION" ]; then
   fi
 fi
 
+# Extend PATH
+PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
+
 # Set default programs
 export TERMINAL="st"
 export EDITOR="vim"
