@@ -118,15 +118,22 @@ sudo pacman --needed -S base-devel catdoc cmake code ctags docx2txt firefox git 
 
 yay -S rstudio-desktop-bin saxon-he
 
-__node/npm:__ nodejs / nodejs-lts-erbium, npm
+__node/npm:__
+- paci nodejs/nodejs-lts-erbium npm
 
-__ruby/rails:__ ruby, ruby-irb, ruby-rdoc, ruby-docs, yarn, gem install rails (-v ...)
+__ruby/rails:__
+- paci ruby ruby-irb ruby-rdoc ruby-docs yarn
+- gem install rails (-v ...) rails_db launchy
 
-__gaming:__ steam-manjaro, [lutris](https://github.com/lutris/lutris/wiki/Wine-Dependencies), wine-mono, wine-gecko, gamemode, lib32-gamemode
+__gaming:__
+- paci steam-manjaro wine-mono wine-gecko gamemode lib32-gamemode
+- [lutris](https://github.com/lutris/lutris/wiki/Wine-Dependencies)
 
-__manual:__ st, vim-plug, mons, YCM
+__manual:__
+- st, vim-plug, mons, YCM
 
-__vscode extensions:__ Trailing Spaces, Vim, XML, XML Tools
+__vscode extensions:__
+- Trailing Spaces, Vim, XML, XML Tools
 
 ### Manual configuration
 
