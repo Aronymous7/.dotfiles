@@ -33,16 +33,6 @@
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                ":"
-            ],
-            "commands": [
-                "workbench.action.showCommands"
-            ]
-        }
-    ],
     "vim.insertModeKeyBindingsNonRecursive": [
         {
             "before": [

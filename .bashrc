@@ -27,14 +27,13 @@ PS1='\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls --color=auto --group-directories-first'
+  alias ls='ls -F --color=auto --group-directories-first'
   alias grep='grep --color=auto'
 fi
 
 # some more ls aliases
 alias ll='ls -AlhF'
 alias la='ls -AF'
-alias l='ls -CF'
 
 # enable programmable completion features (you don't need to enable this, if it's already enabled in /etc/bash.bashrc and /etc/profile sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
