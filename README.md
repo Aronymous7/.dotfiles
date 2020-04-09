@@ -116,13 +116,14 @@ sudo pacman-mirrors -c Germany
 
 sudo pacman --needed -S base-devel catdoc cmake code ctags docx2txt firefox git gvim httpie jdk-openjdk jre-openjdk libreoffice-fresh manjaro-printer neofetch nomacs pandoc python simple-scan syncthing texlive-most thunderbird timeshift tldr tmux tmuxp ttf-droid ttf-inconsolata unclutter vifm vlc xdotool xorg-xrandr yay zathura zathura-pdf-poppler
 
-yay -S rstudio-desktop-bin saxon-he
+yay -S rbenv rstudio-desktop-bin ruby-build saxon-he
 
 __node/npm:__
 - paci nodejs/nodejs-lts-erbium npm
 
 __ruby/rails:__
 - paci ruby ruby-irb ruby-rdoc ruby-docs yarn
+- rbenv install x.x.x
 - gem install rails (-v ...) rails_db launchy
 
 __gaming:__

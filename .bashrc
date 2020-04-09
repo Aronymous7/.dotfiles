@@ -51,6 +51,9 @@ bind '"jj":vi-movement-mode'
 # Disable CTRL-S and CTRL-Q
 stty -ixon
 
+# Needed for rbenv to work
+eval "$(rbenv init -)"
+
 # Custom aliases
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
