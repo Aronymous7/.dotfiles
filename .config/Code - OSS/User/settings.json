@@ -4,6 +4,7 @@
     "editor.renderLineHighlight": "all",
     "editor.roundedSelection": false,
     "editor.smoothScrolling": true,
+    "editor.wordWrap": "on",
     "editor.tabCompletion": "on",
     "editor.tabSize": 2,
     "editor.cursorBlinking": "solid",
@@ -69,5 +70,5 @@
         "<C-k>": false,
         "<C-j>": false,
         "<C-h>": false
-    }
+    },
 }
