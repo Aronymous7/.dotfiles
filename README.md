@@ -124,7 +124,7 @@ __node/npm:__
 __ruby/rails:__
 - paci ruby ruby-irb ruby-rdoc ruby-docs yarn
 - rbenv install x.x.x
-- gem install rails (-v ...) rails_db launchy
+- gem install rails (-v ...) rails_db launchy solargraph
 
 __gaming:__
 - paci steam-manjaro wine-mono wine-gecko gamemode lib32-gamemode
@@ -134,7 +134,7 @@ __manual:__
 - st, vim-plug, mons, YCM
 
 __vscode extensions:__
-- Trailing Spaces, Vim, XML, XML Tools
+- endwise, Rails, Ruby, Ruby Solargraph, Trailing Spaces, Vim, XML, XML Tools
 
 ### Manual configuration
 

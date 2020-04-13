@@ -30,6 +30,9 @@
     "terminal.integrated.showExitAlert": false,
     "html.format.wrapLineLength": 100,
     "html.mirrorCursorOnMatchingTag": true,
+    "emmet.includeLanguages": {
+        "html.erb": "html"
+    },
     "trailing-spaces.highlightCurrentLine": false,
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
@@ -71,4 +74,5 @@
         "<C-j>": false,
         "<C-h>": false
     },
+    "workbench.editor.showTabs": true,
 }

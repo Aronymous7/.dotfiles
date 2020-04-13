@@ -13,7 +13,3 @@ inoremap jj <ESC>
 
 " Move cursor right in insert mode
 inoremap <C-l> <right>
-
-" RoR bindings
-inoremap ;< <%
-inoremap ;> <%=
