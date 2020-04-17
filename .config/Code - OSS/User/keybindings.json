@@ -2,11 +2,13 @@
 [
 	{
 		"key": "alt+h",
-		"command": "workbench.action.previousEditor"
+		"command": "workbench.action.previousEditor",
+		"when": "editorFocus"
 	},
 	{
 		"key": "alt+l",
-		"command": "workbench.action.nextEditor"
+		"command": "workbench.action.nextEditor",
+		"when": "editorFocus"
 	},
 	{
 		"key": "alt+j",
@@ -34,5 +36,15 @@
 	{
 		"key": "alt+u",
 		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "alt+l",
+		"command": "workbench.action.terminal.focusNext",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "alt+h",
+		"command": "workbench.action.terminal.focusPrevious",
+		"when": "terminalFocus"
 	}
 ]
