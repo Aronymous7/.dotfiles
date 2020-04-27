@@ -29,7 +29,6 @@
     "update.showReleaseNotes": false,
     "terminal.integrated.showExitAlert": false,
     "html.format.wrapLineLength": 100,
-    "html.mirrorCursorOnMatchingTag": true,
     "emmet.includeLanguages": {
         "html.erb": "html"
     },
@@ -73,6 +72,5 @@
         "<C-k>": false,
         "<C-j>": false,
         "<C-h>": false
-    },
-    "workbench.editor.showTabs": true,
+    }
 }
