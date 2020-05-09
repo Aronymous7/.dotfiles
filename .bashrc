@@ -107,3 +107,7 @@ ex () {
     echo "'$1' is not a valid file"
   fi
 }
+
+# WebEng Exercise 3
+export BLING_API_KEY="ak_wes20a3_054"
+export ARTMART_BASE_URL="http://localhost:3000"

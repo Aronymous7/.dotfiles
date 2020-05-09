@@ -1,4 +1,5 @@
 {
+    "editor.parameterHints.enabled": false,
     "editor.accessibilitySupport": "off",
     "editor.accessibilityPageSize": 1,
     "editor.renderLineHighlight": "all",

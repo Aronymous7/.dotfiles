@@ -196,8 +196,11 @@ nnoremap Q <nop>
 " Copy/paste to/from system clipboard
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+vnoremap <C-c> "+y
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
+vnoremap <C-v> "+p
+inoremap <C-v> <ESC>"+pa
 
 " Map Escape
 inoremap jj <ESC>
