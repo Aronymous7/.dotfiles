@@ -46,5 +46,14 @@
 		"key": "alt+h",
 		"command": "workbench.action.terminal.focusPrevious",
 		"when": "terminalFocus"
+	},
+	{
+		"key": "alt+f1",
+		"command": "-editor.action.showAccessibilityHelp",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+f1",
+		"command": "-Rails:Document"
 	}
 ]
