@@ -73,5 +73,12 @@
         "<C-k>": false,
         "<C-j>": false,
         "<C-h>": false
+    },
+    "java.semanticHighlighting.enabled": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     }
 }
