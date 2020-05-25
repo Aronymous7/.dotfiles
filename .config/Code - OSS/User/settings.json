@@ -34,8 +34,14 @@
         "html.erb": "html"
     },
     "trailing-spaces.highlightCurrentLine": false,
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
+    "xml.java.home": "/usr/lib/jvm/java-8-openjdk",
+    "java.semanticHighlighting.enabled": true,
+    "java.requirements.JDK11Warning": false,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "vim.insertModeKeyBindingsNonRecursive": [
         {
@@ -73,12 +79,5 @@
         "<C-k>": false,
         "<C-j>": false,
         "<C-h>": false
-    },
-    "java.semanticHighlighting.enabled": true,
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
     }
 }
