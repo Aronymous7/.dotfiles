@@ -60,9 +60,6 @@ let g:UltiSnipsListSnippets = '<leader>:'
 let g:UltiSnipsJumpForwardTrigger = ';<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = ':<Tab>'
 
-" YCM options
-let g:ycm_collect_identifiers_from_tags_files = 1
-
 " Pick a leader key
 let mapleader = ";"
 let maplocalleader = "\\"
@@ -138,7 +135,6 @@ set spelllang=en,de
 
 " Column at 100 characters and gutter
 set colorcolumn=101
-set signcolumn=yes
 
 " Update time for swap-files and gitgutter
 set updatetime=1000
