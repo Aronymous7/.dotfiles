@@ -20,7 +20,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
-Plug 'airblade/vim-gitgutter'
 Plug 'honza/vim-snippets'
 Plug 'sirver/UltiSnips'
 Plug 'ycm-core/YouCompleteMe'
@@ -135,9 +134,6 @@ set spelllang=en,de
 
 " Column at 100 characters and gutter
 set colorcolumn=101
-
-" Update time for swap-files and gitgutter
-set updatetime=1000
 
 " Wildmenu for command completion
 set wildmenu
