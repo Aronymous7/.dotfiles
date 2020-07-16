@@ -78,5 +78,6 @@
         "<C-k>": false,
         "<C-j>": false,
         "<C-h>": false
-    }
+    },
+    "infer-for-vscode.enableCodeLens": true
 }
