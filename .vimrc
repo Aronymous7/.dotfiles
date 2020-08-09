@@ -133,7 +133,7 @@ set undodir=~/.config/vimundo
 set spelllang=en,de
 
 " Column at 100 characters and gutter
-set colorcolumn=101
+set colorcolumn=121
 
 " Wildmenu for command completion
 set wildmenu

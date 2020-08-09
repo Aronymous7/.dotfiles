@@ -33,9 +33,9 @@
     "emmet.includeLanguages": {
         "html.erb": "html"
     },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
     "trailing-spaces.highlightCurrentLine": false,
-    "java.semanticHighlighting.enabled": true,
-    "java.requirements.JDK11Warning": false,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -78,6 +78,5 @@
         "<C-k>": false,
         "<C-j>": false,
         "<C-h>": false
-    },
-    "infer-for-vscode.enableCodeLens": true
+    }
 }
