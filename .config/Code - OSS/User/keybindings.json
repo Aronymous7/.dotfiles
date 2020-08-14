@@ -55,5 +55,10 @@
 	{
 		"key": "alt+f1",
 		"command": "-Rails:Document"
+	},
+	{
+		"key": "ctrl+shift+i",
+		"command": "-workbench.action.toggleDevTools",
+		"when": "isDevelopment"
 	}
 ]

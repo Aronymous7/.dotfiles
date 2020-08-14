@@ -71,6 +71,8 @@ alias dr='cd "$(</tmp/cwd)"'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias configupd='config add -u && config commit -m "some changes" && config push'
 
+alias setkb='setxkbmap us -option "ctrl:nocaps,shift:both_capslock"'
+
 # Make directory ans move into it
 mkd() {
   mkdir -pv $1
