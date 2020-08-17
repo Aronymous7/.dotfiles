@@ -52,7 +52,7 @@ bind '"jj":vi-movement-mode'
 stty -ixon
 
 # Needed for rbenv to work
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # Custom aliases
 alias vimrc='vim ~/.vimrc'

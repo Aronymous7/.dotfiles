@@ -17,10 +17,10 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Set JAVA_HOME
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
+# export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 
 # Extend PATH
-PATH="$JAVA_HOME/bin:$PATH:$HOME/.gem/ruby/2.7.0/bin"
+# PATH="$JAVA_HOME/bin:$PATH:$HOME/.gem/ruby/2.7.0/bin"
 
 # Set default programs
 export TERMINAL="st"

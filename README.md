@@ -114,26 +114,29 @@ sudo apt install alsa-utils arandr arc-theme build-essential catdoc cups curl do
 
 sudo pacman-mirrors -c Germany
 
-sudo pacman --needed -S base-devel catdoc cmake code docx2txt firefox git gvim httpie jdk-openjdk jre-openjdk libreoffice-fresh manjaro-printer neofetch nomacs pandoc python simple-scan syncthing texlive-most thunderbird timeshift tldr tmux ttf-droid ttf-inconsolata unclutter vifm vlc xdotool xorg-xrandr yay zathura zathura-pdf-poppler
+sudo pacman --needed -S base-devel catdoc cmake code docx2txt firefox git gvim httpie libreoffice-fresh manjaro-printer neofetch nomacs pandoc python simple-scan syncthing texlive-most thunderbird timeshift tldr tmux ttf-droid ttf-inconsolata unclutter vifm vlc xdotool xorg-xrandr yay zathura zathura-pdf-poppler
 
 yay -S rbenv rstudio-desktop-bin ruby-build saxon-he
 
-__node/npm:__
+__Java:__
+- paci jdk-openjdk jre-openjdk ant gradle maven
+
+__JavaScript:__
 - paci nodejs/nodejs-lts-erbium npm
 
-__ruby/rails:__
+__Ruby/Rails:__
 - paci ruby ruby-irb ruby-rdoc ruby-docs yarn
 - rbenv install x.x.x
 - gem install rails (-v ...) rails_db launchy solargraph
 
-__gaming:__
+__Gaming:__
 - paci steam-manjaro wine-mono wine-gecko gamemode lib32-gamemode
 - [lutris](https://github.com/lutris/lutris/wiki/Wine-Dependencies)
 
-__manual:__
+__Manual:__
 - st, vim-plug, mons, YCM
 
-__vscode extensions:__
+__VSCode extensions:__
 - endwise, Language Support for Java(TM) by Red Hat, Rails, Ruby, Ruby Solargraph, Trailing Spaces, Vetur, Vim, XML
 
 ### Manual configuration
