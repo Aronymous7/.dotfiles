@@ -16,6 +16,9 @@ if [ -n "$BASH_VERSION" ]; then
   fi
 fi
 
+# Classpath for Java
+export CLASSPATH=".:./*:$HOME/.local/share/java-libs/*"
+
 # Set JAVA_HOME
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 

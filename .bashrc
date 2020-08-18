@@ -73,6 +73,8 @@ alias configupd='config add -u && config commit -m "some changes" && config push
 
 alias setkb='setxkbmap us -option "ctrl:nocaps,shift:both_capslock"'
 
+alias srcjava='find -name "*.java" > sources.txt'
+
 # Make directory ans move into it
 mkd() {
   mkdir -pv $1
