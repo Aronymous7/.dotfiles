@@ -22,7 +22,6 @@ Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'honza/vim-snippets'
 Plug 'sirver/UltiSnips'
-Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 " Turn on syntax highlighting
@@ -41,11 +40,8 @@ let g:AutoPairsCenterLine = 0
 let g:AutoPairsMapCh = 0
 
 " Vimtex options
+let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
-if !exists('g:ycm_semantic_triggers')
-	let g:ycm_semantic_triggers = {}
-endif
-autocmd VimEnter * let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 
 " Syntastic options
 let g:syntastic_always_populate_loc_list = 1
