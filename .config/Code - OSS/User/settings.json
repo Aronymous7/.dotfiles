@@ -11,9 +11,9 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorSurroundingLines": 4,
     "editor.minimap.enabled": false,
-    "editor.rulers": [
-        100
-    ],
+    // "editor.rulers": [
+    //     100
+    // ],
     "explorer.openEditors.visible": 0,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -36,6 +36,7 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "trailing-spaces.highlightCurrentLine": false,
+    "gitlens.defaultDateStyle": "absolute",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,

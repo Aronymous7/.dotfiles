@@ -74,6 +74,8 @@ alias configupd='config add -u && config commit -m "some changes" && config push
 alias setkb='setxkbmap us -option "ctrl:nocaps,shift:both_capslock"'
 
 alias srcjava='find -name "*.java" > sources.txt'
+alias setjava8='export JAVA_HOME="/usr/lib/jvm/java-8-openjdk" && PATH="$JAVA_HOME/bin:$PATH"'
+alias setjava14='export JAVA_HOME="/usr/lib/jvm/java-14-openjdk" && PATH="$JAVA_HOME/bin:$PATH"'
 
 # Make directory ans move into it
 mkd() {
@@ -110,3 +112,7 @@ ex () {
     echo "'$1' is not a valid file"
   fi
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/aaron/.sdkman"
+[[ -s "/home/aaron/.sdkman/bin/sdkman-init.sh" ]] && source "/home/aaron/.sdkman/bin/sdkman-init.sh"
