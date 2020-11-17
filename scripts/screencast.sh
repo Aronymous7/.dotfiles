@@ -2,7 +2,7 @@
 
 ffmpeg \
 -f x11grab \
--s 1920x1080 \
+-s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
 -i :0.0 \
 -f alsa \
 -i default \
