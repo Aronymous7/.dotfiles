@@ -11,9 +11,9 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorSurroundingLines": 4,
     "editor.minimap.enabled": false,
-    // "editor.rulers": [
-    //     100
-    // ],
+    "editor.rulers": [
+        120
+    ],
     "explorer.openEditors.visible": 0,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
