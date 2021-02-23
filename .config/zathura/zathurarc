@@ -5,6 +5,7 @@ set zoom-center
 set recolor-keephue
 set recolor-reverse-video
 set guioptions sv
+set sandbox none
 
 map J zoom out
 map K zoom in
