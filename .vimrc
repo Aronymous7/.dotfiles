@@ -217,8 +217,11 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<space>
 
-" Compile markdown files
-autocmd FileType markdown nnoremap <leader>c :!pandoc<space>%<space>-o<space>%<.html<CR>
+" Compile and view markdown files
+autocmd FileType markdown nnoremap <leader>ch :!pandoc<space>%<space>-o<space>%<.html<CR>
+autocmd FileType markdown nnoremap <leader>vh :!firefox<space>%<.html<CR>
+autocmd FileType markdown nnoremap <leader>cp :!pandoc<space>%<space>-o<space>%<.pdf<CR>
+autocmd FileType markdown nnoremap <leader>vp :!zathura<space>%<.pdf<space>&<CR>
 
 " Remove vertical line-limit-column for some filetypes
 autocmd FileType tex,markdown,rmd,text setlocal colorcolumn = ""

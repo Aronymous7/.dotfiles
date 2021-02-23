@@ -87,6 +87,7 @@ mark h ~/
 " %d the current directory name.
 " %D the other window directory name.
 " %m run the command in a menu window
+" %i completely ignore command output
 
 command! df df -h %m 2> /dev/null
 command! diff vim -d %f %F
