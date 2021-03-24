@@ -116,8 +116,6 @@ sudo pacman-mirrors -c Germany
 
 sudo pacman --needed -S base-devel catdoc cmake code docx2txt firefox git gvim httpie libreoffice-fresh manjaro-printer neofetch nomacs pandoc python simple-scan syncthing texlive-most thunderbird timeshift tldr tmux ttf-droid ttf-inconsolata unclutter vifm vlc xdotool xorg-xrandr yay zathura zathura-pdf-poppler
 
-yay -S rbenv rstudio-desktop-bin ruby-build saxon-he
-
 __Java:__
 - paci jdk-openjdk jre-openjdk ant gradle maven
 
@@ -126,6 +124,7 @@ __JavaScript:__
 
 __Ruby/Rails:__
 - paci ruby ruby-irb ruby-rdoc ruby-docs yarn
+- yay -S rbenv ruby-build
 - rbenv install x.x.x
 - gem install rails (-v ...) rails_db launchy solargraph
 
@@ -137,7 +136,7 @@ __Manual:__
 - st, vim-plug, mons, YCM
 
 __VSCode extensions:__
-- endwise, Language Support for Java(TM) by Red Hat, Rails, Ruby, Ruby Solargraph, Trailing Spaces, Vetur, Vim, XML
+- endwise, Regex Previewer, Language Support for Java(TM) by Red Hat, Rails, Ruby, Ruby Solargraph, Trailing Spaces, Vetur, Vim, XML
 
 ### Manual configuration
 
@@ -145,7 +144,7 @@ __VSCode extensions:__
 - mkdir ~/.config/vimundo
 - thunderbird setup (app password for hotmail and yahoo)
 - disable bluetooth
-- firefox sync
+- brave browser sync
 - syncthing setup
 - ssh-key for github
 - enable printing: sudo systemctl enable --now org.cups.cupsd.service
