@@ -58,9 +58,11 @@ stty -ixon
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias todo='vim ~/Sync/todo'
+alias howto='vim ~/Documents/howto.md'
 
 alias paci='sudo pacman --needed -S'
 alias pacr='sudo pacman -Rns'
+alias pacror='~/scripts/pacman-remove-orphans.sh'
 alias pacs='pacman -Ss'
 alias pacq='pacman -Qs'
 alias cl='clear -x'
