@@ -147,7 +147,7 @@ __VSCode extensions:__
 - brave browser sync
 - syncthing setup
 - ssh-key for github
-- enable printing: sudo systemctl enable --now org.cups.cupsd.service
+- enable printing: sudo systemctl enable --now cups.service
 - snapd (optional)
   - sudo systemctl enable --now snapd.socket
   - sudo ln -s /var/lib/snapd/snap /snap
