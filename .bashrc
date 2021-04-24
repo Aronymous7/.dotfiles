@@ -79,6 +79,11 @@ alias srcjava='find -name "*.java" > sources.txt'
 alias setjava8='export JAVA_HOME="/usr/lib/jvm/java-8-openjdk" && PATH="$JAVA_HOME/bin:$PATH"'
 alias setjava14='export JAVA_HOME="/usr/lib/jvm/java-14-openjdk" && PATH="$JAVA_HOME/bin:$PATH"'
 
+# Automatically ls after cd
+function cd {
+  builtin cd "$@" && ls
+}
+
 # Make directory ans move into it
 mkd() {
   mkdir -pv $1
