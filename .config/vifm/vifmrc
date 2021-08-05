@@ -191,7 +191,7 @@ fileviewer *.tar.txz,*.txz xz --list %c
 fileviewer *.tar tar -tf %c
 
 " Office files
-filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppsx libreoffice %c %i &
+filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppsx,*.rtf libreoffice %c %i &
 fileviewer *.doc catdoc %c
 fileviewer *.docx, docx2txt.pl %f -
 
