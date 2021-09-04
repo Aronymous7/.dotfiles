@@ -77,7 +77,7 @@ alias setkb='setxkbmap us -option "ctrl:nocaps,shift:both_capslock"'
 
 alias srcjava='find -name "*.java" > sources.txt'
 alias setjava8='export JAVA_HOME="/usr/lib/jvm/java-8-openjdk" && PATH="$JAVA_HOME/bin:$PATH"'
-alias setjava14='export JAVA_HOME="/usr/lib/jvm/java-14-openjdk" && PATH="$JAVA_HOME/bin:$PATH"'
+alias setjava15='export JAVA_HOME="/usr/lib/jvm/java-15-openjdk" && PATH="$JAVA_HOME/bin:$PATH"'
 
 # Automatically ls after cd
 function cd {

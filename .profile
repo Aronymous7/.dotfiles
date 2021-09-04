@@ -20,7 +20,7 @@ fi
 export CLASSPATH=".:./*:$HOME/.local/share/java-libs/*"
 
 # Set JAVA_HOME
-export JAVA_HOME="/usr/lib/jvm/java-14-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 
 # Extend PATH
 PATH="$JAVA_HOME/bin:$PATH"
